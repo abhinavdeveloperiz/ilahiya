@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- jQuery (required for Bootstrap JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+  <!-- Bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+
+  <div class="container mt-3">
+    <a href="/courses" class="btn btn-primary mb-3">
+      <i class="bi bi-arrow-left"></i> Back to Courses
+    </a>
+  </div>
+
+  <!-- page title -->
+  <section class="page-title-section overlay" data-background="static/images/title.jpeg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="list-inline custom-breadcrumb">
+            <li class="list-inline-item">
+              <a class="h2 text-primary font-secondary" href="/courses">Law Courses</a>
+            </li>
+          </ul>
+          <p class="text-lighten">
+            Home <i class="fa-solid fa-angles-right"></i> Courses <i class="fa-solid fa-angles-right"></i> Course
+            Details
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /page title -->
+
+  <!-- course details section -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <!-- course image -->
+        <div class="col-md-5">
+          <img src="{{ details.image.url }}" class="img-fluid w-100" />
+        </div>
+        <!-- course details -->
+        <div class="col-md-7">
+          <h2>{{details.course}}</h2>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-3">
+              <i class="ti-book text-dark icon-md mr-3"></i>
+              <div>
+                <h6 class="mb-0">COURSE DURATION</h6>
+                <p class="mb-0">{{details.duration}}</p>
+              </div>
+            </li>
+          </ul>
+          <button class="btn btn-primary mt-3" onclick="openPopup()">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Registration Popup -->
+      <div id="registerPopup" class="popup-overlay" style="display: none;">
+        <div class="popup-form">
+          <button class="close-btn" onclick="closePopup()">×</button>
+          <h4 class="mb-3">Register for {{details.course}}</h4>
+          <form method="POST" action="{% url 'send_llb' %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <input type="text" name="name" class="form-control mb-3" placeholder="Full Name" required />
+              <input type="email" name="email" class="form-control mb-3" placeholder="Email" required />
+              <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone Number" required />
+              <textarea name="message" class="form-control mb-3" placeholder="Message (optional)" rows="3"></textarea>
+              <button type="submit" class="btn btn-success w-100">Submit Application</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- additional course information -->
+      <div class="col">
+        <div class="col-12 mb-4">
+          <h3>About Course</h3>
+          <p class="text-justify">{{details.about}}</p>
+        </div>
+
+        <div class="mb-4">
+          <h3>Eligibility & Admission Criteria</h3>
+          <br>
+          <ul class="list-styled">
+            <li>
+              <strong>(i) Nativity Requirements:</strong>
+              <br>
+              <br>
+              <ul>
+                <li>The applicant must be an Indian citizen.</li>
+                <li>However, only candidates of Kerala origin are eligible for reservation benefits or fee
+                  concessions. </li>
+              </ul>
+              <p class="mt-2">To establish Indian citizenship, applicants must upload any one of the following
+                documents along with their application:</p>
+              <ul>
+                <li>A true copy of the birth certificate issued by a competent birth registration authority
+                  (Panchayat/Municipality/Corporation), indicating that the place of birth is within any
+                  state or union territory of India.</li>
+                <li>A relevant page from the Secondary School Leaving Certificate (SSLC) showing the
+                  place of birth in any state or union territory of India.</li>
+                <li>A valid passport issued by the Government of India.</li>
+                <li>A certificate from a Village Officer or other competent authority, verifying that the
+                  candidate is a native of any state or union territory of India (in the prescribed format).</li>
+              </ul>
+            </li>
+            <li>
+              <strong> For candidates claiming Kerala origin, any one of the following documents must be
+                uploaded to prove nativity:</strong>
+              <br>
+              <br>
+              <ul>
+                <li>A relevant page of the SSLC certificate showing the place of birth in Kerala.</li>
+                <li>A birth certificate issued by a competent birth registration authority, indicating Kerala
+                  as the place of birth.</li>
+                <li>
+                  Relevant pages of the passport of either the candidate or their parents, issued by the
+                  Government of India, showing the place of birth in Kerala. (If the parent’s passport is
+                  submitted, a corroborative certificate proving the relationship must also be uploaded.)</small>
+                </li>
+                <li>
+                  SSLC certificate pages of either the candidate or their parents, showing Kerala as the
+                  place of birth. (If using the parent’s certificate, a corroborative relationship certificate
+                  must be uploaded.)</small>
+                </li>
+                <li>A certificate in the prescribed format issued by the Village Officer or Tahsildar,
+                  confirming that the candidate or their parent was born in Kerala.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-4">
+          <ul class="list-styled">
+            <li class="mt-3">
+              <strong>(ii) Academic Qualifications:</strong>
+              <br>
+              <br>
+              <ul>
+                <li>Candidates must have successfully completed the Higher Secondary Examination (HSE)
+                  conducted by the Higher Secondary Education Board of Kerala, or any equivalent
+                  examination recognised by universities in Kerala.</li>
+                <li>Applicants who have completed a 10+2 schooling system recognised by the Central or
+                  State Government Educational Authorities, or possess equivalent academic
+                  qualifications as recognised by the Bar Council of India (BCI), are eligible to apply.</li>
+                <li>Candidates who have obtained a Higher Secondary Pass Certificate (+2) or a First
+                  Degree Certificate through distance education or correspondence courses are also
+                  considered eligible for admission.</li>
+                <li> However, individuals who have directly pursued a 10+2 qualification or a graduation/
+                  postgraduate degree through open university systems without a basic qualification for
+                  such studies are not eligible for admission.
+                </li>
+                <li>Students who are currently appearing or have recently appeared for their qualifying
+                  examination may also apply. However, they will be eligible for admission only upon
+                  producing their final pass certificate and mark list at the time of admission.</li>
+                <li>A minimum of 45% aggregate marks in the qualifying examination is required for general
+                  category candidates.</li>
+                <li> For candidates belonging to Scheduled Castes (SC) or Scheduled Tribes (ST), the
+                  minimum required percentage is 40%.</li>
+                <li> No rounding off of marks to the nearest integer is permitted</li>
+              </ul>
+            </li>
+            <li class="mt-3">
+              <strong>(iii) Age Criteria:</strong>
+              <br>
+              <br>
+              <ul>
+                <li>The applicant must have completed 17 years of age as of December 31st of the
+                  admission year.</li>
+                <li>The upper age limit for admission to the five-year integrated LL.B. course will be subject
+                  to the final decision of the Hon'ble Supreme Court of India.</li>
+                <li>If the age restriction under Clause 28 of the Legal Education Rules, 2008, as framed by
+                  the Bar Council of India (BCI), is reinstated, only those within the specified age limit will
+                  be permitted to take the Entrance Examination.</li>
+                <li>This comprehensive admission framework ensures that only eligible and qualified
+                  candidates gain entry into the Integrated Double Degree Course in Law, maintaining high
+                  academic standards and fostering the development of competent legal professionals.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+  <style>
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .popup-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      color: #000;
+    }
+  </style>
+
+  <!-- Script -->
+  <script>
+    function openPopup() {
+      document.getElementById('registerPopup').style.display = 'flex'
+    }
+    function closePopup() {
+      document.getElementById('registerPopup').style.display = 'none'
+    }
+  </script>
+  <!-- CSS override to replace background image -->
+  <style>
+    section.page-title-section.overlay[data-background='static/images/title.jpeg'] {
+      background-image: url('static/images/title.jpeg') !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+
+</body>
+
+</html>

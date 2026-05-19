@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Page Title -->
+<section class="page-title-section overlay" data-background="static/images/title.jpeg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item">
+            <a class="h2 text-primary font-secondary" href="#">Achievements</a>
+          </li>
+          <li class="list-inline-item text-white h3 font-secondary"></li>
+        </ul>
+        <p class="text-lighten">
+          Home <i class="fa-solid fa-angles-right"></i> Campus Life <i class="fa-solid fa-angles-right"></i>
+          Achievements
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Page Title -->
+
+<!-- Achievements Section -->
+<section class="section achievements-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Card 4: Ashly Sunny Photography Achievement -->
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-lg border-0 h-100">
+          <img src="static/images/ashley.jpeg" class="card-img-top rounded-top" alt="Photography Award"
+            data-aos="fade-up" />
+          <div class="card-body">
+            <h5 class="card-title text-primary font-secondary">Photography Competition</h5>
+            <p class="card-text">
+              Ashly Sunny (3 Year LLB) secured <strong>A Grade</strong> in Photography at MG University Kalolsavam held
+              at Al-Azhar College, Thodupuzha.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Achievements Section -->
+<!-- CSS override to replace background image -->
+<style>
+  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
+    background-image: url('static/images/title.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- page title -->
+<section class="page-title-section overlay" data-background="static/images/title.jpeg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item">
+            <a class="h2 text-primary font-secondary" href="#">Chairman's Desk</a>
+          </li>
+          <li class="list-inline-item text-white h3 font-secondary"></li>
+        </ul>
+        <p class="text-lighten">
+          Home <i class="fa-solid fa-angles-right"></i> About Us <i class="fa-solid fa-angles-right"></i> Chairman's
+          Desk
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- Chairman's Desk Section -->
+<section class="chairman-desk py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-5">
+        <img src="static/images/chairmanns.jpeg" alt="Chairman" class="img-fluid shadow" data-aos="fade-left" />
+      </div>
+      <div class="col-md-7">
+        <h2 class="section-title font-secondary mb-3" data-aos="fade-left">Message from the Chairman</h2>
+        <p class="text-muted text-justify" data-aos="fade-left">
+          <i class="ri-double-quotes-l fs-3"></i>At Ilahia Law College, we uphold a tradition of excellence in legal
+          education, providing students with a strong academic foundation and professional competence. Our institution
+          is committed to nurturing socially responsible lawyers who will contribute meaningfully to the legal
+          profession and society.
+        </p>
+        <p class="text-muted text-justify" data-aos="fade-left">
+          We prioritize innovation, integrity, and inclusivity, creating an environment where students can thrive both
+          academically and personally. With our state-of-the-art facilities, experienced faculty, and a student-centered
+          approach, Ilahia Law College is dedicated to producing legal professionals who uphold justice and fairness in
+          all spheres of life.
+          <i class="ri-double-quotes-r fs-3"></i>
+        </p>
+        <p class="font-weight-bold" data-aos="fade-left">K Y Sadic Muhammad</p>
+        <p class="font-weight-bold" data-aos="fade-left">- Chairman, Ilahia Law College</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Chairman's Desk Section -->
+<!-- CSS override to replace background image -->
+<style>
+  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
+    background-image: url('static/images/title.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends 'base.html' %}Courses | Ilahia Law College{% block content %}
+<!-- page title -->
+<section class="page-title-section overlay" data-background="static/images/title.jpeg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item">
+            <a class="h2 text-primary font-secondary" href="courses.html">Our Courses</a>
+          </li>
+          <li class="list-inline-item text-white h3 font-secondary"></li>
+        </ul>
+        <p class="text-lighten">
+          Home <i class="fa-solid fa-angles-right"></i> Courses
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- COURSES SECTION -->
+<section class="relative py-24 bg-slate-50 overflow-hidden">
+
+  <!-- Background Blur -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+
+      <span
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-500/20 bg-blue-50 text-blue-500 text-sm uppercase tracking-[3px] font-medium mb-5"
+        data-aos="fade-up">
+        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+        Academic Programs
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight" data-aos="fade-up">
+        Explore Our
+        <span class="text-blue-500">
+          Courses
+        </span>
+      </h2>
+
+    </div>
+
+    <!-- Courses Grid -->
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
+
+      {% for c in course %}
+
+      <!-- Course Card -->
+      <div
+        class="group bg-white rounded-[30px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
+        data-aos="fade-up">
+
+        <!-- Image -->
+        <div class="relative overflow-hidden">
+
+          <img src="{{ c.image.url }}" alt="{{ c.course }}"
+            class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-700">
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+
+        </div>
+
+        <!-- Content -->
+        <div class="p-8 flex flex-col flex-1">
+
+          <!-- Title -->
+          <h3
+            class="text-2xl font-bold text-gray-900 leading-snug mb-2 min-h-[64px] group-hover:text-blue-500 transition duration-300">
+            {{ c.course }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-gray-600 leading-8 mb-8 flex-1">
+            {{ c.description }}
+          </p>
+
+          <!-- Button Wrapper -->
+          <div class="mt-auto pt-2">
+
+            <!-- Button -->
+            <a href="{% url 'fiveyears' c.id %}"
+              class="inline-flex items-center justify-center gap-3 px-6 py-3 rounded-full bg-blue-500 text-white font-semibold tracking-wide hover:bg-blue-600 transition-all duration-300 shadow-lg shadow-blue-500/20">
+              Apply Now
+
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PAGE TITLE IMAGE OVERRIDE -->
+<style>
+  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
+    background-image: url('static/images/title.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+
+{% endblock %}

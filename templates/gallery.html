@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- page title -->
+<section class="page-title-section overlay" data-background="static/images/title.jpeg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item">
+            <a class="h2 text-primary font-secondary" href="@@page-link">Gallery</a>
+          </li>
+          <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
+        </ul>
+        <p class="text-lighten">
+          Home <i class="fa-solid fa-angles-right"></i> Campus Life <i class="fa-solid fa-angles-right"></i> Gallery
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- GALLERY SECTION -->
+<section class="relative py-24 bg-slate-50 overflow-hidden">
+
+  <!-- Background Blur -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+
+      <span
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-500/20 bg-blue-50 text-blue-500 text-sm uppercase tracking-[3px] font-medium mb-5"
+        data-aos="fade-up">
+        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+        Campus Moments
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5" data-aos="fade-up">
+        Legal Insights
+        <span class="text-blue-500">
+          Gallery
+        </span>
+      </h2>
+
+      <p class="text-gray-600 text-lg leading-8 max-w-3xl mx-auto" data-aos="fade-up">
+        Explore memorable moments, academic activities, legal events, and campus experiences at Ilahia Law College.
+      </p>
+
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {% for i in gallery %}
+
+      <!-- Gallery Item -->
+      <div
+        class="group relative overflow-hidden rounded-[28px] bg-white shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer"
+        data-aos="zoom-in" onclick="openImage('{{i.image.url}}')">
+
+        <!-- Image -->
+        <div class="relative overflow-hidden">
+
+          <img src="{{i.image.url}}" alt="Gallery Image"
+            class="w-full h-[320px] object-cover group-hover:scale-110 transition duration-700">
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80"></div>
+
+          <!-- Hover Icon -->
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+
+            <div
+              class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/20 flex items-center justify-center">
+
+              <i class="fa-solid fa-expand text-white text-xl"></i>
+
+            </div>
+
+          </div>
+
+      
+
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+  <!-- IMAGE MODAL -->
+  <div id="imageModal"
+    class="fixed inset-0 bg-black/90 backdrop-blur-md z-[9999] hidden items-center justify-center p-6">
+
+    <!-- Close Button -->
+    <button onclick="closeImage()"
+      class="absolute top-6 right-6 w-14 h-14 rounded-full bg-white/10 hover:bg-white/20 text-white text-2xl transition duration-300 flex items-center justify-center">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Image -->
+    <img id="enlargedImage" class="max-w-full max-h-[90vh] rounded-3xl shadow-2xl object-contain">
+
+  </div>
+
+</section>
+
+<!-- MODAL SCRIPT -->
+<script>
+  function openImage(src) {
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+    document.getElementById("enlargedImage").src = src;
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeImage() {
+    document.getElementById("imageModal").classList.add("hidden");
+    document.getElementById("imageModal").classList.remove("flex");
+    document.body.style.overflow = "auto";
+  }
+
+  // Close on outside click
+  document.getElementById("imageModal").addEventListener("click", function (e) {
+    if (e.target.id === "imageModal") {
+      closeImage();
+    }
+  });
+</script>
+
+<!-- PAGE TITLE IMAGE OVERRIDE -->
+<style>
+  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
+    background-image: url('static/images/title.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+{% endblock %}

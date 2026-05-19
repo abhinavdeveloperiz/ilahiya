@@ -1,0 +1,272 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Page Title -->
+<section class="page-title-section overlay" data-background="static/images/title.jpeg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item">
+            <a class="h2 text-primary font-secondary" href="@@page-link">Facilities</a>
+          </li>
+          <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
+        </ul>
+        <p class="text-lighten">
+          Home <i class="fa-solid fa-angles-right"></i> Campus Life <i class="fa-solid fa-angles-right"></i> Facilities
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Page Title -->
+
+<!-- Facility Cards Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title mb-5" data-aos="fade-in">Campus Facilities</h2>
+
+    <!-- Row 1: Law Library & Cyber Cell -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+      <!-- Library -->
+      <div class="col" data-aos="zoom-in">
+        <div class="facility-image-container h-100 position-relative">
+          <a href="static/images/lib2.jpeg" class="glightbox" data-gallery="library-gallery" data-title="Law Library">
+            <img src="static/images/lib2.jpeg" class="w-100 shadow-1-strong" alt="Library" style="height: 250px;" />
+            <div class="overlay-text">LAW LIBRARY</div>
+            <div class="more-images-text position-absolute text-white small" style="bottom: 10px; right: 10px;">Click to
+              view more images</div>
+          </a>
+          <a href="static/images/lib2.jpeg" class="glightbox d-none" data-gallery="library-gallery"></a>
+          <a href="static/images/lib3.jpeg" class="glightbox d-none" data-gallery="library-gallery"></a>
+          <a href="static/images/lib4.jpeg" class="glightbox d-none" data-gallery="library-gallery"></a>
+          <a href="static/images/lib5.jpeg" class="glightbox d-none" data-gallery="library-gallery"></a>
+          <a href="static/images/lib6.jpeg" class="glightbox d-none" data-gallery="library-gallery"></a>
+        </div>
+      </div>
+
+      <!-- Cyber Cell -->
+      <div class="col" data-aos="zoom-out">
+        <div class="facility-image-container h-100 position-relative">
+          <a href="static/images/computer.jpeg" class="glightbox" data-gallery="cyber-gallery" data-title="Cyber Cell">
+            <img src="static/images/computer.jpeg" class="w-100 shadow-1-strong" alt="Cyber Cell"
+              style="height: 250px;" />
+            <div class="overlay-text">CYBER CELL</div>
+            <div class="more-images-text position-absolute text-white small" style="bottom: 10px; right: 10px;">Click to
+              view more images</div>
+          </a>
+          <a href="static/images/computer.jpeg" class="glightbox d-none" data-gallery="cyber-gallery"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Moot Court & AC -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+      <!-- Moot Court -->
+      <div class="col" data-aos="zoom-in">
+        <div class="facility-image-container h-100 position-relative">
+          <a href="static/images/moot.jpeg" class="glightbox" data-gallery="moot-gallery" data-title="Moot Court">
+            <img src="static/images/moot.jpeg" class="w-100 shadow-1-strong" alt="Moot Court" style="height: 250px;" />
+            <div class="overlay-text">MOOT COURT</div>
+            <div class="more-images-text position-absolute text-white small" style="bottom: 10px; right: 10px;">Click to
+              view more images</div>
+          </a>
+          <a href="static/images/moot1.jpeg" class="glightbox d-none" data-gallery="moot-gallery"></a>
+        </div>
+      </div>
+
+      <!-- AC Facilities -->
+      <div class="col" data-aos="zoom-out">
+        <div class="facility-image-container h-100 position-relative">
+          <a href="static/images/air.jpeg" class="glightbox" data-gallery="ac-gallery" data-title="Auditoriums">
+            <img src="static/images/air.jpeg" class="w-100 shadow-1-strong" alt="AC Facilities"
+              style="height: 250px;" />
+            <div class="overlay-text">AIR CONDITIONED AUDITORIUMS</div>
+            <div class="more-images-text position-absolute text-white small" style="bottom: 10px; right: 10px;">Click to
+              view more images</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: Grounds -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+      <!-- Ground 1 -->
+      <div class="col" data-aos="zoom-in">
+        <div class="facility-image-container h-100 position-relative">
+          <a href="static/images/ground.jpeg" class="glightbox" data-gallery="ground1-gallery"
+            data-title="Sports Ground 1">
+            <img src="static/images/ground.jpeg" class="w-100 shadow-1-strong" alt="Ground 1" style="height: 250px;" />
+            <div class="overlay-text">SPORTS GROUND 1</div>
+            <div class="more-images-text position-absolute text-white small" style="bottom: 10px; right: 10px;">Click to
+              view more images</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Ground 2 -->
+      <div class="col" data-aos="zoom-out">
+        <div class="facility-image-container h-100 position-relative">
+          <a href="static/images/ground 2.jpeg" class="glightbox" data-gallery="ground2-gallery"
+            data-title="Sports Ground 2">
+            <img src="static/images/ground 2.jpeg" class="w-100 shadow-1-strong" alt="Ground 2"
+              style="height: 250px;" />
+            <div class="overlay-text">SPORTS GROUND 2</div>
+            <div class="more-images-text position-absolute text-white small" style="bottom: 10px; right: 10px;">Click to
+              view more images</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 4: Hostel & Transport -->
+    <div class="row row-cols-1 row-cols-lg-2 g-4">
+      <!-- Hostel -->
+      <div class="col" data-aos="zoom-out">
+        <div class="card h-100 shadow">
+          <div class="facility-image-container">
+            <div class="row gx-2 m-0">
+              <!-- Boys Hostel -->
+              <div class="col-6 position-relative">
+                <a href="static/images/boys.jpeg" class="glightbox" data-gallery="boys-hostel-gallery"
+                  data-title="Boys Hostel">
+                  <div class="hostel-image-container">
+                    <img src="static/images/boys.jpeg" alt="Boys Hostel" />
+                    <div class="overlay-text">BOYS HOSTEL</div>
+                    <div class="more-images-text position-absolute text-white small" style="bottom: 10px; right: 10px;">
+                      Click to view more images</div>
+                  </div>
+                </a>
+                <a href="static/images/boys2.jpg" class="glightbox d-none" data-gallery="boys-hostel-gallery"></a>
+              </div>
+              <!-- Girls Hostel -->
+              <div class="col-6 position-relative">
+                <a href="static/images/girls.jpeg" class="glightbox" data-gallery="girls-hostel-gallery"
+                  data-title="Girls Hostel">
+                  <div class="hostel-image-container">
+                    <img src="static/images/girls.jpeg" alt="Girls Hostel" />
+                    <div class="overlay-text">GIRLS HOSTEL</div>
+                    <div class="more-images-text position-absolute text-white small" style="bottom: 10px; right: 10px;">
+                      Click to view more images</div>
+                  </div>
+                </a>
+                <a href="static/images/girls2.jpg" class="glightbox d-none" data-gallery="girls-hostel-gallery"></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Hostel Accommodation</h5>
+            <p class="card-text">The Law College has two separate hostels inside the campus:</p>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <strong>Boys Hostel:</strong><br />
+                <br />
+                Capacity: 100 students<br />
+                Warden: Mohammad Aslam
+              </li>
+              <li>
+                <strong>Girls Hostel:</strong><br />
+                <br />
+                Capacity: 150 students<br />
+                Matron: Mrs. Shyla Raghu
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transport -->
+      <div class="col" data-aos="zoom-in">
+        <div class="card h-100 shadow">
+          <div class="facility-image-container position-relative">
+            <a href="static/images/bus.jpeg" class="glightbox" data-gallery="bus-gallery"
+              data-title="Bus Transportation">
+              <img src="static/images/bus.jpeg" class="card-img-top" alt="Bus Transportation" style="height: 300px;" />
+              <div class="overlay-text">BUS TRANSPORTATION</div>
+              <div class="more-images-text position-absolute text-white small" style="bottom: 10px; right: 10px;">Click
+                to view more images</div>
+            </a>
+            <a href="static/images/bus2.jpeg" class="glightbox d-none" data-gallery="bus-gallery"></a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Transport Routes</h5>
+            <ul class="list-unstyled mb-0">
+              <li>BUS 1: ALUVA (KL17-3894)</li>
+              <br />
+              <li>BUS 2: KALADY (KL17J-5306)</li>
+              <br />
+              <li>BUS 3: PERINGALA (KL17F-8843)</li>
+              <br />
+              <li>BUS 4: PAIGOTTOOR (KL17H-4312)</li>
+              <br />
+              <li>BUS 5: KOTHAMANGALAM (KL17C-7340)</li>
+              <br />
+              <li>THODUPUZHA (KL17N-6929)</li>
+              <br />
+              <li>THRIPPUNITHURA (KL17N-5892)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Facility Cards -->
+
+<!-- Lightbox CSS/JS -->
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({ selector: '.glightbox' })
+</script>
+
+<style>
+  .facility-image-container {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .facility-image-container img,
+  .hostel-image-container img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .facility-image-container a:hover img,
+  .hostel-image-container:hover img {
+    transform: scale(1.03);
+  }
+
+  .card {
+    border: none;
+    border-radius: 10px;
+  }
+
+  .hostel-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+
+  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
+    background-image: url('static/images/title.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,264 @@
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full z-50">
+
+    <nav class="bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
+
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+
+            <div class="flex items-center justify-between h-[88px]">
+
+                <!-- LOGO -->
+                <a href="/" class="flex items-center gap-4">
+
+                    <img src="static/images/ilahialogo.png" alt="Logo"
+                        class="w-14 h-14 rounded-full object-cover shadow-lg border border-gray-200">
+
+                    <div class="hidden sm:block">
+
+                        <h2 class="text-lg font-extrabold uppercase tracking-wide text-[#1e1e4b]">
+                            Ilahia Law College
+                        </h2>
+
+                        <p class="text-xs text-gray-500 tracking-wide">
+                            Muvattupuzha, Kerala - 686673
+                        </p>
+
+                    </div>
+
+                </a>
+
+                <!-- DESKTOP MENU -->
+                <div class="hidden lg:flex items-center gap-8">
+
+                    <a href="/" class="navItem">Home</a>
+
+                    <a href="aboutus" class="navItem">
+                        About Us
+                    </a>
+
+                    <a href="courses" class="navItem">
+                        Courses
+                    </a>
+
+                    <a href="programs" class="navItem">
+                        Programs
+                    </a>
+
+                    <a href="iqac" class="navItem">
+                        IQAC
+                    </a>
+
+                    <a href="gallery" class="navItem">
+                        Gallery
+                    </a>
+
+                    <a href="contactpage"
+                        class="px-5 py-2.5 rounded-xl bg-blue-500 text-white font-semibold hover:bg-blue-900 transition duration-300 shadow-lg">
+
+                        Contact
+
+                    </a>
+
+                </div>
+
+                <!-- MOBILE BUTTON -->
+                <button id="openMenu"
+                    class="lg:hidden w-11 h-11 rounded-xl bg-[#1e1e4b] text-white flex items-center justify-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- OVERLAY -->
+<div id="menuOverlay"
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 invisible transition-all duration-300 z-[60]">
+</div>
+
+<!-- MOBILE SIDEBAR -->
+<div id="mobileMenu"
+    class="fixed top-0 right-[-100%] w-[85%] max-w-[360px] h-full bg-white z-[70] transition-all duration-500 shadow-2xl overflow-y-auto">
+
+    <!-- TOP -->
+    <div class="flex items-center justify-between p-5 border-b border-gray-100">
+
+        <div class="flex items-center gap-3">
+
+            <img src="static/images/ilahialogo.png" class="w-12 h-12 rounded-full object-cover shadow">
+
+            <div>
+
+                <h2 class="text-sm font-bold uppercase text-[#1e1e4b]">
+                    Ilahia Law College
+                </h2>
+
+                <p class="text-[11px] text-gray-500">
+                    Kerala - 686673
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- CLOSE -->
+        <button id="closeMenu"
+            class="w-10 h-10 rounded-lg bg-gray-100 hover:bg-gray-200 transition flex items-center justify-center">
+
+            ✕
+
+        </button>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="p-5 border-b border-gray-100">
+
+        <div class="space-y-3">
+
+            <div class="flex items-center gap-3">
+
+                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+
+                    📞
+
+                </div>
+
+                <div>
+
+                    <p class="text-sm font-semibold text-gray-800">
+                        +91 90720 75311
+                    </p>
+
+                    <p class="text-xs text-gray-500">
+                        Contact Number
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="flex items-center gap-3">
+
+                <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
+
+                    ✉️
+
+                </div>
+
+                <div>
+
+                    <p class="text-sm font-semibold text-gray-800 break-all">
+                        ilahialaw@gmail.com
+                    </p>
+
+                    <p class="text-xs text-gray-500">
+                        Email Address
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MOBILE LINKS -->
+    <div class="p-5 flex flex-col">
+
+        <a href="/" class="mobileNavItem">
+            Home
+        </a>
+
+        <a href="aboutus" class="mobileNavItem">
+            About Us
+        </a>
+
+        <a href="courses" class="mobileNavItem">
+            Courses
+        </a>
+
+        <a href="programs" class="mobileNavItem">
+            Programs
+        </a>
+
+        <a href="iqac" class="mobileNavItem">
+            IQAC
+        </a>
+
+        <a href="gallery" class="mobileNavItem">
+            Gallery
+        </a>
+
+        <a href="facilities" class="mobileNavItem">
+            Facilities
+        </a>
+
+        <a href="achievements" class="mobileNavItem">
+            Achievements
+        </a>
+
+        <a href="contactpage" class="mt-6 bg-[#1e1e4b] text-white text-center py-3 rounded-xl font-semibold shadow-lg">
+
+            Contact Us
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- TAILWIND ONLY STYLE -->
+<div class="hidden">
+
+    <style>
+        .navItem {
+            @apply relative text-[15px] font-semibold text-gray-800 transition duration-300 hover:text-[#1e1e4b];
+        }
+
+        .mobileNavItem {
+            @apply py-4 border-b border-gray-100 text-[15px] font-semibold text-gray-700 transition duration-300 hover:pl-2 hover:text-[#1e1e4b];
+        }
+    </style>
+
+</div>
+
+<script>
+
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuOverlay = document.getElementById("menuOverlay");
+
+    document.getElementById("openMenu").addEventListener("click", () => {
+
+        mobileMenu.style.right = "0";
+
+        menuOverlay.classList.remove("opacity-0", "invisible");
+
+    });
+
+    document.getElementById("closeMenu").addEventListener("click", closeMobileMenu);
+
+    menuOverlay.addEventListener("click", closeMobileMenu);
+
+    function closeMobileMenu() {
+
+        mobileMenu.style.right = "-100%";
+
+        menuOverlay.classList.add("opacity-0", "invisible");
+
+    }
+
+</script>

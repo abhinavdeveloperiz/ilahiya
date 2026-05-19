@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- page title -->
+<section class="page-title-section overlay" data-background="static/images/title.jpeg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item">
+            <a class="h2 text-primary font-secondary" href="courses.html">Law Courses</a>
+          </li>
+        </ul>
+        <p class="text-lighten">
+          Home <i class="fa-solid fa-angles-right"></i> Courses <i class="fa-solid fa-angles-right"></i> Course Details
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- course details section -->
+<section class="section-sm">
+  <div class="container">
+    <!-- Course Section -->
+    <div class="row align-items-center mb-5">
+      <!-- course image -->
+      <div class="col-md-5">
+        <img
+          src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          class="img-fluid w-100" />
+      </div>
+      <!-- course details -->
+      <div class="col-md-7">
+        <h2>3-Year LL.B.</h2>
+        <ul class="list-unstyled">
+          <li class="d-flex align-items-center mb-3">
+            <i class="ti-book text-dark icon-md mr-3"></i>
+            <div>
+              <h6 class="mb-0">COURSE DURATION</h6>
+              <p class="mb-0">3 Years (Full Time)</p>
+            </div>
+          </li>
+        </ul>
+        <button class="btn btn-primary mt-3" onclick="openPopup()">Apply Now</button>
+      </div>
+    </div>
+
+    <!-- Registration Popup -->
+    <div id="registerPopup" class="popup-overlay" style="display: none;">
+      <div class="popup-form">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <h4 class="mb-3">Register for 3 year LL.B. Course</h4>
+        <form method="POST" action="{% url 'register_llb' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text" name="name" class="form-control mb-3" placeholder="Full Name" required />
+            <input type="email" name="email" class="form-control mb-3" placeholder="Email" required />
+            <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone Number" required />
+            <textarea name="message" class="form-control mb-3" placeholder="Message (optional)" rows="3"></textarea>
+            <button type="submit" class="btn btn-success w-100">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- additional course information -->
+    <div class="row">
+      <div class="col-12 mb-4">
+        <h3>About Course</h3>
+        <p class="text-justify">This program leads to a Bachelor’s Degree in Law (LL.B.), structured in accordance with
+          the Bar Council of India (BCI) regulations, as empowered by the Advocates Act, 1961. Upon successful
+          completion, the degree qualifies graduates for enrollment as an Advocate under the Advocates Act, 1961. The
+          course requires a minimum of three academic years of regular study. Additionally, the final six months of the
+          last academic year include mandatory practical training, ensuring students gain hands-on legal experience.</p>
+      </div>
+
+      <div class="col-12 mb-4">
+        <h3>Eligibility & Admission Criteria</h3>
+        <ul class="list-styled">
+          <li>
+            <strong>(i) Nativity Requirements:</strong>
+            <br /><br />
+            <ul>
+              <li>The applicant must be an Indian citizen.</li>
+              <li>However, only candidates of Kerala origin are eligible for reservation benefits and fee concessions.
+              </li>
+            </ul>
+            <p class="mt-2">To verify Indian citizenship, applicants must upload one of the following documents along
+              with their application:</p>
+            <ul>
+              <li>A true copy of the birth certificate, issued by a competent birth registration authority
+                (Panchayat/Municipality/Corporation), showing the place of birth in any State or Union Territory of
+                India.</li>
+              <li>A relevant page of the Secondary School Leaving Certificate (SSLC), indicating the place of birth in
+                any State or Union Territory of India.</li>
+              <li>A valid passport issued by the Government of India.</li>
+              <li>A certificate from a Village Officer or competent authority, certifying that the applicant is a native
+                of any State or Union Territory of India (in the prescribed format).</li>
+            </ul>
+            <p class="mt-2">To establish Kerala origin, candidates must submit one of the following documents:</p>
+            <ul>
+              <li>The relevant page of the SSLC certificate, indicating Kerala as the place of birth.</li>
+              <li>A birth certificate, issued by a competent birth registration authority, showing Kerala as the place
+                of birth.</li>
+              <li>A passport of the candidate or either parent, issued by the Government of India, specifying the place
+                of birth as Kerala. If the parent's passport is uploaded, a corroborative certificate proving the
+                parent-child relationship must also be submitted.</li>
+              <li>The relevant page of the SSLC certificate of either parent, showing Kerala as the place of birth. If
+                the parent’s document is used, a relationship certificate must also be uploaded.</li>
+              <li>A certificate from the Village Officer/ Tahsildar, confirming that the applicant or their
+                mother/father was born in Kerala (in the prescribed format).</li>
+            </ul>
+          </li>
+
+          <li class="mt-4">
+            <strong>(ii) Academic Qualifications:</strong>
+            <br /><br />
+            <ul>
+              <li>The applicant must hold a Bachelor’s Degree in any faculty from a university in Kerala or from any
+                other university recognized as equivalent by a university in Kerala.</li>
+              <li>Candidates must have secured a minimum aggregate of 45% across all parts of their Bachelor’s Degree
+                Examination to qualify for admission to the three-year LL.B. course.</li>
+              <li>Candidates from Socially and Educationally Backward Classes (SEBC) require a minimum of 42% marks,
+                while those from Scheduled Castes (SC) or Scheduled Tribes (ST) need only 40% marks.</li>
+              <li>Rounding off of percentages to the nearest higher integer is not permitted.</li>
+              <li>Applicants who obtained their first-degree certificate through distance education or correspondence
+                courses are eligible for admission. However, those who completed their graduation/post-graduation
+                through an open university system without a prior basic qualification are not eligible.</li>
+              <li>Candidates appearing for or awaiting results of their qualifying examination (regular examination of
+                the 2021-22 academic year) may apply for the Entrance Examination. However, admission will be granted
+                only upon submission of their Provisional/Degree Certificate along with mark lists of all parts of the
+                qualifying examination at the time of admission.</li>
+            </ul>
+          </li>
+
+          <li class="mt-4">
+            <strong>(iii) Age Criteria:</strong>
+            <br /><br />
+            <ul>
+              <li>There is no lower age limit for admission to the three-year LL.B. course.</li>
+              <li>The upper age limit for admission is subject to the decision of the Hon’ble Supreme Court of India.
+              </li>
+              <li>If the age restriction under Clause 28 of the Legal Education Rules, 2008, as prescribed by the Bar
+                Council of India (BCI), is reinstated, only candidates within the stipulated age limit will be permitted
+                to appear for the Entrance Examination.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  .popup-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #000;
+  }
+</style>
+
+<script>
+  function openPopup() {
+    document.getElementById('registerPopup').style.display = 'flex'
+  }
+  function closePopup() {
+    document.getElementById('registerPopup').style.display = 'none'
+  }
+</script>
+<!-- CSS override to replace background image -->
+<style>
+  section.page-title-section.overlay[data-background='static/images/title.jpeg'] {
+    background-image: url('static/images/title.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+{% endblock %}
