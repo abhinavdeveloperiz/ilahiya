@@ -1,15 +1,11 @@
 from django.db import models
 
-"""
-Models module for the Ilahia application.
-This module defines the data models for the Ilahia application.
-"""
 
-# Create your models here.
 
 
 class Home(models.Model):
     image = models.ImageField(upload_to='banner_images/')
+    image2 = models.ImageField(upload_to='banner_images/', null=True, blank=True)
 
 class Academic_Program(models.Model):
     image = models.ImageField(upload_to='academic_program_images/')
@@ -56,6 +52,20 @@ class Gallery(models.Model):
         return str(self.image)
     
 
+class ArtdayGallery(models.Model):
+    image = models.ImageField(upload_to='artday_gallery_images/')
+
+    def __str__(self):
+        return str(self.image)
+    
+
+class Co_curricularGallery(models.Model):
+    image = models.ImageField(upload_to='co_curricular_images/')
+    
+    def __str__(self):
+        return str(self.image)
+
+
 class Faculty(models.Model):
     image = models.ImageField(upload_to='faculty_desk_images/')
     name=models.CharField(max_length=200)
@@ -76,6 +86,24 @@ class Notice(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+class UpComingEvents(models.Model):
+    title = models.CharField(max_length=200, verbose_name="Event Title")
+    description = models.TextField(verbose_name="Event Description")
+    date = models.DateField(verbose_name="Event Date")
+    time = models.TimeField(verbose_name="Event Time", null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Events"
+        verbose_name_plural = "Events"
+        ordering = ["-date", "-time"] 
+
+    def __str__(self):
+        return self.title
+
+
 
 
 

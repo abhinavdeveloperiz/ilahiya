@@ -3,7 +3,7 @@ from django.conf import settings
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages 
-from .models import Home, Academic_Program, Courses, Management_desk, Administrator_desk ,Gallery,Faculty,Notice
+from .models import Home, Academic_Program, Courses, Management_desk, Administrator_desk ,Gallery,Faculty,Notice,ArtdayGallery,Co_curricularGallery,UpComingEvents
 
 """
 Views module for the Ilahia application.
@@ -16,11 +16,13 @@ def index(request):
     academic=Academic_Program.objects.all()
     course=Courses.objects.all()
     notice=notice=Notice.objects.all()
+    events=UpComingEvents.objects.all()
     context={
         'banner':banner,
         'academic':academic,
         'course':course,
-        'notice':notice
+        'notice':notice,
+        'events':events,
         }
     return render(request, "index.html",context)
 
@@ -40,9 +42,15 @@ def courses(request):
 
 
 def gallery(request):
-    """Render the gallery page."""
     gallery=Gallery.objects.all()
-    return render(request, "gallery.html",{'gallery':gallery})
+    arts = ArtdayGallery.objects.all()
+    co_curricular = Co_curricularGallery.objects.all()
+    context={
+        'gallery':gallery,
+        'arts':arts,
+        'co_curricular':co_curricular,
+        }
+    return render(request, "gallery.html",context)
 
 
 def managements(request):

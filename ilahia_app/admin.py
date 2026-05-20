@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import Home, Academic_Program, Courses, Management_desk, Administrator_desk, Gallery,Faculty,Notice,Principal_desk
+from .models import Home, Academic_Program, Courses, Management_desk, Administrator_desk, Gallery,Faculty,Notice,Principal_desk, ArtdayGallery, Co_curricularGallery,UpComingEvents
 
 
 # Change the default Django admin titles
@@ -11,6 +11,8 @@ admin.site.index_title = "Welcome to ILAHIALAWCOLLAGE Admin Panel"
 
 
 admin.site.register(Notice)
+
+admin.site.register(UpComingEvents)
 
 
 @admin.register(Principal_desk)
@@ -92,6 +94,30 @@ class AdministratorDeskAdmin(admin.ModelAdmin):
 
 @admin.register(Gallery)
 class GalleryAdmin(admin.ModelAdmin):
+    list_display = ("id", "image_preview")
+    readonly_fields = ("image_preview",)
+
+    def image_preview(self, obj):
+        if obj.image:
+            return format_html('<img src="{}" width="120" style="border-radius:6px;" />', obj.image.url)
+        return ""
+    image_preview.short_description = "Preview"
+
+
+@admin.register(Co_curricularGallery)
+class CoCurricularGalleryAdmin(admin.ModelAdmin):
+    list_display = ("id", "image_preview")
+    readonly_fields = ("image_preview",)
+
+    def image_preview(self, obj):
+        if obj.image:
+            return format_html('<img src="{}" width="120" style="border-radius:6px;" />', obj.image.url)
+        return ""
+    image_preview.short_description = "Preview"
+
+
+@admin.register(ArtdayGallery)
+class ArtdayGalleryAdmin(admin.ModelAdmin):
     list_display = ("id", "image_preview")
     readonly_fields = ("image_preview",)
 

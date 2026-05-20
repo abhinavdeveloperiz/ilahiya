@@ -50,9 +50,7 @@
     <!-- SLIDE 2 -->
     <div class="heroSlide absolute inset-0 opacity-0 transition-all duration-1000">
 
-      <img
-        src="https://www.ilahialawcollege.com/media/academic_program_images/WhatsApp_Image_2025-12-09_at_10.47.37_AM_1.jpeg"
-        class="w-full h-full object-cover">
+      <img src="{{ banner.image2.url }}" class="w-full h-full object-cover">
 
       <!-- OVERLAY -->
       <div class="absolute inset-0 bg-black/50"></div>
@@ -602,6 +600,139 @@
 </section>
 
 
+<section class="py-24 bg-white relative overflow-hidden">
+
+  <!-- Background Elements -->
+  <div class="absolute top-0 right-0 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-80 bg-indigo-100/40 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-20">
+
+      <span
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold tracking-[2px] uppercase mb-6">
+
+        <i class="fa-solid fa-calendar-days"></i>
+        Latest Updates
+
+      </span>
+
+      <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+
+        Upcoming
+        <span class="text-blue-600">
+          Events
+        </span>
+
+      </h2>
+
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-8">
+
+        Stay updated with seminars, workshops, cultural programs,
+        competitions and campus activities.
+
+      </p>
+
+    </div>
+
+
+    {% if events %}
+
+    <!-- Events Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {% for n in events %}
+
+      <div
+        class="group bg-white border border-gray-100 p-8 rounded-[30px] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+
+        <!-- Hover Gradient -->
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] to-indigo-500/[0.03] opacity-0 group-hover:opacity-100 transition duration-500">
+        </div>
+
+        <!-- Icon -->
+        <div
+          class="relative w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
+
+          <i class="fa-solid fa-calendar-check"></i>
+
+        </div>
+
+        <!-- Date -->
+        <p class="relative text-sm text-blue-700 font-semibold mb-3 tracking-wide">
+
+          {{ n.date }} • {{ n.time }}
+
+        </p>
+
+        <!-- Title -->
+        <h3 class="relative text-2xl font-bold text-gray-900 mb-4 leading-snug">
+
+          {{ n.title }}
+
+        </h3>
+
+        <!-- Description -->
+        <p class="relative text-gray-600 leading-7">
+
+          {{ n.description }}
+
+        </p>
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+
+    {% else %}
+
+    <!-- No Events Design -->
+    <div class="max-w-3xl mx-auto">
+
+      <div
+        class="relative bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 rounded-[40px] p-12 md:p-16 text-center overflow-hidden shadow-lg">
+
+        <!-- Decorative Circles -->
+        <div class="absolute top-0 right-0 w-40 h-40 bg-blue-200/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-40 h-40 bg-indigo-200/20 rounded-full blur-3xl"></div>
+
+        <!-- Icon -->
+        <div
+          class="relative w-28 h-28 mx-auto rounded-full bg-white shadow-xl flex items-center justify-center mb-8 border border-blue-100">
+
+          <i class="fa-regular fa-calendar-xmark text-5xl text-blue-600"></i>
+
+        </div>
+
+        <!-- Heading -->
+        <h3 class="relative text-3xl md:text-4xl font-black text-gray-900 mb-5">
+
+          No Upcoming Events
+
+        </h3>
+
+
+      </div>
+
+    </div>
+
+    {% endif %}
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
 
 <!-- success story -->
 <section class="section bg-cover" data-aos="flip-down"
@@ -711,6 +842,660 @@
 
 
 <br><br>
+
+
+
+<!-- LIBRARY RULES SECTION -->
+<section class="py-24 bg-slate-50 relative overflow-hidden">
+
+  <!-- Background Blur -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="text-center mb-20">
+
+      <span
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-500/20 bg-blue-50 text-blue-600 text-sm uppercase tracking-[3px] font-semibold mb-6">
+
+        <i class="fa-solid fa-book-open-reader"></i>
+        Academic Resources
+
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-6">
+
+        Library
+        <span class="text-blue-600">
+          Rules & Regulations
+        </span>
+
+      </h2>
+
+      <p class="text-gray-600 text-lg leading-8 max-w-3xl mx-auto">
+
+        Students are requested to maintain proper discipline and follow
+        the library guidelines to ensure a peaceful and productive
+        academic environment at Ilahia Law College.
+
+      </p>
+
+    </div>
+
+
+    <!-- Rules Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Rule -->
+      <div
+        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+
+        <div
+          class="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
+
+          <i class="fa-solid fa-volume-xmark"></i>
+
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          Maintain Silence
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          Complete silence must be maintained inside the library premises
+          to provide a calm and focused study atmosphere.
+        </p>
+
+      </div>
+
+
+      <!-- Rule -->
+      <div
+        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+
+        <div
+          class="w-16 h-16 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
+
+          <i class="fa-solid fa-id-card"></i>
+
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          Carry ID Card
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          Students must carry their valid college ID card while entering
+          and using library facilities.
+        </p>
+
+      </div>
+
+
+      <!-- Rule -->
+      <div
+        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+
+        <div
+          class="w-16 h-16 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
+
+          <i class="fa-solid fa-burger"></i>
+
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          No Food Allowed
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          Eating, drinking and carrying food items inside the library are
+          strictly prohibited.
+        </p>
+
+      </div>
+
+
+      <!-- Rule -->
+      <div
+        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+
+        <div
+          class="w-16 h-16 rounded-2xl bg-yellow-50 text-yellow-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
+
+          <i class="fa-solid fa-book"></i>
+
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          Handle Books Carefully
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          Library books and resources should be handled responsibly.
+          Damaging or marking books is strictly prohibited.
+        </p>
+
+      </div>
+
+
+      <!-- Rule -->
+      <div
+        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+
+        <div
+          class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
+
+          <i class="fa-solid fa-mobile-screen-button"></i>
+
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          Keep Phones Silent
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          Mobile phones should be kept in silent mode while inside the
+          library to avoid disturbance to others.
+        </p>
+
+      </div>
+
+
+      <!-- Rule -->
+      <div
+        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+
+        <div
+          class="w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
+
+          <i class="fa-solid fa-clock"></i>
+
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          Return Books On Time
+        </h3>
+
+        <p class="text-gray-600 leading-7">
+          Borrowed books must be returned on or before the due date.
+          Late returns may attract penalties as per library policy.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- COMPLIANCE & STUDENT WELFARE -->
+<section class="relative py-16 md:py-24 bg-slate-50 overflow-hidden">
+
+  <!-- Background Effects -->
+  <div class="absolute top-0 left-0 w-80 h-80 bg-red-500/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="text-center max-w-4xl mx-auto mb-14 md:mb-20">
+
+      <span
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-red-100 text-red-600 text-xs sm:text-sm uppercase tracking-[2px] font-semibold shadow-sm mb-6">
+
+        <i class="fa-solid fa-shield-heart"></i>
+        Student Safety & Welfare
+
+      </span>
+
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-5">
+
+        Compliance &
+        <span class="text-red-600">
+          Student Welfare
+        </span>
+
+      </h2>
+
+      <p class="text-gray-600 text-base md:text-lg leading-7 md:leading-8">
+
+        Ilahia Law College is committed to maintaining a safe,
+        respectful and inclusive academic environment through
+        anti-ragging initiatives, counselling support,
+        statutory committees and grievance redressal mechanisms.
+
+      </p>
+
+    </div>
+
+
+
+    <!-- TOP CARDS -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 items-start">
+
+      <!-- Anti Ragging -->
+      <div
+        class="bg-white rounded-[30px] border border-red-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-red-600 to-red-500 p-6 md:p-8 text-white">
+
+          <div
+            class="w-16 h-16 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-3xl mb-5">
+
+            <i class="fa-solid fa-ban"></i>
+
+          </div>
+
+          <h3 class="text-2xl md:text-3xl font-black mb-4">
+
+            Anti-Ragging Cell
+
+          </h3>
+
+          <p class="text-red-100 leading-7 text-sm md:text-base">
+
+            Ragging in any form is strictly prohibited within the campus.
+            The institution follows UGC Anti-Ragging Regulations
+            to ensure a safe learning environment.
+
+          </p>
+
+        </div>
+
+        <!-- Content -->
+        <div class="p-5 md:p-8">
+
+          <!-- Brochure -->
+          <div class="bg-red-50 border border-red-100 rounded-3xl p-5 md:p-6 mb-6">
+
+            <div class="flex flex-col sm:flex-row gap-5 items-start">
+
+              <div
+                class="w-14 h-14 rounded-2xl bg-white text-red-600 flex items-center justify-center text-2xl shadow-sm flex-shrink-0">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+              </div>
+
+              <div class="w-full">
+
+                <h4 class="text-xl font-bold text-gray-900 mb-3">
+
+                  Anti-Ragging Brochure
+
+                </h4>
+
+                <p class="text-gray-600 leading-7 text-sm md:text-base mb-5">
+
+                  Download anti-ragging regulations,
+                  committee details and student undertaking forms.
+
+                </p>
+
+                <a href="#"
+                  class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white font-semibold transition duration-300">
+
+                  <i class="fa-solid fa-download"></i>
+                  Download Brochure
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Helpline -->
+          <div class="rounded-3xl bg-gray-900 text-white p-5 flex items-center gap-4">
+
+            <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl flex-shrink-0">
+
+              <i class="fa-solid fa-phone-volume"></i>
+
+            </div>
+
+            <div class="min-w-0">
+
+              <p class="text-sm uppercase tracking-[2px] text-white/70 mb-1">
+
+                Anti-Ragging Helpline
+
+              </p>
+
+              <h5 class="text-xl md:text-2xl text-white font-bold break-words">
+
+                +91 98765 43210
+
+              </h5>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Prevention of Sexual Harassment -->
+      <div
+        class="bg-white rounded-[30px] border border-blue-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 md:p-8 text-white">
+
+          <div
+            class="w-16 h-16 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-3xl mb-5">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+          </div>
+
+          <h3 class="text-2xl md:text-3xl font-black mb-4">
+
+            Prevention of Sexual Harassment
+
+          </h3>
+
+          <p class="text-blue-100 leading-7 text-sm md:text-base">
+
+            The Internal Complaints Committee (ICC) ensures
+            a safe, respectful and supportive environment
+            for all students and staff members.
+
+          </p>
+
+        </div>
+
+        <!-- Features -->
+        <div class="p-5 md:p-8 space-y-5">
+
+          <!-- Item -->
+          <div class="flex flex-col sm:flex-row gap-5 bg-slate-50 border border-slate-100 rounded-3xl p-5">
+
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl flex-shrink-0">
+
+              <i class="fa-solid fa-scale-balanced"></i>
+
+            </div>
+
+            <div class="flex-1 min-w-0">
+
+              <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
+
+                Redressal Cell
+
+              </h4>
+
+              <p class="text-gray-600 leading-7 text-sm md:text-base">
+
+                The committee receives complaints, conducts inquiries,
+                maintains confidentiality and recommends appropriate action.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- Item -->
+          <div class="flex flex-col sm:flex-row gap-5 bg-slate-50 border border-slate-100 rounded-3xl p-5">
+
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl flex-shrink-0">
+
+              <i class="fa-solid fa-handshake-angle"></i>
+
+            </div>
+
+            <div class="flex-1 min-w-0">
+
+              <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
+
+                Counselling & Support
+
+              </h4>
+
+              <p class="text-gray-600 leading-7 text-sm md:text-base">
+
+                Confidential counselling and student welfare support
+                are provided throughout grievance handling procedures.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- Item -->
+          <div class="flex flex-col sm:flex-row gap-5 bg-slate-50 border border-slate-100 rounded-3xl p-5">
+
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl flex-shrink-0">
+
+              <i class="fa-solid fa-envelope-open-text"></i>
+
+            </div>
+
+            <div class="flex-1 min-w-0">
+
+              <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
+
+                Complaint Submission
+
+              </h4>
+
+              <p class="text-gray-600 leading-7 text-sm md:text-base">
+
+                Complaints may be submitted directly to committee members
+                or through the official grievance redressal email.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- COMMITTEE CONTACTS -->
+    <div class="mt-16 md:mt-24">
+
+      <div class="text-center mb-12 md:mb-16">
+
+        <h3 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+
+          Statutory Committee Contacts
+
+        </h3>
+
+        <p class="text-gray-600 text-base md:text-lg">
+
+          Official contact details for student welfare committees.
+
+        </p>
+
+      </div>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+
+        <!-- Contact -->
+        <div
+          class="bg-white border border-gray-100 rounded-[28px] p-6 md:p-8 shadow-sm hover:shadow-xl transition duration-500">
+
+          <div class="w-16 h-16 rounded-2xl bg-red-100 text-red-600 flex items-center justify-center text-2xl mb-6">
+
+            <i class="fa-solid fa-user-tie"></i>
+
+          </div>
+
+          <h4 class="text-2xl font-black text-gray-900 mb-2">
+
+            Anti-Ragging Committee
+
+          </h4>
+
+          <p class="text-gray-500 mb-5">
+
+            Faculty Coordinator
+
+          </p>
+
+          <div class="space-y-4 text-gray-700">
+
+            <div class="flex items-start gap-3">
+
+              <i class="fa-solid fa-phone text-red-600 mt-1"></i>
+
+              <span class="break-all">
+                +91 98765 43210
+              </span>
+
+            </div>
+
+            <div class="flex items-start gap-3">
+
+              <i class="fa-solid fa-envelope text-red-600 mt-1"></i>
+
+              <span class="break-all">
+                antiragging@ilahialawcollege.edu
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Contact -->
+        <div
+          class="bg-white border border-gray-100 rounded-[28px] p-6 md:p-8 shadow-sm hover:shadow-xl transition duration-500">
+
+          <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-6">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+          </div>
+
+          <h4 class="text-2xl font-black text-gray-900 mb-2">
+
+            ICC / Redressal Cell
+
+          </h4>
+
+          <p class="text-gray-500 mb-5">
+
+            Presiding Officer
+
+          </p>
+
+          <div class="space-y-4 text-gray-700">
+
+            <div class="flex items-start gap-3">
+
+              <i class="fa-solid fa-phone text-blue-600 mt-1"></i>
+
+              <span class="break-all">
+                +91 98765 43211
+              </span>
+
+            </div>
+
+            <div class="flex items-start gap-3">
+
+              <i class="fa-solid fa-envelope text-blue-600 mt-1"></i>
+
+              <span class="break-all">
+                icc@ilahialawcollege.edu
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Contact -->
+        <div
+          class="bg-white border border-gray-100 rounded-[28px] p-6 md:p-8 shadow-sm hover:shadow-xl transition duration-500">
+
+          <div class="w-16 h-16 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center text-2xl mb-6">
+
+            <i class="fa-solid fa-hands-holding-circle"></i>
+
+          </div>
+
+          <h4 class="text-2xl font-black text-gray-900 mb-2">
+
+            Student Counselling Cell
+
+          </h4>
+
+          <p class="text-gray-500 mb-5">
+
+            Student Welfare Officer
+
+          </p>
+
+          <div class="space-y-4 text-gray-700">
+
+            <div class="flex items-start gap-3">
+
+              <i class="fa-solid fa-phone text-green-600 mt-1"></i>
+
+              <span class="break-all">
+                +91 98765 43212
+              </span>
+
+            </div>
+
+            <div class="flex items-start gap-3">
+
+              <i class="fa-solid fa-envelope text-green-600 mt-1"></i>
+
+              <span class="break-all">
+                counselling@ilahialawcollege.edu
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
 
 <!-- Contact Section -->
 <section class="section bg-gray">
