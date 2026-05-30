@@ -7,14 +7,12 @@ body {
 }
 
 p,
-.paragraph,
-.text-justify {
+.paragraph {
   font-weight: 500;
   color: #000000;
   font-size: 20px;
   line-height: 1.5;
   font-family: "Times New Roman", Times, serif;
-  text-align: justify;
 }
 
 h1,
@@ -237,6 +235,23 @@ h6,
 body {
   background-color: #fff;
   overflow-x: hidden;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+h1.text-justify,
+h2.text-justify,
+h3.text-justify,
+h4.text-justify,
+h5.text-justify,
+h6.text-justify {
+  text-align: inherit !important;
 }
 
 ::-moz-selection {
