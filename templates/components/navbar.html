@@ -28,38 +28,86 @@
                 </a>
 
                 <!-- DESKTOP MENU -->
-                <div class="hidden lg:flex items-center gap-8">
+                <nav class="hidden lg:flex items-center gap-6">
 
                     <a href="/" class="navItem">Home</a>
 
-                    <a href="aboutus" class="navItem">
-                        About Us
-                    </a>
+                    <!-- About Us Dropdown -->
+                    <div class="relative group">
+                        <button class="navItem flex items-center gap-2">About Us
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-lg border border-gray-100 nav-dropdown z-[70]">
+                            <div class="p-3">
+                                <div class="border-b border-gray-100 pb-3 mb-3">
+                                    <a href="aboutus" class="block font-semibold text-gray-800 px-2 py-1">College
+                                        Profile</a>
 
-                    <a href="courses" class="navItem">
-                        Courses
-                    </a>
+                                </div>
+                                <a href="aboutus" class="text-sm text-gray-600 px-2 py-1">About Us</a>
+                                <a href="managements" class="block text-gray-700 px-2 py-1">Management</a>
+                                <a href="chairmans_desk" class="block text-gray-700 px-2 py-1">Chairman's Desk</a>
+                                <a href="principal_desk" class="block text-gray-700 px-2 py-1">Principal's Desk</a>
+                                <a href="admindesk" class="block text-gray-700 px-2 py-1">Administrator's Desk</a>
+                                <a href="facultydesk" class="block text-gray-700 px-2 py-1">Faculty's Desk</a>
+                            </div>
+                        </div>
+                    </div>
 
-                    <a href="programs" class="navItem">
-                        Programs
-                    </a>
+                    <!-- Admissions Dropdown -->
+                    <div class="relative group">
+                        <button class="navItem flex items-center gap-2">Admissions
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 mt-3 w-44 bg-white rounded-lg shadow-lg border border-gray-100 nav-dropdown z-[70]">
+                            <div class="p-3">
+                                <a href="courses" class="block text-gray-700 px-2 py-1">Courses</a>
+                                <a href="admission_process" class="block text-gray-700 px-2 py-1">Admission Process</a>
+                            </div>
+                        </div>
+                    </div>
 
-                    <a href="iqac" class="navItem">
-                        IQAC
-                    </a>
+                    <a href="programs" class="navItem">Programs</a>
 
-                    <a href="gallery" class="navItem">
-                        Gallery
-                    </a>
+                    <a href="iqac" class="navItem">IQAC</a>
+
+                    <!-- Campus Life Dropdown -->
+                    <div class="relative group">
+                        <button class="navItem flex items-center gap-2">Campus Life
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 mt-3 w-44 bg-white rounded-lg shadow-lg border border-gray-100 nav-dropdown z-[70]">
+                            <div class="p-3">
+                                <a href="gallery" class="block text-gray-700 px-2 py-1">Gallery</a>
+                                <a href="facilities" class="block text-gray-700 px-2 py-1">Facilities</a>
+                                <a href="achievements" class="block text-gray-700 px-2 py-1">Our Achievements</a>
+                                <a href="rules" class="block text-gray-700 px-2 py-1">Rules & Regulations</a>
+                                <a href="committee" class="block text-gray-700 px-2 py-1">Statutory Committee</a>
+                            </div>
+                        </div>
+                    </div>
 
                     <a href="contactpage"
-                        class="px-5 py-2.5 rounded-xl bg-blue-500 text-white font-semibold hover:bg-blue-900 transition duration-300 shadow-lg">
-
+                        class="px-5 py-2.5 rounded-xl bg-[#1e1e4b] text-white font-semibold hover:bg-[#15203a] transition duration-300 shadow-lg">
                         Contact
-
                     </a>
 
-                </div>
+                </nav>
 
                 <!-- MOBILE BUTTON -->
                 <button id="openMenu"
@@ -176,46 +224,75 @@
 
     </div>
 
-    <!-- MOBILE LINKS -->
-    <div class="p-5 flex flex-col">
+    <!-- MOBILE LINKS (accordion style) -->
+    <div class="p-5 flex flex-col divide-y divide-gray-100">
 
-        <a href="/" class="mobileNavItem">
-            Home
-        </a>
+        <a href="/" class="py-4 text-[15px] font-semibold text-gray-800">Home</a>
 
-        <a href="aboutus" class="mobileNavItem">
-            About Us
-        </a>
+        <div class="py-2">
+            <button
+                class="w-full flex items-center justify-between py-3 text-[15px] font-semibold text-gray-800 mobile-accordion"
+                data-target="aboutMenu">About Us
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div id="aboutMenu" class="pl-3 max-h-0 overflow-hidden transition-all">
+                <a href="aboutus" class="block py-2 text-gray-700">About Us</a>
+                <a href="" class="block py-2 text-gray-700">Our Vision</a>
+                <a href="" class="block py-2 text-gray-700">Our Mission</a>
+                <a href="" class="block py-2 text-gray-700">Our Values</a>
+                <a href="managements" class="block py-2 text-gray-700">Management</a>
+                <a href="chairmans_desk" class="block py-2 text-gray-700">Chairman's Desk</a>
+                <a href="principal_desk" class="block py-2 text-gray-700">Principal's Desk</a>
+                <a href="admindesk" class="block py-2 text-gray-700">Administrator's Desk</a>
+                <a href="facultydesk" class="block py-2 text-gray-700">Faculty's Desk</a>
+            </div>
+        </div>
 
-        <a href="courses" class="mobileNavItem">
-            Courses
-        </a>
+        <div class="py-2">
+            <button
+                class="w-full flex items-center justify-between py-3 text-[15px] font-semibold text-gray-800 mobile-accordion"
+                data-target="admissionMenu">Admissions
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div id="admissionMenu" class="pl-3 max-h-0 overflow-hidden transition-all">
+                <a href="courses" class="block py-2 text-gray-700">Courses</a>
+                <a href="admission_process" class="block py-2 text-gray-700">Admission Process</a>
+            </div>
+        </div>
 
-        <a href="programs" class="mobileNavItem">
-            Programs
-        </a>
+        <a href="programs" class="py-4 text-[15px] font-semibold text-gray-800">Programs</a>
 
-        <a href="iqac" class="mobileNavItem">
-            IQAC
-        </a>
+        <a href="iqac" class="py-4 text-[15px] font-semibold text-gray-800">IQAC</a>
 
-        <a href="gallery" class="mobileNavItem">
-            Gallery
-        </a>
+        <div class="py-2">
+            <button
+                class="w-full flex items-center justify-between py-3 text-[15px] font-semibold text-gray-800 mobile-accordion"
+                data-target="campusMenu">Campus Life
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div id="campusMenu" class="pl-3 max-h-0 overflow-hidden transition-all">
+                <a href="gallery" class="block py-2 text-gray-700">Gallery</a>
+                <a href="facilities" class="block py-2 text-gray-700">Facilities</a>
+                <a href="achievements" class="block py-2 text-gray-700">Achievements</a>
+                <a href="rules" class="block py-2 text-gray-700">Rules & Regulations</a>
+                <a href="committee" class="block py-2 text-gray-700">Statutory Committee</a>
+            </div>
+        </div>
 
-        <a href="facilities" class="mobileNavItem">
-            Facilities
-        </a>
-
-        <a href="achievements" class="mobileNavItem">
-            Achievements
-        </a>
-
-        <a href="contactpage" class="mt-6 bg-[#1e1e4b] text-white text-center py-3 rounded-xl font-semibold shadow-lg">
-
-            Contact Us
-
-        </a>
+        <div class="pt-4">
+            <a href="contactpage"
+                class="block mt-4 bg-[#1e1e4b] text-white text-center py-3 rounded-xl font-semibold shadow-lg">Contact
+                Us</a>
+        </div>
 
     </div>
 
@@ -236,29 +313,109 @@
 
 </div>
 
-<script>
+<style>
+    /* JS-controlled dropdown visibility to avoid Tailwind group-hover conflicts */
+    header .nav-dropdown {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-6px);
+        transition: opacity 160ms ease, transform 160ms ease;
+        pointer-events: none;
+    }
 
+    header .relative.open>.nav-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+</style>
+
+<script>
     const mobileMenu = document.getElementById("mobileMenu");
     const menuOverlay = document.getElementById("menuOverlay");
 
-    document.getElementById("openMenu").addEventListener("click", () => {
-
+    function openMobileMenu() {
         mobileMenu.style.right = "0";
-
         menuOverlay.classList.remove("opacity-0", "invisible");
-
-    });
-
-    document.getElementById("closeMenu").addEventListener("click", closeMobileMenu);
-
-    menuOverlay.addEventListener("click", closeMobileMenu);
+        menuOverlay.classList.add("opacity-50");
+    }
 
     function closeMobileMenu() {
-
         mobileMenu.style.right = "-100%";
-
         menuOverlay.classList.add("opacity-0", "invisible");
-
+        menuOverlay.classList.remove("opacity-50");
     }
+
+    document.getElementById("openMenu").addEventListener("click", openMobileMenu);
+    document.getElementById("closeMenu").addEventListener("click", closeMobileMenu);
+    menuOverlay.addEventListener("click", closeMobileMenu);
+
+    // Mobile accordion toggles
+    document.querySelectorAll('.mobile-accordion').forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const panel = document.getElementById(targetId);
+            if (!panel) return;
+
+            const isOpen = !panel.classList.contains('max-h-0');
+            // close any open panels (optional)
+            document.querySelectorAll('#mobileMenu > .p-5 .max-h-0, #mobileMenu > .p-5 .overflow-hidden').forEach(p => { });
+
+            if (isOpen) {
+                panel.style.maxHeight = null;
+                panel.classList.add('max-h-0');
+            } else {
+                panel.classList.remove('max-h-0');
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+            }
+        });
+    });
+
+    // Close mobile menu on window resize (desktop)
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) closeMobileMenu();
+    });
+
+    // Desktop dropdown toggles (click to open/close + close on outside click)
+    document.addEventListener('DOMContentLoaded', () => {
+        const wrapperItems = Array.from(document.querySelectorAll('header .relative'));
+        const dropdownButtons = Array.from(document.querySelectorAll('header .relative > button'));
+
+        dropdownButtons.forEach(btn => {
+            btn.style.cursor = 'pointer';
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const parent = btn.parentElement; // .relative
+                if (!parent) return;
+
+                const isOpen = parent.classList.contains('open');
+
+                // close all
+                wrapperItems.forEach(w => w.classList.remove('open'));
+
+                if (!isOpen) {
+                    parent.classList.add('open');
+                    const svg = btn.querySelector('svg');
+                    if (svg) svg.style.transform = 'rotate(180deg)';
+                } else {
+                    const svg = btn.querySelector('svg');
+                    if (svg) svg.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // close menus on outside click
+        document.addEventListener('click', () => {
+            wrapperItems.forEach(w => {
+                w.classList.remove('open');
+                const btn = w.querySelector('button');
+                if (btn) {
+                    const svg = btn.querySelector('svg');
+                    if (svg) svg.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    });
 
 </script>
