@@ -248,54 +248,102 @@
 
 
 
-<section class="py-24 bg-white overflow-hidden">
+<section class="py-24 bg-blue-200 overflow-hidden relative">
 
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+  <!-- Decorative Background -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-300/40 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-80 bg-white/30 rounded-full blur-3xl"></div>
 
-    <!-- IMAGE -->
-    <div data-aos="fade-right" data-aos-duration="1200">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-      <div class="overflow-hidden rounded-3xl shadow-2xl group">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-        <img src="static/images/ilahia.jpeg"
-          class="rounded-3xl w-full object-cover transition duration-700 group-hover:scale-110">
+      <!-- IMAGE -->
+      <div data-aos="fade-right" data-aos-duration="1200">
+
+        <div class="relative group">
+
+          <!-- Decorative Border -->
+          <div
+            class="absolute -inset-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500">
+          </div>
+
+          <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+            <img src="static/images/ilahia.jpeg"
+              class="w-full h-full object-cover rounded-3xl transition duration-700 group-hover:scale-110">
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
+      <!-- CONTENT -->
+      <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
 
-    <!-- CONTENT -->
-    <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+        <!-- Small Heading -->
+        <span
+          class="inline-flex items-center px-5 py-2 rounded-full bg-white/70 backdrop-blur-md text-blue-700 font-semibold tracking-[3px] uppercase shadow-md mb-6">
 
-      <p class="uppercase tracking-[5px] text-blue-700 font-semibold mb-4" data-aos="fade-up" data-aos-delay="300">
+          About Ilahia
 
-        About Ilahia
+        </span>
 
-      </p>
+        <!-- Main Heading -->
+        <h2 class="text-4xl md:text-5xl font-black leading-tight text-slate-900 mb-8">
 
-      <h2 class="text-3xl md:text-4xl font-black leading-tight text-gray-900 mb-8" data-aos="fade-up"
-        data-aos-delay="500">
+          Shaping Tomorrow's
+          <span class="text-blue-700">Legal Leaders</span>
 
-        Shaping Tomorrow’s Legal Leaders
+        </h2>
 
-      </h2>
+        <!-- Content Card -->
+        <div class="bg-white/60 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-white/50 space-y-6">
 
-      <div class="space-y-6 text-gray-600 leading-8 text-justify">
+          <p class="text-lg text-slate-700 leading-8">
 
-        <p data-aos="fade-up" data-aos-delay="700">
+            Ilahia Law College is committed to academic excellence,
+            practical advocacy training, and ethical legal education.
+            We nurture students through innovative learning,
+            professional mentorship, and experiential legal practice.
 
-          Ilahia Law College is committed to academic excellence,
-          practical advocacy training, and ethical legal education.
+          </p>
 
-        </p>
+          <p class="text-lg text-slate-700 leading-8">
 
-        <p data-aos="fade-up" data-aos-delay="900">
+            Founded in 2024, the institution aims to create
+            future-ready legal professionals capable of contributing
+            meaningfully to justice, leadership, and societal
+            transformation in an evolving legal landscape.
 
-          Founded in 2024, the institution aims to create
-          future-ready legal professionals capable of contributing
-          meaningfully to justice and society.
+          </p>
 
-        </p>
+          <!-- Highlights -->
+          <div class="grid sm:grid-cols-3 gap-4 pt-4">
+
+            <div class="bg-white rounded-2xl p-4 text-center shadow-md hover:shadow-xl transition">
+
+              <h4 class="text-2xl font-bold text-blue-700">2024</h4>
+              <p class="text-sm text-gray-600 mt-1">Established</p>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 text-center shadow-md hover:shadow-xl transition">
+
+              <h4 class="text-2xl font-bold text-blue-700">100%</h4>
+              <p class="text-sm text-gray-600 mt-1">Legal Focus</p>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 text-center shadow-md hover:shadow-xl transition">
+
+              <h4 class="text-2xl font-bold text-blue-700">∞</h4>
+              <p class="text-sm text-gray-600 mt-1">Opportunities</p>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -310,18 +358,20 @@
 
 
 
-<section class="py-28 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+<section class="relative py-28 overflow-hidden bg-fixed bg-center bg-cover"
+  style="background-image: url('/static/images/banner/4.jpeg');">
+  <div class="absolute inset-0 bg-slate-950/60"></div>
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="relative max-w-7xl mx-auto px-6">
 
     <!-- HEADING -->
     <div class="text-center mb-24">
 
-      <p class="uppercase tracking-[6px] text-blue-700 font-bold mb-4">
+      <p class="uppercase tracking-[6px] text-white font-bold mb-4">
         Why Choose Us
       </p>
 
-      <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
+      <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">
 
         Why Choose Ilahia
 
@@ -329,7 +379,7 @@
 
       <div class="w-32 h-1 bg-blue-700 mx-auto rounded-full mt-8"></div>
 
-      <p class="max-w-3xl mx-auto text-gray-600 mt-8 text-lg leading-9">
+      <p class="max-w-3xl mx-auto text-gray-300 mt-8 text-lg leading-9">
         Experience an innovative legal education environment that blends
         academic excellence, professional ethics, leadership, and practical exposure.
       </p>
@@ -349,9 +399,9 @@
 
         <!-- ICON -->
         <div
-          class="w-24 h-24 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/open-book.gif" class="w-16 h-16 object-contain">
+          <img src="static/images/open-book.gif" class="w-20 h-20 object-contain">
 
         </div>
 
@@ -380,9 +430,9 @@
         </div>
 
         <div
-          class="w-24 h-24 rounded-3xl bg-gradient-to-br from-purple-50 to-indigo-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-purple-50 to-indigo-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/graduation.gif" class="w-16 h-16 object-contain">
+          <img src="static/images/graduation.gif" class="w-20 h-20 object-contain">
 
         </div>
 
@@ -409,9 +459,9 @@
         </div>
 
         <div
-          class="w-24 h-24 rounded-3xl bg-gradient-to-br from-emerald-50 to-teal-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-emerald-50 to-teal-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/open-enrollment.gif" class="w-16 h-16 object-contain">
+          <img src="static/images/open-enrollment.gif" class="w-20 h-20 object-contain">
 
         </div>
 
@@ -438,9 +488,9 @@
         </div>
 
         <div
-          class="w-24 h-24 rounded-3xl bg-gradient-to-br from-orange-50 to-amber-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-orange-50 to-amber-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/trophy.gif" class="w-16 h-16 object-contain">
+          <img src="static/images/trophy.gif" class="w-20 h-20 object-contain">
 
         </div>
 
@@ -467,9 +517,9 @@
         </div>
 
         <div
-          class="w-24 h-24 rounded-3xl bg-gradient-to-br from-cyan-50 to-sky-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-cyan-50 to-sky-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/open-book.gif" class="w-16 h-16 object-contain">
+          <img src="static/images/open-book.gif" class="w-20 h-20 object-contain">
 
         </div>
 
@@ -496,9 +546,9 @@
         </div>
 
         <div
-          class="w-24 h-24 rounded-3xl bg-gradient-to-br from-pink-50 to-rose-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-pink-50 to-rose-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/graduation.gif" class="w-16 h-16 object-contain">
+          <img src="static/images/graduation.gif" class="w-20 h-20 object-contain">
 
         </div>
 
@@ -525,9 +575,9 @@
         </div>
 
         <div
-          class="w-24 h-24 rounded-3xl bg-gradient-to-br from-lime-50 to-green-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-lime-50 to-green-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/open-enrollment.gif" class="w-16 h-16 object-contain">
+          <img src="static/images/open-enrollment.gif" class="w-20 h-20 object-contain">
 
         </div>
 
@@ -554,9 +604,9 @@
         </div>
 
         <div
-          class="w-24 h-24 rounded-3xl bg-gradient-to-br from-violet-50 to-fuchsia-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-violet-50 to-fuchsia-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/trophy.gif" class="w-16 h-16 object-contain">
+          <img src="static/images/trophy.gif" class="w-20 h-20 object-contain">
 
         </div>
 
@@ -582,7 +632,7 @@
 </section>
 
 
-<section class="py-24 bg-white">
+<section class="py-24 bg-blue-200">
 
   <div class="max-w-7xl mx-auto px-6">
 
@@ -642,7 +692,7 @@
 </section>
 
 
-<section class="relative py-24 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-blue-50">
+<section class="relative py-24 overflow-hidden bg-blue-200">
 
   <!-- Background Shapes -->
   <div class="absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-40"></div>
@@ -878,29 +928,41 @@
 
 
 <!-- Academic Programs Section -->
-<section class="py-28 bg-white overflow-hidden">
+<section class="relative py-28 overflow-hidden bg-fixed bg-center bg-cover"
+  style="background-image:url('/static/images/banner2.jpg');">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-slate-900/85"></div>
+
+  <!-- Decorative Elements -->
+  <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 right-10 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
 
     <!-- HEADING -->
     <div class="text-center mb-24">
 
-      <p class="uppercase tracking-[6px] text-blue-700 font-bold mb-4">
+      <p class="uppercase tracking-[6px] text-blue-400 font-bold mb-4">
+
         Academic Excellence
+
       </p>
 
-      <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
+      <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">
 
         Explore Our Academic Programs
 
       </h2>
 
-      <div class="w-32 h-1 bg-blue-700 mx-auto rounded-full mt-8"></div>
+      <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full mt-8"></div>
 
-      <p class="max-w-3xl mx-auto text-gray-600 mt-8 text-lg leading-9">
+      <p class="max-w-3xl mx-auto text-slate-300 mt-8 text-lg leading-9">
+
         Discover modern legal education programs designed to prepare
         students for excellence in advocacy, judiciary, corporate law,
         and public service.
+
       </p>
 
     </div>
@@ -912,38 +974,58 @@
 
       <!-- CARD -->
       <div
-        class="group bg-white rounded-[30px] overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
+        class="group relative overflow-hidden rounded-[30px] backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl hover:-translate-y-4 hover:shadow-blue-500/20 transition-all duration-500">
 
         <!-- IMAGE -->
         <div class="relative overflow-hidden h-[300px]">
 
-          <img src="{{ item.image.url }}" alt="Academic Program"
+          <img src="{{ item.image.url }}"
             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
 
-          <!-- OVERLAY -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent">
           </div>
 
+          <!-- Program Badge -->
+          <div
+            class="absolute top-5 left-5 bg-blue-600 text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
 
+            Program
+
+          </div>
 
         </div>
 
         <!-- CONTENT -->
-        <div class="p-8 relative">
+        <div class="relative p-8">
 
-          <!-- GLOW -->
-          <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-blue-100 opacity-40 blur-3xl">
+          <!-- Glow Effect -->
+          <div
+            class="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-500">
           </div>
 
-          <h3
-            class="relative text-sm font-black text-gray-900 leading-snug group-hover:text-blue-700 transition duration-300">
+          <div class="relative z-10">
 
-            {{ item.description }}
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white text-xl mb-6">
 
-          </h3>
+              <i class="fa-solid fa-scale-balanced"></i>
 
+            </div>
 
+            <h3 class="text-sm font-black text-white leading-snug group-hover:text-blue-300 transition duration-300">
 
+              {{ item.description }}
+
+            </h3>
+
+          </div>
+
+        </div>
+
+        <!-- Bottom Accent -->
+        <div
+          class="h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 scale-x-0 group-hover:scale-x-100 transition duration-500 origin-left">
         </div>
 
       </div>
@@ -962,7 +1044,7 @@
 
 
 <!-- LIBRARY RULES SECTION -->
-<section class="py-24 bg-slate-50 relative overflow-hidden">
+<section class="py-24 bg-blue-200 relative overflow-hidden">
 
   <!-- Background Blur -->
   <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
@@ -1151,7 +1233,7 @@
 
 
 <!-- COMPLIANCE & STUDENT WELFARE -->
-<section class="relative py-16 md:py-24 bg-slate-50 overflow-hidden">
+<section class="relative py-16 md:py-24 bg-blue-200 overflow-hidden">
 
   <!-- Background Effects -->
   <div class="absolute top-0 left-0 w-80 h-80 bg-red-500/5 rounded-full blur-3xl"></div>
@@ -1607,87 +1689,127 @@
 
 
 <!-- Contact Section -->
-<section class="section bg-gray">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="section-title" data-aos="fade-in">Get in Touch with Us</h2>
-      </div>
+<section id="contact" class="relative py-16 bg-slate-100">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold">Contact</p>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-slate-900">Get in Touch with Us</h2>
+      <p class="mt-3 text-slate-600">For admissions, events, partnerships or general enquiries — we’re here to help.
+        Fill the form or use the contact details beside.</p>
     </div>
-    <div class="row">
-      <!-- Contact Form -->
-      <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-in">
-        <!-- Display success or error messages -->
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+      <!-- Form -->
+      <div class="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up">
         {% if messages %}
-        <div>
+        <div class="space-y-3 mb-4">
           {% for message in messages %}
-          <div class="alert {% if message.tags == 'success' %}
-                    
-                    alert-success
-
-                  {% else %}
-                    
-                    alert-danger
-
-                  {% endif %}">{{ message }}</div>
+          <div
+            class="px-4 py-2 rounded-md text-sm {% if message.tags == 'success' %}bg-green-50 text-green-700 border border-green-100{% else %}bg-red-50 text-red-700 border border-red-100{% endif %}">
+            {{ message }}</div>
           {% endfor %}
         </div>
         {% endif %}
 
-        <form action="{% url 'send_message' %}" method="POST">
+        <form action="{% url 'send_message' %}" method="POST" class="space-y-4">
           {% csrf_token %}
-          <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Full Name" required
-            data-aos="fade-right" />
-          <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Your Email Address"
-            required data-aos="fade-right" />
-          <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Inquiry Subject"
-            required data-aos="fade-right" />
-          <textarea name="message" id="message" class="form-control mb-3" placeholder="Write your message here..."
-            rows="5" required data-aos="fade-right"></textarea>
-          <button type="submit" class="btn btn-primary" data-aos="fade-right">SEND MESSAGE</button>
+          <div>
+            <label for="name" class="sr-only">Full name</label>
+            <input id="name" name="name" required type="text" placeholder="Your full name"
+              class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <div>
+            <label for="email" class="sr-only">Email</label>
+            <input id="email" name="email" required type="email" placeholder="Your email address"
+              class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <div>
+            <label for="subject" class="sr-only">Subject</label>
+            <input id="subject" name="subject" required type="text" placeholder="Subject"
+              class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <div>
+            <label for="message" class="sr-only">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."
+              class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <button type="submit"
+              class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow">Send
+              Message</button>
+            <p class="text-sm text-slate-500">We respond within 1-2 business days.</p>
+          </div>
         </form>
       </div>
 
-      <!-- Contact Info -->
-      <div class="col-lg-5">
-        <p class="mb-5 text-justify" data-aos="fade-right">
-          For inquiries related to <strong>admissions, legal seminars, moot court competitions, or faculty
-            appointments</strong>, feel free to reach out via phone or email. Our dedicated team is here to assist you.
-        </p>
+      <!-- Contact Details -->
+      <div class="space-y-6">
+        <div class="rounded-2xl bg-blue-200 text-white p-6 shadow-lg" data-aos="fade-up">
+          <h3 class="text-xl font-bold">Contact Details</h3>
+          <p class="mt-2 text-sm opacity-90">Admissions, seminars, moot courts, faculty appointments — reach us using
+            the details below.</p>
 
-        <h5 class="text-dark" data-aos="fade-right">Contact Details</h5>
-        <br />
-        <ul class="list-unstyled">
-          <li>
-            <i class="fas fa-user-tie mr-2 text-dark"></i><strong>Chairman :</strong> +91 90745 23805
-          </li><br />
-          <li>
-            <i class="fas fa-chalkboard-teacher mr-2 text-dark"></i><strong>Principal :</strong> +91 94485 02518
-          </li><br />
-          <li>
-            <i class="fas fa-briefcase mr-2 text-dark"></i><strong>Administrative Officer :</strong> +91 94466 06549
-          </li><br />
-          <li>
-            <i class="fas fa-laptop-code mr-2 text-dark"></i><strong>System Administrator :</strong> +91 99478 89499
-          </li><br />
-          <li>
-            <i class="fas fa-briefcase mr-2 text-dark"></i><strong>Faculty Coordinator :</strong> +91 89219 08430
-          </li>
-        </ul>
+          <div class="mt-4 space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="inline-flex p-2 bg-white/20 rounded-lg text-white">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <div>
+                <p class="text-sm opacity-90">Phone</p>
+                <p class="font-semibold">+91 90745 23805</p>
+              </div>
+            </div>
 
-        <br /><br />
-        <h5 class="text-dark" data-aos="fade-right">Campus Address</h5>
-        <br />
-        <div class="d-flex">
-          <i class="fas fa-map-marker-alt text-dark mt-1 mr-3"></i>
-          <p class="mb-0">
-            Ilahia Nagar, Muvattupuzha<br />
-            Ernakulam District, Kerala<br />
-            India - 686673
-          </p>
+            <div class="flex items-start gap-3">
+              <span class="inline-flex p-2 bg-white/20 rounded-lg text-white">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <div>
+                <p class="text-sm opacity-90">Email</p>
+                <p class="font-semibold">info@ilahialawcollege.edu</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="inline-flex p-2 bg-white/20 rounded-lg text-white">
+                <i class="fa-solid fa-map-marker-alt"></i>
+              </span>
+              <div>
+                <p class="text-sm opacity-90">Address</p>
+                <p class="font-semibold">Ilahia Nagar, Muvattupuzha, Ernakulam, Kerala - 686673</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <a href="mailto:info@ilahialawcollege.edu"
+              class="inline-flex items-center gap-2 bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold hover:opacity-90">Email
+              Us</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-4 shadow-sm">
+          <h4 class="text-sm font-semibold text-slate-700 mb-3">Key Contacts</h4>
+          <ul class="space-y-3 text-slate-600">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-user-tie text-blue-600"></i> Chairman: <span
+                class="font-medium ml-2">+91 90745 23805</span></li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-chalkboard-teacher text-blue-600"></i> Principal:
+              <span class="font-medium ml-2">+91 94485 02518</span>
+            </li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-briefcase text-blue-600"></i> Admin Officer: <span
+                class="font-medium ml-2">+91 94466 06549</span></li>
+          </ul>
         </div>
       </div>
+
     </div>
+
   </div>
 </section>
 <!-- /Contact Section -->
