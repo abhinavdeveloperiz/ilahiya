@@ -109,16 +109,45 @@
 
 
 
-  <!-- WhatsApp and Call Buttons -->
-  <div class="fixed-buttons">
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/919072075311" class="btn-whatsapp-pulse whatsapp-button btn btn-success"
-      aria-label="WhatsApp Us" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  <!-- WhatsApp Button - Left Side -->
+  <a href="https://wa.me/919072075311" target="_blank" class="fixed left-0 top-1/2 -translate-y-1/2 z-50
+           flex items-center gap-3
+           bg-green-500 hover:bg-green-600
+           text-white font-semibold
+           px-3 py-4
+           rounded-r-2xl
+           shadow-2xl
+           transition-all duration-300
+           hover:pr-8">
 
-    <!-- Call Button -->
-    <a href="tel:+919072075311" class="btn-whatsapp-pulse call-button btn btn-primary" aria-label="Call Us"><i
-        class="fa-solid fa-phone"></i></a>
-  </div>
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+
+    <span class="hidden md:block">
+      WhatsApp Us
+    </span>
+
+  </a>
+
+  <!-- Call Button - Right Side -->
+  <a href="tel:+919072075311" class="fixed right-0 top-1/2 -translate-y-1/2 z-50
+           flex items-center gap-3
+           bg-blue-600 hover:bg-blue-700
+           text-white font-semibold
+           px-3 py-4
+           rounded-l-2xl
+           shadow-2xl
+           transition-all duration-300
+           hover:pl-8">
+
+    <span class="hidden md:block">
+      Call Now
+    </span>
+
+    <i class="fa-solid fa-phone text-xl"></i>
+
+  </a>
+
+
 
   {% block content %}
 
