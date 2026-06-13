@@ -1,89 +1,52 @@
-{% extends 'base.html' %}
+﻿{% extends 'base.html' %}
+{% block title %}Management | Ilahia Law College
+
+{% endblock %}
 {% block content %}
-<!-- Page Title Section -->
-<section class="page-title-section overlay" data-background="static/images/title.jpeg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item">
-            <a class="h2 text-primary font-secondary" href="@@page-link">Management</a>
-          </li>
-        </ul>
-        <p class="text-lighten">
-          <a href="/">Home</a> <i class="fa-solid fa-angles-right"></i> Management
-        </p>
-      </div>
-    </div>
-  </div>
+
+<!-- page title -->
+<section class="relative h-[80vh] bg-fixed bg-center bg-cover flex items-center"
+  style="background-image: url('/static/newimages/cafe.JPG');">
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/20"></div>
+
+
+
 </section>
 
-<!-- Management Team Section -->
-<section class="section">
-  <div class="container">
-    <!-- Section Title -->
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title" data-aos="fade-left">Management Desk</h2>
-        <p class="lead text-dark mt-3 mb-4 text-justify" data-aos="fade-right" style="font-size: 18px;">
-          Ilahia Law College is managed by Ilahia Trust. The trust is the noble dream of a group of visionaries hailing
-          from diverse socio-economic, political, cultural and business circuits in and around Muvattupuzha that came
-          true in the year 1992. Ever since, the Trust has been catering to the educational aspirations of the region.
-          The Trust is steered by a 13-member governing board and its prime objective is to attend to the educational
-          needs of the knowledge seekers located in and around its place of origin. Now Ilahia Trust has 70 members, of
-          which 13 members are elected to the executive committee. The establishment of a lower primary school
-          (Kavumkara Muslim L.P. School) in 1992 was an affirmation of its phenomenal growth. The commencement of a
-          prestigious English medium School (of CBSE Syllabus) named Ilahia Public School in the same year added another
-          landmark to its timeline of achievements.
-        </p>
+<section class="relative py-24 bg-[#0A192F] overflow-hidden">
+  <div class="absolute top-0 right-0 w-72 h-72 bg-blue-900/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 bg-slate-900/20 rounded-full blur-3xl"></div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="uppercase tracking-[6px] text-blue-400 font-semibold mb-4">Management</p>
+      <h1 class="text-4xl md:text-5xl font-black text-white">Management Desk</h1>
+      <p class="mt-6 text-gray-300 max-w-3xl mx-auto leading-8">Ilahia Law College is guided by a strong governing board
+        and experienced management team committed to academic excellence and institutional growth.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div class="rounded-3xl bg-slate-800 border border-white/10 p-10 shadow-2xl">
+        <h2 class="text-3xl font-bold text-white mb-6">Trust and Leadership</h2>
+        <p class="text-gray-300 leading-8">Ilahia Trust has led the college since 1992, nurturing the institution's
+          mission through strategic planning, educational investment and community-focused governance.</p>
+      </div>
+      <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+        <img src="/static/images/banner1.JPG" alt="Management" class="w-full h-full object-cover min-h-[360px]">
       </div>
     </div>
-
-    <!-- Management Cards -->
-    <div class="row justify-content-center text-center">
-
-      {% for m in management%}
-      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="card border-0 rounded-lg shadow-sm">
-          <img src="{{m.image.url}}" class="card-img-top rounded-top management-image" alt="Principal" />
-          <div class="card-body">
-            <h5 class="card-title mb-1">{{m.position}}</h5>
-            <p class="text-dark mb-0">{{m.name}}</p>
-          </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+      {% for m in management %}
+      <div
+        class="group rounded-[30px] bg-slate-800 border border-slate-700 p-6 shadow-xl transition hover:-translate-y-2 duration-300">
+        <div class="overflow-hidden rounded-3xl mb-5">
+          <img src="{{ m.image.url }}" alt="{{ m.name }}" class="w-full h-72 object-cover">
         </div>
+        <h3 class="text-2xl font-bold text-white mb-2">{{ m.position }}</h3>
+        <p class="text-blue-300 font-semibold mb-3">{{ m.name }}</p>
       </div>
       {% endfor %}
-     
     </div>
   </div>
 </section>
-
-<!-- CSS override -->
-<style>
-  /* Keep existing background override */
-  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
-    background-image: url('static/images/title.jpeg') !important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  /* Set fixed height to cards images so full image is shown nicely */
-  .management-image {
-    height: 350px;
-    /* adjust height as needed */
-    object-fit: cover;
-    width: 100%;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-  }
-
-  /* Optional: ensure card height fits image + content */
-  .card {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    /* allow flexible height */
-  }
-</style>
 {% endblock %}

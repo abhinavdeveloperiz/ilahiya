@@ -27,4 +27,22 @@
     background-repeat: no-repeat;
   }
 </style>
+
+<!-- Page-level dark theme -->
+<style>/* ILH_THEME */
+section.page-title-section.overlay {min-height:320px;position:relative;background-size:cover;background-position:center;background-repeat:no-repeat;padding:4rem 0;}
+section.page-title-section.overlay::after {content:"";position:absolute;inset:0;background:rgba(8,15,39,0.80);z-index:1;}
+section.page-title-section.overlay .container,section.page-title-section.overlay .row,section.page-title-section.overlay .list-inline,section.page-title-section.overlay .col-md-8 {position:relative;z-index:2;}
+section.page-title-section.overlay .text-lighten,section.page-title-section.overlay .h2,section.page-title-section.overlay .section-title,section.page-title-section.overlay .font-secondary,section.page-title-section.overlay p,section.page-title-section.overlay a {color:#f8fafc !important;}
+section.page-title-section.overlay a:hover {color:#7dd3fc !important;}
+section.page-title-section.overlay .text-primary,section.page-title-section.overlay .text-white {color:#f8fafc !important;}
+section.page-title-section.overlay .font-secondary {color:#f8fafc !important;}
+section.section,section.section-sm,section.bg-gray,section.bg-white,section.bg-light,section.bg-slate-50,section.bg-gray-100,section.bg-gray-200 {background-color:#0A192F !important;color:#e2e8f0 !important;}
+section.section .card,section.section .card-body,section.section .alert,section.section .list-group-item,section.section .border,section.section .facility-image-container,section.section .hostel-image-container,section.section .card-title,section.section .card-text,section.section .btn,section.section .form-control {background-color:#0f172a !important;border-color:rgba(148,163,184,0.2) !important;color:#e2e8f0 !important;}
+section.section .btn-primary,section.section .btn.btn-primary,section.section .btn-primary:hover,section.section .btn.btn-primary:hover {background-color:#2563eb !important;border-color:#2563eb !important;color:#fff !important;}
+section.section a,section.section .text-color,section.section .btn-link,section.section .list-inline-item a {color:#7dd3fc !important;}
+section.section a:hover,section.section .text-color:hover {color:#38bdf8 !important;}
+section.section .overlay-text {background:rgba(15,23,42,0.90) !important;}
+section.section .facility-image-container img,section.section .hostel-image-container img,section.section .card-img-top,section.section img {object-fit:cover !important;}
+</style>
 {% endblock %}

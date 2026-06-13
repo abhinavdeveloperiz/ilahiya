@@ -12,13 +12,21 @@ This module contains the view functions for the Ilahia application.
 
 
 def index(request):
-    banner=Home.objects.order_by('-id').first()
-    academic=Academic_Program.objects.all()
-    course=Courses.objects.all()
-    notice=notice=Notice.objects.all()
-    events=UpComingEvents.objects.all()
+    banner_obj = Home.objects.order_by('-id').first()
+    # Collect up to 7 banner image URLs from the latest Home object
+    banner_images = []
+    if banner_obj:
+        for attr in ['image', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7']:
+            img = getattr(banner_obj, attr)
+            if img:
+                banner_images.append(img.url)
+    academic = Academic_Program.objects.order_by('-id')
+    course = Courses.objects.order_by('-id')
+    notice = Notice.objects.order_by('-date', '-time')
+    events = UpComingEvents.objects.order_by('-date', '-time')
     context={
-        'banner':banner,
+        'banner': banner_obj,
+        'banner_images': banner_images,
         'academic':academic,
         'course':course,
         'notice':notice,

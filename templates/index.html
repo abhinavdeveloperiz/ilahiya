@@ -19,129 +19,16 @@
   <!-- SLIDER -->
   <div class="relative w-full h-full">
 
-    <!-- SLIDE 1 -->
+    {% if banner_images %}
+    {% for img in banner_images %}
+    <div
+      class="heroSlide absolute inset-0 {% if forloop.first %}opacity-100 z-10{% else %}opacity-0{% endif %} transition-all duration-1000">
+      <img src="{{ img }}" class="w-full h-full object-cover">
+    </div>
+    {% endfor %}
+    {% else %}
     <div class="heroSlide absolute inset-0 opacity-100 transition-all duration-1000 z-10">
-
-      <img src="{{ banner.image.url }}" class="w-full h-full object-cover">
-
-      <!-- OVERLAY -->
-      <div class="absolute inset-0 bg-black/50"></div>
-
-      <!-- CONTENT -->
-      <div class="absolute inset-0 flex items-center z-20">
-
-        <div class="max-w-7xl mx-auto px-6 w-full">
-
-          <div class="max-w-3xl">
-
-            <h1 class="text-white uppercase font-extrabold
-                                   text-4xl md:text-6xl leading-tight mb-6">
-
-              Ilahia Law College Excellence
-
-            </h1>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- SLIDE 2 -->
-    {% if banner.image2 %}
-    <div class="heroSlide absolute inset-0 opacity-0 transition-all duration-1000">
-
-      <img src="{{ banner.image2.url }}" class="w-full h-full object-cover">
-
-      <!-- OVERLAY -->
-      <div class="absolute inset-0 bg-black/50"></div>
-
-      <!-- CONTENT -->
-      <div class="absolute inset-0 flex items-center z-20">
-
-        <div class="max-w-7xl mx-auto px-6 w-full">
-
-          <div class="max-w-3xl">
-
-            <h1 class="text-white uppercase font-extrabold
-                                   text-4xl md:text-6xl leading-tight mb-6">
-
-              Build Your Future In Law
-
-            </h1>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-    {% endif %}
-
-    {% if banner.image3 %}
-    <!-- SLIDE 3 -->
-    <div class="heroSlide absolute inset-0 opacity-0 transition-all duration-1000">
-
-      <img src="{{ banner.image3.url }}" class="w-full h-full object-cover">
-
-      <!-- OVERLAY -->
-      <div class="absolute inset-0 bg-black/50"></div>
-
-      <!-- CONTENT -->
-      <div class="absolute inset-0 flex items-center z-20">
-
-        <div class="max-w-7xl mx-auto px-6 w-full">
-
-          <div class="max-w-3xl">
-
-            <h1 class="text-white uppercase font-extrabold
-                                   text-4xl md:text-6xl leading-tight mb-6">
-
-              Discover Legal Excellence
-
-            </h1>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-    {% endif %}
-
-    {% if banner.image4 %}
-    <!-- SLIDE 4 -->
-    <div class="heroSlide absolute inset-0 opacity-0 transition-all duration-1000">
-
-      <img src="{{ banner.image4.url }}" class="w-full h-full object-cover">
-
-      <!-- OVERLAY -->
-      <div class="absolute inset-0 bg-black/50"></div>
-
-      <!-- CONTENT -->
-      <div class="absolute inset-0 flex items-center z-20">
-
-        <div class="max-w-7xl mx-auto px-6 w-full">
-
-          <div class="max-w-3xl">
-
-            <h1 class="text-white uppercase font-extrabold
-                                   text-4xl md:text-6xl leading-tight mb-6">
-
-              Shape Tomorrow’s Legal Leaders
-
-            </h1>
-
-          </div>
-
-        </div>
-
-      </div>
-
+      <img src="/static/images/ilahia.jpeg" class="w-full h-full object-cover">
     </div>
     {% endif %}
 
@@ -150,18 +37,13 @@
   <!-- DOTS -->
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-3">
 
+    {% if banner_images %}
+    {% for img in banner_images %}
+    <button
+      class="heroDot {% if forloop.first %}w-9 h-3 rounded-full bg-white{% else %}w-3 h-3 rounded-full bg-white/50{% endif %} transition-all duration-300"></button>
+    {% endfor %}
+    {% else %}
     <button class="heroDot w-9 h-3 rounded-full bg-white transition-all duration-300"></button>
-
-    {% if banner.image2 %}
-    <button class="heroDot w-3 h-3 rounded-full bg-white/50 transition-all duration-300"></button>
-    {% endif %}
-
-    {% if banner.image3 %}
-    <button class="heroDot w-3 h-3 rounded-full bg-white/50 transition-all duration-300"></button>
-    {% endif %}
-
-    {% if banner.image4 %}
-    <button class="heroDot w-3 h-3 rounded-full bg-white/50 transition-all duration-300"></button>
     {% endif %}
 
   </div>
@@ -248,11 +130,11 @@
 
 
 
-<section class="py-24 bg-blue-200 overflow-hidden relative">
+<section class="py-24 bg-[#0A192F] overflow-hidden relative">
 
   <!-- Decorative Background -->
-  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-300/40 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 left-0 w-80 h-80 bg-white/30 rounded-full blur-3xl"></div>
+  <div class="absolute top-0 right-0 w-40 h-96 bg-blue-300/40 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-40 h-80 bg-white/30 rounded-full blur-3xl"></div>
 
   <div class="max-w-7xl mx-auto px-6 relative z-10">
 
@@ -289,7 +171,7 @@
         </span>
 
         <!-- Main Heading -->
-        <h2 class="text-4xl md:text-5xl font-black leading-tight text-slate-900 mb-8">
+        <h2 class="text-4xl md:text-5xl font-black leading-tight text-slate-100 mb-8">
 
           Shaping Tomorrow's
           <span class="text-blue-700">Legal Leaders</span>
@@ -297,9 +179,9 @@
         </h2>
 
         <!-- Content Card -->
-        <div class="bg-white/60 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-white/50 space-y-6">
+        <div class="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-white/50 space-y-6">
 
-          <p class="text-lg text-slate-700 leading-8">
+          <p class="text-xl text-slate-700 leading-8">
 
             Ilahia Law College is committed to academic excellence,
             practical advocacy training, and ethical legal education.
@@ -308,7 +190,7 @@
 
           </p>
 
-          <p class="text-lg text-slate-700 leading-8">
+          <p class="text-xl text-slate-700 leading-8">
 
             Founded in 2024, the institution aims to create
             future-ready legal professionals capable of contributing
@@ -387,11 +269,11 @@
     </div>
 
     <!-- GRID -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
       <!-- CARD -->
       <div
-        class="group relative bg-white rounded-[28px] p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-3">
+        class="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
 
         <!-- TOP GLOW -->
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400">
@@ -399,228 +281,228 @@
 
         <!-- ICON -->
         <div
-          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-4 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/open-book.gif" class="w-20 h-20 object-contain">
+          <img src="static/images/open-book.gif" class="w-12 h-12 object-contain">
 
         </div>
 
         <!-- CONTENT -->
-        <h3 class="text-2xl font-black text-gray-900 mb-5 leading-snug">
+        <h3 class="text-lg font-black text-gray-900 mb-3 leading-snug">
           Academic Excellence
         </h3>
 
-        <p class="text-gray-600 leading-8 text-[15px]">
+        <p class="text-gray-600 leading-6 text-sm">
           Rigorous legal curriculum integrated with practical
           courtroom exposure and advanced legal methodologies.
         </p>
 
         <!-- HOVER EFFECT -->
         <div
-          class="absolute -bottom-16 -right-16 w-40 h-40 rounded-full bg-blue-100 opacity-0 group-hover:opacity-100 transition duration-700">
+          class="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-blue-100 opacity-0 group-hover:opacity-100 transition duration-700">
         </div>
 
       </div>
 
       <!-- CARD -->
       <div
-        class="group relative bg-white rounded-[28px] p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-3">
+        class="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
 
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-indigo-500 to-pink-400">
         </div>
 
         <div
-          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-purple-50 to-indigo-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-100 flex items-center justify-center mb-4 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/graduation.gif" class="w-20 h-20 object-contain">
+          <img src="static/images/graduation.gif" class="w-12 h-12 object-contain">
 
         </div>
 
-        <h3 class="text-2xl font-black text-gray-900 mb-5 leading-snug">
+        <h3 class="text-lg font-black text-gray-900 mb-3 leading-snug">
           Practical Training
         </h3>
 
-        <p class="text-gray-600 leading-8 text-[15px]">
+        <p class="text-gray-600 leading-6 text-sm">
           Moot courts, internships, legal aid clinics,
           seminars, and advocacy workshops.
         </p>
 
         <div
-          class="absolute -bottom-16 -right-16 w-40 h-40 rounded-full bg-purple-100 opacity-0 group-hover:opacity-100 transition duration-700">
+          class="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-purple-100 opacity-0 group-hover:opacity-100 transition duration-700">
         </div>
 
       </div>
 
       <!-- CARD -->
       <div
-        class="group relative bg-white rounded-[28px] p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-3">
+        class="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
 
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-green-400">
         </div>
 
         <div
-          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-emerald-50 to-teal-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-100 flex items-center justify-center mb-4 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/open-enrollment.gif" class="w-20 h-20 object-contain">
+          <img src="static/images/open-enrollment.gif" class="w-12 h-12 object-contain">
 
         </div>
 
-        <h3 class="text-2xl font-black text-gray-900 mb-5 leading-snug">
+        <h3 class="text-lg font-black text-gray-900 mb-3 leading-snug">
           Interdisciplinary Learning
         </h3>
 
-        <p class="text-gray-600 leading-8 text-[15px]">
+        <p class="text-gray-600 leading-6 text-sm">
           Integrated learning with social sciences,
           governance, and public policy.
         </p>
 
         <div
-          class="absolute -bottom-16 -right-16 w-40 h-40 rounded-full bg-emerald-100 opacity-0 group-hover:opacity-100 transition duration-700">
+          class="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-emerald-100 opacity-0 group-hover:opacity-100 transition duration-700">
         </div>
 
       </div>
 
       <!-- CARD -->
       <div
-        class="group relative bg-white rounded-[28px] p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-3">
+        class="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
 
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400">
         </div>
 
         <div
-          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-orange-50 to-amber-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-50 to-amber-100 flex items-center justify-center mb-4 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/trophy.gif" class="w-20 h-20 object-contain">
+          <img src="static/images/trophy.gif" class="w-12 h-12 object-contain">
 
         </div>
 
-        <h3 class="text-2xl font-black text-gray-900 mb-5 leading-snug">
+        <h3 class="text-lg font-black text-gray-900 mb-3 leading-snug">
           Legal Ethics & Integrity
         </h3>
 
-        <p class="text-gray-600 leading-8 text-[15px]">
+        <p class="text-gray-600 leading-6 text-sm">
           Building responsible legal professionals
           committed to ethics and justice.
         </p>
 
         <div
-          class="absolute -bottom-16 -right-16 w-40 h-40 rounded-full bg-orange-100 opacity-0 group-hover:opacity-100 transition duration-700">
+          class="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-orange-100 opacity-0 group-hover:opacity-100 transition duration-700">
         </div>
 
       </div>
 
       <!-- CARD -->
       <div
-        class="group relative bg-white rounded-[28px] p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-3">
+        class="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
 
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-400">
         </div>
 
         <div
-          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-cyan-50 to-sky-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-50 to-sky-100 flex items-center justify-center mb-4 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/open-book.gif" class="w-20 h-20 object-contain">
+          <img src="static/images/open-book.gif" class="w-12 h-12 object-contain">
 
         </div>
 
-        <h3 class="text-2xl font-black text-gray-900 mb-5 leading-snug">
+        <h3 class="text-lg font-black text-gray-900 mb-3 leading-snug">
           Innovative Research
         </h3>
 
-        <p class="text-gray-600 leading-8 text-[15px]">
+        <p class="text-gray-600 leading-6 text-sm">
           Encouraging impactful legal research and
           policy development initiatives.
         </p>
 
         <div
-          class="absolute -bottom-16 -right-16 w-40 h-40 rounded-full bg-cyan-100 opacity-0 group-hover:opacity-100 transition duration-700">
+          class="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-cyan-100 opacity-0 group-hover:opacity-100 transition duration-700">
         </div>
 
       </div>
 
       <!-- CARD -->
       <div
-        class="group relative bg-white rounded-[28px] p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-3">
+        class="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
 
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-rose-500 to-red-400">
         </div>
 
         <div
-          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-pink-50 to-rose-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-20 h-20 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-100 flex items-center justify-center mb-4 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/graduation.gif" class="w-20 h-20 object-contain">
+          <img src="static/images/graduation.gif" class="w-12 h-12 object-contain">
 
         </div>
 
-        <h3 class="text-2xl font-black text-gray-900 mb-5 leading-snug">
+        <h3 class="text-lg font-black text-gray-900 mb-3 leading-snug">
           Inclusive Environment
         </h3>
 
-        <p class="text-gray-600 leading-8 text-[15px]">
+        <p class="text-gray-600 leading-6 text-sm">
           Equal opportunity and collaborative
           learning for every student.
         </p>
 
         <div
-          class="absolute -bottom-16 -right-16 w-40 h-40 rounded-full bg-pink-100 opacity-0 group-hover:opacity-100 transition duration-700">
+          class="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-pink-100 opacity-0 group-hover:opacity-100 transition duration-700">
         </div>
 
       </div>
 
       <!-- CARD -->
       <div
-        class="group relative bg-white rounded-[28px] p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-3">
+        class="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
 
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-lime-500 via-green-500 to-emerald-400">
         </div>
 
         <div
-          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-lime-50 to-green-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-20 h-20 rounded-2xl bg-gradient-to-br from-lime-50 to-green-100 flex items-center justify-center mb-4 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/open-enrollment.gif" class="w-20 h-20 object-contain">
+          <img src="static/images/open-enrollment.gif" class="w-12 h-12 object-contain">
 
         </div>
 
-        <h3 class="text-2xl font-black text-gray-900 mb-5 leading-snug">
+        <h3 class="text-lg font-black text-gray-900 mb-3 leading-snug">
           Holistic Development
         </h3>
 
-        <p class="text-gray-600 leading-8 text-[15px]">
+        <p class="text-gray-600 leading-6 text-sm">
           Leadership, communication skills,
           and personality development programs.
         </p>
 
         <div
-          class="absolute -bottom-16 -right-16 w-40 h-40 rounded-full bg-lime-100 opacity-0 group-hover:opacity-100 transition duration-700">
+          class="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-lime-100 opacity-0 group-hover:opacity-100 transition duration-700">
         </div>
 
       </div>
 
       <!-- CARD -->
       <div
-        class="group relative bg-white rounded-[28px] p-7 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-3">
+        class="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
 
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-400">
         </div>
 
         <div
-          class="w-28 h-28 rounded-3xl bg-gradient-to-br from-violet-50 to-fuchsia-100 flex items-center justify-center mb-8 group-hover:scale-110 transition duration-500 shadow-inner">
+          class="w-20 h-20 rounded-2xl bg-gradient-to-br from-violet-50 to-fuchsia-100 flex items-center justify-center mb-4 group-hover:scale-110 transition duration-500 shadow-inner">
 
-          <img src="static/images/trophy.gif" class="w-20 h-20 object-contain">
+          <img src="static/images/trophy.gif" class="w-12 h-12 object-contain">
 
         </div>
 
-        <h3 class="text-2xl font-black text-gray-900 mb-5 leading-snug">
+        <h3 class="text-lg font-black text-gray-900 mb-3 leading-snug">
           Career Opportunities
         </h3>
 
-        <p class="text-gray-600 leading-8 text-[15px]">
+        <p class="text-gray-600 leading-6 text-sm">
           Preparing students for judiciary,
           litigation, corporate law, and public service.
         </p>
 
         <div
-          class="absolute -bottom-16 -right-16 w-40 h-40 rounded-full bg-violet-100 opacity-0 group-hover:opacity-100 transition duration-700">
+          class="absolute -bottom-12 -right-12 w-28 h-28 rounded-full bg-violet-100 opacity-0 group-hover:opacity-100 transition duration-700">
         </div>
 
       </div>
@@ -632,50 +514,76 @@
 </section>
 
 
-<section class="py-24 bg-blue-200">
+<section class="relative py-24 overflow-hidden bg-fixed bg-center bg-cover"
+  style="background-image:url('/static/newimages/6.JPG');">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/50"></div>
 
+  <!-- Decorative Effects -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-700/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-700/10 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
     <div class="text-center mb-20">
 
-      <p class="uppercase tracking-[5px] text-blue-700 font-semibold mb-3">
-        Academics
-      </p>
+      <span
+        class="inline-block px-6 py-2 mb-5 text-xs font-bold tracking-[4px] uppercase rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
 
-      <h2 class="text-3xl md:text-4xl font-black text-gray-900">
+        Academics
+
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-black text-white uppercase mb-6">
 
         Courses Offered
 
       </h2>
 
+      <div class="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
+
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <!-- Courses -->
+    <div class="grid md:grid-cols-2 gap-10">
 
       {% for c in course %}
 
-      <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+      <div
+        class="group bg-white/5 backdrop-blur-lg border border-white/10 rounded-[30px] overflow-hidden shadow-xl hover:-translate-y-3 hover:bg-white/10 transition-all duration-500">
 
+        <!-- Image -->
         <div class="overflow-hidden">
 
           <img src="{{ c.image.url }}" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
 
         </div>
 
+        <!-- Content -->
         <div class="p-8">
 
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          <h3 class="text-2xl font-bold text-white mb-4">
+
             {{ c.course }}
+
           </h3>
 
-          <p class="text-gray-600 leading-7 mb-6">
+          <p class="text-slate-300 leading-7 mb-8">
+
             {{ c.description|truncatewords:20 }}
+
           </p>
 
-          <a href="{% url 'fiveyears' c.id %}"
-            class="inline-flex px-6 py-3 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
+          <a href="{% url 'fiveyears' c.id %}" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl
+                        bg-blue-600 text-white font-semibold
+                        border border-blue-500
+                        shadow-lg hover:bg-blue-700 transition">
 
             Apply Now
+
+            <i class="fa-solid fa-arrow-right"></i>
 
           </a>
 
@@ -692,11 +600,11 @@
 </section>
 
 
-<section class="relative py-24 overflow-hidden bg-blue-200">
+<section class="relative py-24 overflow-hidden bg-[#0A192F]">
 
   <!-- Background Shapes -->
-  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-40"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-40"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-900/20 rounded-full blur-3xl opacity-40"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-900/20 rounded-full blur-3xl opacity-40"></div>
 
   <div class="relative max-w-7xl mx-auto px-6">
 
@@ -704,15 +612,15 @@
     <div class="text-center mb-16">
 
       <span
-        class="inline-flex items-center px-5 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold tracking-widest uppercase mb-4">
+        class="inline-flex items-center px-5 py-2 rounded-full bg-blue-900 text-blue-300 text-sm font-semibold tracking-widest uppercase mb-4">
         Latest Updates
       </span>
 
-      <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-5">
+      <h2 class="text-4xl md:text-5xl font-black text-white mb-5">
         Notice Board
       </h2>
 
-      <div class="w-24 h-1 bg-blue-700 mx-auto rounded-full"></div>
+      <div class="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
 
     </div>
 
@@ -722,10 +630,10 @@
       {% for n in notice %}
 
       <div
-        class="group bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-3 hover:shadow-2xl transition-all duration-500">
+        class="group bg-slate-800 rounded-3xl shadow-lg border border-slate-700 overflow-hidden hover:-translate-y-3 hover:shadow-2xl transition-all duration-500">
 
         <!-- Top Border -->
-        <div class="h-2 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+        <div class="h-2 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
 
         <div class="p-8">
 
@@ -733,21 +641,21 @@
 
           <!-- Date -->
           <div
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-5">
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-700 text-blue-300 text-sm font-semibold mb-5">
 
             📅 {{ n.date }} &nbsp; • &nbsp; ⏰ {{ n.time }}
 
           </div>
 
           <!-- Title -->
-          <h3 class="text-xl font-bold text-gray-900 mb-4 leading-snug group-hover:text-blue-700 transition">
+          <h3 class="text-xl font-bold text-white mb-4 leading-snug group-hover:text-blue-300 transition">
 
             {{ n.title }}
 
           </h3>
 
           <!-- Description -->
-          <p class="text-gray-600 leading-7 line-clamp-4">
+          <p class="text-gray-300 leading-7 line-clamp-4">
 
             {{ n.description }}
 
@@ -766,35 +674,38 @@
 </section>
 
 
-<section class="py-24 bg-white relative overflow-hidden">
+<section class="py-24 relative overflow-hidden bg-fixed bg-center bg-cover"
+  style="background-image: url('/static/newimages/7.JPG');">
 
-  <!-- Background Elements -->
-  <div class="absolute top-0 right-0 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 left-0 w-80 h-80 bg-indigo-100/40 rounded-full blur-3xl"></div>
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/45"></div>
 
+  <!-- Decorative Blur -->
+  <div class="absolute top-0 right-0 w-80 h-80 bg-blue-900/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-80 bg-indigo-900/20 rounded-full blur-3xl"></div>
   <div class="relative max-w-7xl mx-auto px-6">
 
     <!-- Heading -->
     <div class="text-center mb-20">
 
       <span
-        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold tracking-[2px] uppercase mb-6">
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-800 border border-slate-700 text-blue-300 text-sm font-semibold tracking-[2px] uppercase mb-6">
 
         <i class="fa-solid fa-calendar-days"></i>
         Latest Updates
 
       </span>
 
-      <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 leading-tight">
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-6 leading-tight">
 
         Upcoming
-        <span class="text-blue-600">
+        <span class="text-blue-400">
           Events
         </span>
 
       </h2>
 
-      <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-8">
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto leading-8">
 
         Stay updated with seminars, workshops, cultural programs,
         competitions and campus activities.
@@ -812,7 +723,7 @@
       {% for n in events %}
 
       <div
-        class="group bg-white border border-gray-100 p-8 rounded-[30px] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+        class="group bg-slate-800 border border-slate-700 p-8 rounded-[30px] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
 
         <!-- Hover Gradient -->
         <div
@@ -821,28 +732,28 @@
 
         <!-- Icon -->
         <div
-          class="relative w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
+          class="relative w-16 h-16 rounded-2xl bg-slate-700 text-blue-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
 
           <i class="fa-solid fa-calendar-check"></i>
 
         </div>
 
         <!-- Date -->
-        <p class="relative text-sm text-blue-700 font-semibold mb-3 tracking-wide">
+        <p class="relative text-sm text-blue-400 font-semibold mb-3 tracking-wide">
 
           {{ n.date }} • {{ n.time }}
 
         </p>
 
         <!-- Title -->
-        <h3 class="relative text-2xl font-bold text-gray-900 mb-4 leading-snug">
+        <h3 class="relative text-2xl font-bold text-white mb-4 leading-snug">
 
           {{ n.title }}
 
         </h3>
 
         <!-- Description -->
-        <p class="relative text-gray-600 leading-7">
+        <p class="relative text-gray-300 leading-7">
 
           {{ n.description }}
 
@@ -861,22 +772,22 @@
     <div class="max-w-3xl mx-auto">
 
       <div
-        class="relative bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 rounded-[40px] p-12 md:p-16 text-center overflow-hidden shadow-lg">
+        class="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-[40px] p-12 md:p-16 text-center overflow-hidden shadow-lg">
 
         <!-- Decorative Circles -->
-        <div class="absolute top-0 right-0 w-40 h-40 bg-blue-200/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-40 h-40 bg-indigo-200/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-0 w-40 h-40 bg-blue-900/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-40 h-40 bg-indigo-900/20 rounded-full blur-3xl"></div>
 
         <!-- Icon -->
         <div
-          class="relative w-28 h-28 mx-auto rounded-full bg-white shadow-xl flex items-center justify-center mb-8 border border-blue-100">
+          class="relative w-28 h-28 mx-auto rounded-full bg-slate-700 shadow-xl flex items-center justify-center mb-8 border border-slate-600">
 
-          <i class="fa-regular fa-calendar-xmark text-5xl text-blue-600"></i>
+          <i class="fa-regular fa-calendar-xmark text-5xl text-blue-400"></i>
 
         </div>
 
         <!-- Heading -->
-        <h3 class="relative text-3xl md:text-4xl font-black text-gray-900 mb-5">
+        <h3 class="relative text-3xl md:text-4xl font-black text-white mb-5">
 
           No Upcoming Events
 
@@ -927,317 +838,20 @@
 
 
 
-<!-- Academic Programs Section -->
-<section class="relative py-28 overflow-hidden bg-fixed bg-center bg-cover"
-  style="background-image:url('/static/images/banner2.jpg');">
 
-  <!-- Dark Overlay -->
-  <div class="absolute inset-0 bg-slate-900/85"></div>
 
-  <!-- Decorative Elements -->
-  <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-20 right-10 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6">
 
-    <!-- HEADING -->
-    <div class="text-center mb-24">
-
-      <p class="uppercase tracking-[6px] text-blue-400 font-bold mb-4">
-
-        Academic Excellence
-
-      </p>
-
-      <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">
-
-        Explore Our Academic Programs
-
-      </h2>
-
-      <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full mt-8"></div>
-
-      <p class="max-w-3xl mx-auto text-slate-300 mt-8 text-lg leading-9">
-
-        Discover modern legal education programs designed to prepare
-        students for excellence in advocacy, judiciary, corporate law,
-        and public service.
-
-      </p>
-
-    </div>
-
-    <!-- PROGRAM GRID -->
-    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
-
-      {% for item in academic %}
-
-      <!-- CARD -->
-      <div
-        class="group relative overflow-hidden rounded-[30px] backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl hover:-translate-y-4 hover:shadow-blue-500/20 transition-all duration-500">
-
-        <!-- IMAGE -->
-        <div class="relative overflow-hidden h-[300px]">
-
-          <img src="{{ item.image.url }}"
-            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-
-          <!-- Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent">
-          </div>
-
-          <!-- Program Badge -->
-          <div
-            class="absolute top-5 left-5 bg-blue-600 text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
-
-            Program
-
-          </div>
-
-        </div>
-
-        <!-- CONTENT -->
-        <div class="relative p-8">
-
-          <!-- Glow Effect -->
-          <div
-            class="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-500">
-          </div>
-
-          <div class="relative z-10">
-
-            <div
-              class="w-14 h-14 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white text-xl mb-6">
-
-              <i class="fa-solid fa-scale-balanced"></i>
-
-            </div>
-
-            <h3 class="text-sm font-black text-white leading-snug group-hover:text-blue-300 transition duration-300">
-
-              {{ item.description }}
-
-            </h3>
-
-          </div>
-
-        </div>
-
-        <!-- Bottom Accent -->
-        <div
-          class="h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 scale-x-0 group-hover:scale-x-100 transition duration-500 origin-left">
-        </div>
-
-      </div>
-
-      {% endfor %}
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<br><br>
-
-
-
-<!-- LIBRARY RULES SECTION -->
-<section class="py-24 bg-blue-200 relative overflow-hidden">
-
-  <!-- Background Blur -->
-  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-
-    <!-- Heading -->
-    <div class="text-center mb-20">
-
-      <span
-        class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-500/20 bg-blue-50 text-blue-600 text-sm uppercase tracking-[3px] font-semibold mb-6">
-
-        <i class="fa-solid fa-book-open-reader"></i>
-        Academic Resources
-
-      </span>
-
-      <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight mb-6">
-
-        Library
-        <span class="text-blue-600">
-          Rules & Regulations
-        </span>
-
-      </h2>
-
-      <p class="text-gray-600 text-lg leading-8 max-w-3xl mx-auto">
-
-        Students are requested to maintain proper discipline and follow
-        the library guidelines to ensure a peaceful and productive
-        academic environment at Ilahia Law College.
-
-      </p>
-
-    </div>
-
-
-    <!-- Rules Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Rule -->
-      <div
-        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
-
-        <div
-          class="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
-
-          <i class="fa-solid fa-volume-xmark"></i>
-
-        </div>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Maintain Silence
-        </h3>
-
-        <p class="text-gray-600 leading-7">
-          Complete silence must be maintained inside the library premises
-          to provide a calm and focused study atmosphere.
-        </p>
-
-      </div>
-
-
-      <!-- Rule -->
-      <div
-        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
-
-        <div
-          class="w-16 h-16 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
-
-          <i class="fa-solid fa-id-card"></i>
-
-        </div>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Carry ID Card
-        </h3>
-
-        <p class="text-gray-600 leading-7">
-          Students must carry their valid college ID card while entering
-          and using library facilities.
-        </p>
-
-      </div>
-
-
-      <!-- Rule -->
-      <div
-        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
-
-        <div
-          class="w-16 h-16 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
-
-          <i class="fa-solid fa-burger"></i>
-
-        </div>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          No Food Allowed
-        </h3>
-
-        <p class="text-gray-600 leading-7">
-          Eating, drinking and carrying food items inside the library are
-          strictly prohibited.
-        </p>
-
-      </div>
-
-
-      <!-- Rule -->
-      <div
-        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
-
-        <div
-          class="w-16 h-16 rounded-2xl bg-yellow-50 text-yellow-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
-
-          <i class="fa-solid fa-book"></i>
-
-        </div>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Handle Books Carefully
-        </h3>
-
-        <p class="text-gray-600 leading-7">
-          Library books and resources should be handled responsibly.
-          Damaging or marking books is strictly prohibited.
-        </p>
-
-      </div>
-
-
-      <!-- Rule -->
-      <div
-        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
-
-        <div
-          class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
-
-          <i class="fa-solid fa-mobile-screen-button"></i>
-
-        </div>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Keep Phones Silent
-        </h3>
-
-        <p class="text-gray-600 leading-7">
-          Mobile phones should be kept in silent mode while inside the
-          library to avoid disturbance to others.
-        </p>
-
-      </div>
-
-
-      <!-- Rule -->
-      <div
-        class="group bg-white rounded-[30px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
-
-        <div
-          class="w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-500">
-
-          <i class="fa-solid fa-clock"></i>
-
-        </div>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Return Books On Time
-        </h3>
-
-        <p class="text-gray-600 leading-7">
-          Borrowed books must be returned on or before the due date.
-          Late returns may attract penalties as per library policy.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
 
 
 
 <!-- COMPLIANCE & STUDENT WELFARE -->
-<section class="relative py-16 md:py-24 bg-blue-200 overflow-hidden">
+<section class="relative py-16 md:py-24 bg-[#0A192F] overflow-hidden">
 
   <!-- Background Effects -->
-  <div class="absolute top-0 left-0 w-80 h-80 bg-red-500/5 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 right-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+  <div class="absolute top-0 left-0 w-80 h-80 bg-red-900/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-blue-900/10 rounded-full blur-3xl"></div>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -1245,23 +859,23 @@
     <div class="text-center max-w-4xl mx-auto mb-14 md:mb-20">
 
       <span
-        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-red-100 text-red-600 text-xs sm:text-sm uppercase tracking-[2px] font-semibold shadow-sm mb-6">
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 border border-red-900 text-red-400 text-xs sm:text-sm uppercase tracking-[2px] font-semibold shadow-sm mb-6">
 
         <i class="fa-solid fa-shield-heart"></i>
         Student Safety & Welfare
 
       </span>
 
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-5">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-5">
 
         Compliance &
-        <span class="text-red-600">
+        <span class="text-red-400">
           Student Welfare
         </span>
 
       </h2>
 
-      <p class="text-gray-600 text-base md:text-lg leading-7 md:leading-8">
+      <p class="text-gray-300 text-base md:text-lg leading-7 md:leading-8">
 
         Ilahia Law College is committed to maintaining a safe,
         respectful and inclusive academic environment through
@@ -1279,10 +893,10 @@
 
       <!-- Anti Ragging -->
       <div
-        class="bg-white rounded-[30px] border border-red-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+        class="bg-slate-800 rounded-[30px] border border-red-900 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
 
         <!-- Header -->
-        <div class="bg-gradient-to-r from-red-600 to-red-500 p-6 md:p-8 text-white">
+        <div class="bg-gradient-to-r from-red-700 to-red-600 p-6 md:p-8 text-white">
 
           <div
             class="w-16 h-16 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-3xl mb-5">
@@ -1297,7 +911,7 @@
 
           </h3>
 
-          <p class="text-red-100 leading-7 text-sm md:text-base">
+          <p class="text-red-200 leading-7 text-sm md:text-base">
 
             Ragging in any form is strictly prohibited within the campus.
             The institution follows UGC Anti-Ragging Regulations
@@ -1311,12 +925,12 @@
         <div class="p-5 md:p-8">
 
           <!-- Brochure -->
-          <div class="bg-red-50 border border-red-100 rounded-3xl p-5 md:p-6 mb-6">
+          <div class="bg-slate-700 border border-slate-600 rounded-3xl p-5 md:p-6 mb-6">
 
             <div class="flex flex-col sm:flex-row gap-5 items-start">
 
               <div
-                class="w-14 h-14 rounded-2xl bg-white text-red-600 flex items-center justify-center text-2xl shadow-sm flex-shrink-0">
+                class="w-14 h-14 rounded-2xl bg-slate-800 text-red-400 flex items-center justify-center text-2xl shadow-sm flex-shrink-0">
 
                 <i class="fa-solid fa-file-pdf"></i>
 
@@ -1324,18 +938,26 @@
 
               <div class="w-full">
 
-                <h4 class="text-xl font-bold text-gray-900 mb-3">
+                <h4 class="text-xl font-bold text-white mb-3">
 
                   Anti-Ragging Brochure
 
                 </h4>
 
-                <p class="text-gray-600 leading-7 text-sm md:text-base mb-5">
+                <p class="text-gray-300 leading-7 text-sm md:text-base mb-5">
 
                   Download anti-ragging regulations,
                   committee details and student undertaking forms.
 
                 </p>
+
+                <a href="" download
+                  class="inline-flex items-center gap-3 px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
+
+                  <i class="fa-solid fa-download"></i>
+                  Download Brochure
+
+                </a>
 
 
               </div>
@@ -1345,9 +967,9 @@
           </div>
 
           <!-- Helpline -->
-          <div class="rounded-3xl bg-gray-900 text-white p-5 flex items-center gap-4">
+          <div class="rounded-3xl bg-slate-700 text-white p-5 flex items-center gap-4">
 
-            <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl flex-shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-slate-600 flex items-center justify-center text-2xl flex-shrink-0">
 
               <i class="fa-solid fa-phone-volume"></i>
 
@@ -1355,7 +977,7 @@
 
             <div class="min-w-0">
 
-              <p class="text-sm uppercase tracking-[2px] text-white/70 mb-1">
+              <p class="text-sm uppercase tracking-[2px] text-gray-400 mb-1">
 
                 Anti-Ragging Helpline
 
@@ -1379,10 +1001,10 @@
 
       <!-- Prevention of Sexual Harassment -->
       <div
-        class="bg-white rounded-[30px] border border-blue-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+        class="bg-slate-800 rounded-[30px] border border-blue-900 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
 
         <!-- Header -->
-        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 md:p-8 text-white">
+        <div class="bg-gradient-to-r from-blue-700 to-indigo-700 p-6 md:p-8 text-white">
 
           <div
             class="w-16 h-16 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-3xl mb-5">
@@ -1397,7 +1019,7 @@
 
           </h3>
 
-          <p class="text-blue-100 leading-7 text-sm md:text-base">
+          <p class="text-blue-200 leading-7 text-sm md:text-base">
 
             The Internal Complaints Committee (ICC) ensures
             a safe, respectful and supportive environment
@@ -1411,10 +1033,10 @@
         <div class="p-5 md:p-8 space-y-5">
 
           <!-- Item -->
-          <div class="flex flex-col sm:flex-row gap-5 bg-slate-50 border border-slate-100 rounded-3xl p-5">
+          <div class="flex flex-col sm:flex-row gap-5 bg-slate-700 border border-slate-600 rounded-3xl p-5">
 
             <div
-              class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl flex-shrink-0">
+              class="w-14 h-14 rounded-2xl bg-slate-600 text-blue-400 flex items-center justify-center text-2xl flex-shrink-0">
 
               <i class="fa-solid fa-scale-balanced"></i>
 
@@ -1422,13 +1044,13 @@
 
             <div class="flex-1 min-w-0">
 
-              <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
+              <h4 class="text-lg md:text-xl font-bold text-white mb-2">
 
                 Redressal Cell
 
               </h4>
 
-              <p class="text-gray-600 leading-7 text-sm md:text-base">
+              <p class="text-gray-300 leading-7 text-sm md:text-base">
 
                 The committee receives complaints, conducts inquiries,
                 maintains confidentiality and recommends appropriate action.
@@ -1441,10 +1063,10 @@
 
 
           <!-- Item -->
-          <div class="flex flex-col sm:flex-row gap-5 bg-slate-50 border border-slate-100 rounded-3xl p-5">
+          <div class="flex flex-col sm:flex-row gap-5 bg-slate-700 border border-slate-600 rounded-3xl p-5">
 
             <div
-              class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl flex-shrink-0">
+              class="w-14 h-14 rounded-2xl bg-slate-600 text-blue-400 flex items-center justify-center text-2xl flex-shrink-0">
 
               <i class="fa-solid fa-handshake-angle"></i>
 
@@ -1452,13 +1074,13 @@
 
             <div class="flex-1 min-w-0">
 
-              <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
+              <h4 class="text-lg md:text-xl font-bold text-white mb-2">
 
                 Counselling & Support
 
               </h4>
 
-              <p class="text-gray-600 leading-7 text-sm md:text-base">
+              <p class="text-gray-300 leading-7 text-sm md:text-base">
 
                 Confidential counselling and student welfare support
                 are provided throughout grievance handling procedures.
@@ -1471,10 +1093,10 @@
 
 
           <!-- Item -->
-          <div class="flex flex-col sm:flex-row gap-5 bg-slate-50 border border-slate-100 rounded-3xl p-5">
+          <div class="flex flex-col sm:flex-row gap-5 bg-slate-700 border border-slate-600 rounded-3xl p-5">
 
             <div
-              class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl flex-shrink-0">
+              class="w-14 h-14 rounded-2xl bg-slate-600 text-blue-400 flex items-center justify-center text-2xl flex-shrink-0">
 
               <i class="fa-solid fa-envelope-open-text"></i>
 
@@ -1482,13 +1104,13 @@
 
             <div class="flex-1 min-w-0">
 
-              <h4 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
+              <h4 class="text-lg md:text-xl font-bold text-white mb-2">
 
                 Complaint Submission
 
               </h4>
 
-              <p class="text-gray-600 leading-7 text-sm md:text-base">
+              <p class="text-gray-300 leading-7 text-sm md:text-base">
 
                 Complaints may be submitted directly to committee members
                 or through the official grievance redressal email.
@@ -1512,13 +1134,13 @@
 
       <div class="text-center mb-12 md:mb-16">
 
-        <h3 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+        <h3 class="text-3xl md:text-4xl font-black text-white mb-4">
 
           Statutory Committee Contacts
 
         </h3>
 
-        <p class="text-gray-600 text-base md:text-lg">
+        <p class="text-gray-300 text-base md:text-lg">
 
           Official contact details for student welfare committees.
 
@@ -1531,31 +1153,31 @@
 
         <!-- Contact -->
         <div
-          class="bg-white border border-gray-100 rounded-[28px] p-6 md:p-8 shadow-sm hover:shadow-xl transition duration-500">
+          class="bg-slate-800 border border-slate-700 rounded-[28px] p-6 md:p-8 shadow-sm hover:shadow-xl transition duration-500">
 
-          <div class="w-16 h-16 rounded-2xl bg-red-100 text-red-600 flex items-center justify-center text-2xl mb-6">
+          <div class="w-16 h-16 rounded-2xl bg-slate-700 text-red-400 flex items-center justify-center text-2xl mb-6">
 
             <i class="fa-solid fa-user-tie"></i>
 
           </div>
 
-          <h4 class="text-2xl font-black text-gray-900 mb-2">
+          <h4 class="text-2xl font-black text-white mb-2">
 
             Anti-Ragging Committee
 
           </h4>
 
-          <p class="text-gray-500 mb-5">
+          <p class="text-gray-400 mb-5">
 
             Faculty Coordinator
 
           </p>
 
-          <div class="space-y-4 text-gray-700">
+          <div class="space-y-4 text-gray-300">
 
             <div class="flex items-start gap-3">
 
-              <i class="fa-solid fa-phone text-red-600 mt-1"></i>
+              <i class="fa-solid fa-phone text-red-400 mt-1"></i>
 
               <span class="break-all">
                 +91 98765 43210
@@ -1581,31 +1203,31 @@
 
         <!-- Contact -->
         <div
-          class="bg-white border border-gray-100 rounded-[28px] p-6 md:p-8 shadow-sm hover:shadow-xl transition duration-500">
+          class="bg-slate-800 border border-slate-700 rounded-[28px] p-6 md:p-8 shadow-sm hover:shadow-xl transition duration-500">
 
-          <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-6">
+          <div class="w-16 h-16 rounded-2xl bg-slate-700 text-blue-400 flex items-center justify-center text-2xl mb-6">
 
             <i class="fa-solid fa-user-shield"></i>
 
           </div>
 
-          <h4 class="text-2xl font-black text-gray-900 mb-2">
+          <h4 class="text-2xl font-black text-white mb-2">
 
             ICC / Redressal Cell
 
           </h4>
 
-          <p class="text-gray-500 mb-5">
+          <p class="text-gray-400 mb-5">
 
             Presiding Officer
 
           </p>
 
-          <div class="space-y-4 text-gray-700">
+          <div class="space-y-4 text-gray-300">
 
             <div class="flex items-start gap-3">
 
-              <i class="fa-solid fa-phone text-blue-600 mt-1"></i>
+              <i class="fa-solid fa-phone text-blue-400 mt-1"></i>
 
               <span class="break-all">
                 +91 98765 43211
@@ -1631,31 +1253,31 @@
 
         <!-- Contact -->
         <div
-          class="bg-white border border-gray-100 rounded-[28px] p-6 md:p-8 shadow-sm hover:shadow-xl transition duration-500">
+          class="bg-slate-800 border border-slate-700 rounded-[28px] p-6 md:p-8 shadow-sm hover:shadow-xl transition duration-500">
 
-          <div class="w-16 h-16 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center text-2xl mb-6">
+          <div class="w-16 h-16 rounded-2xl bg-slate-700 text-green-400 flex items-center justify-center text-2xl mb-6">
 
             <i class="fa-solid fa-hands-holding-circle"></i>
 
           </div>
 
-          <h4 class="text-2xl font-black text-gray-900 mb-2">
+          <h4 class="text-2xl font-black text-white mb-2">
 
             Student Counselling Cell
 
           </h4>
 
-          <p class="text-gray-500 mb-5">
+          <p class="text-gray-400 mb-5">
 
             Student Welfare Officer
 
           </p>
 
-          <div class="space-y-4 text-gray-700">
+          <div class="space-y-4 text-gray-300">
 
             <div class="flex items-start gap-3">
 
-              <i class="fa-solid fa-phone text-green-600 mt-1"></i>
+              <i class="fa-solid fa-phone text-green-400 mt-1"></i>
 
               <span class="break-all">
                 +91 98765 43212
@@ -1689,20 +1311,20 @@
 
 
 <!-- Contact Section -->
-<section id="contact" class="relative py-16 bg-slate-100">
+<section id="contact" class="relative py-16 bg-[#0A192F]">
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="text-center max-w-2xl mx-auto mb-12">
-      <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold">Contact</p>
-      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-slate-900">Get in Touch with Us</h2>
-      <p class="mt-3 text-slate-600">For admissions, events, partnerships or general enquiries — we’re here to help.
+      <p class="text-sm uppercase tracking-wide text-blue-400 font-semibold">Contact</p>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-white">Get in Touch with Us</h2>
+      <p class="mt-3 text-gray-300">For admissions, events, partnerships or general enquiries — we’re here to help.
         Fill the form or use the contact details beside.</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
       <!-- Form -->
-      <div class="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up">
+      <div class="bg-slate-800 rounded-2xl shadow-lg p-8" data-aos="fade-up">
         {% if messages %}
         <div class="space-y-3 mb-4">
           {% for message in messages %}
@@ -1718,39 +1340,40 @@
           <div>
             <label for="name" class="sr-only">Full name</label>
             <input id="name" name="name" required type="text" placeholder="Your full name"
-              class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              class="w-full px-4 py-3 border border-slate-700 rounded-lg bg-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
 
           <div>
             <label for="email" class="sr-only">Email</label>
             <input id="email" name="email" required type="email" placeholder="Your email address"
-              class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              class="w-full px-4 py-3 border border-slate-700 rounded-lg bg-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
 
           <div>
             <label for="subject" class="sr-only">Subject</label>
             <input id="subject" name="subject" required type="text" placeholder="Subject"
-              class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              class="w-full px-4 py-3 border border-slate-700 rounded-lg bg-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
 
           <div>
             <label for="message" class="sr-only">Message</label>
             <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."
-              class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              class="w-full px-4 py-3 border border-slate-700 rounded-lg bg-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
           </div>
 
           <div class="flex items-center justify-between">
             <button type="submit"
               class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow">Send
               Message</button>
-            <p class="text-sm text-slate-500">We respond within 1-2 business days.</p>
+            <p class="text-sm text-gray-400">We respond within 1-2 business days.</p>
           </div>
         </form>
       </div>
 
       <!-- Contact Details -->
       <div class="space-y-6">
-        <div class="rounded-2xl bg-blue-200 text-white p-6 shadow-lg" data-aos="fade-up">
+        <div class="rounded-2xl bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 shadow-lg"
+          data-aos="fade-up">
           <h3 class="text-xl font-bold">Contact Details</h3>
           <p class="mt-2 text-sm opacity-90">Admissions, seminars, moot courts, faculty appointments — reach us using
             the details below.</p>
@@ -1794,15 +1417,15 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-4 shadow-sm">
-          <h4 class="text-sm font-semibold text-slate-700 mb-3">Key Contacts</h4>
-          <ul class="space-y-3 text-slate-600">
-            <li class="flex items-center gap-3"><i class="fa-solid fa-user-tie text-blue-600"></i> Chairman: <span
+        <div class="bg-slate-800 rounded-2xl p-4 shadow-sm border border-slate-700">
+          <h4 class="text-sm font-semibold text-gray-300 mb-3">Key Contacts</h4>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-user-tie text-blue-400"></i> Chairman: <span
                 class="font-medium ml-2">+91 90745 23805</span></li>
-            <li class="flex items-center gap-3"><i class="fa-solid fa-chalkboard-teacher text-blue-600"></i> Principal:
+            <li class="flex items-center gap-3"><i class="fa-solid fa-chalkboard-teacher text-blue-400"></i> Principal:
               <span class="font-medium ml-2">+91 94485 02518</span>
             </li>
-            <li class="flex items-center gap-3"><i class="fa-solid fa-briefcase text-blue-600"></i> Admin Officer: <span
+            <li class="flex items-center gap-3"><i class="fa-solid fa-briefcase text-blue-400"></i> Admin Officer: <span
                 class="font-medium ml-2">+91 94466 06549</span></li>
           </ul>
         </div>

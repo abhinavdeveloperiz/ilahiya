@@ -8,6 +8,9 @@ class Home(models.Model):
     image2 = models.ImageField(upload_to='banner_images/', null=True, blank=True)
     image3 = models.ImageField(upload_to='banner_images/', null=True, blank=True)
     image4 = models.ImageField(upload_to='banner_images/', null=True, blank=True)
+    image5 = models.ImageField(upload_to='banner_images/', null=True, blank=True)
+    image6 = models.ImageField(upload_to='banner_images/', null=True, blank=True)
+    image7 = models.ImageField(upload_to='banner_images/', null=True, blank=True)
 
 class Academic_Program(models.Model):
     image = models.ImageField(upload_to='academic_program_images/')

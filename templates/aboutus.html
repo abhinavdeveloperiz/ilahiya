@@ -1,653 +1,112 @@
-{% extends 'base.html' %}
+﻿{% extends 'base.html' %}
+{% block title %}About Us | Ilahia Law College
+<!-- Page-level dark theme -->
+
+{% endblock %}
 {% block content %}
-<!-- Page Title -->
-<section class="page-title-section overlay" data-background="static/images/title.jpeg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item">
-            <a class="h2 text-primary font-secondary" href="/static/images/2dayss.jpg">About Us</a>
-          </li>
-          <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
-        </ul>
-        <p class="text-lighten">
-          Home <i class="fa-solid fa-angles-right"></i> About Us
-        </p>
-      </div>
-    </div>
-  </div>
+
+<!-- page title -->
+<section class="relative h-[80vh] bg-fixed bg-center bg-cover flex items-center"
+  style="background-image: url('/static/newimages/2.JPG');">
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/20"></div>
+
+
+
 </section>
-<!-- /page title -->
 
-<!-- about us -->
-<section class="relative py-20 bg-white overflow-x-hidden">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
+<section class="relative py-24 bg-[#0A192F] overflow-hidden">
+  <div class="absolute top-0 right-0 w-72 h-72 bg-blue-900/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 bg-slate-900/20 rounded-full blur-3xl"></div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="uppercase tracking-[6px] text-blue-400 font-semibold mb-4">About Us</p>
+      <h1 class="text-4xl md:text-5xl font-black text-white leading-tight">Ilahia Law College</h1>
+      <p class="mt-6 text-gray-300 max-w-3xl mx-auto leading-8">Ilahia Law College nurtures future-ready legal
+        professionals through academic excellence, practical training, and ethical leadership.</p>
+    </div>
     <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-      <!-- Image Section -->
-      <div class="relative group order-1 lg:order-2" data-aos="zoom-in">
-        <div
-          class="absolute -inset-3 bg-blue-200 rounded-3xl blur-2xl opacity-70 group-hover:opacity-100 transition duration-500">
-        </div>
-
-        <div class="relative overflow-hidden rounded-3xl shadow-2xl border border-black/5">
+      <div class="relative group" data-aos="fade-right">
+        <div class="absolute -inset-3 bg-blue-500/10 rounded-3xl blur-3xl"></div>
+        <div class="relative overflow-hidden rounded-3xl shadow-2xl border border-white/10 bg-slate-950">
           <img src="static/images/ilahia.jpeg" alt="Ilahia Law College"
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-
-          <!-- Premium Overlay -->
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
-
-          <!-- Floating Badge -->
-          <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl shadow-lg">
-            <p class="text-xs uppercase tracking-[3px] text-gray-500 font-medium">
-              Established
-            </p>
-            <h4 class="text-2xl font-bold text-blue-500">
-              2024
-            </h4>
+          <div
+            class="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md px-5 py-3 rounded-2xl border border-white/10">
+            <p class="text-xs uppercase tracking-[3px] text-blue-200 mb-1">Established</p>
+            <h4 class="text-2xl font-bold text-white">2024</h4>
           </div>
         </div>
       </div>
-
-      <!-- Content Section -->
-      <div class="order-2 lg:order-1">
-
+      <div data-aos="fade-left">
         <span
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#c9a84c]/10 text-blue-500 text-sm font-semibold tracking-wide mb-5"
-          data-aos="fade-up">
-          <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-          Excellence in Legal Education
-        </span>
-
-        <h2 class="text-3xl md:text-4xl font-bold leading-tight text-[#111] mb-6" data-aos="fade-up">
-          Welcome to <br>
-          <span class="text-blue-500">
-            Ilahia Law College
-          </span>
-        </h2>
-
-        <p class="text-gray-600 text-lg leading-8 text-justify mb-6" data-aos="fade-left">
-          Ilahia Law College is an institution of eminence providing
-          top-notch legal education that prepares students for the complexities
-          of the modern legal world. By meticulously pursuing academic excellence,
-          imparting practical and impactful training, adhering to ethical practices,
-          and maintaining social responsibility of the highest degree, we aim to
-          nurture the next generation of legal professionals who shall contribute
-          to justice, fairness, and national progress.
-        </p>
-
-        <p class="text-gray-600 text-lg leading-8 text-justify mb-8" data-aos="fade-left">
-          Founded in 2024, Ilahia Law College is a young institution, driven
-          by a bold vision to offer transformative education. Our expert faculty,
-          state-of-the-art facilities, and commitment to transcend the realm of
-          the ordinary ensure that our students are well-equipped to excel in the
-          ever-evolving field of law. The law college is managed by Ilahia Trust.
-        </p>
-
-        <!-- CTA -->
-        <div data-aos="fade-up">
-          <a href="about.html"
-            class="inline-flex items-center gap-3 px-8 py-4 rounded-full text-blue-500 border font-semibold tracking-wide hover:bg-blue-700 hover:text-white transition-all duration-300 shadow-lg hover:shadow-[#c9a84c]/30">
-            Know More
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
-
+          class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-500/10 text-blue-300 text-sm font-semibold tracking-wide mb-5"><span
+            class="w-2 h-2 rounded-full bg-blue-400"></span>Excellence in Legal Education</span>
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-6">A modern law college built for the next generation
+          of legal leaders.</h2>
+        <p class="text-gray-300 leading-8 mb-6">Ilahia Law College provides a strong academic foundation, immersive
+          practical learning and a student-first environment. We combine legal research, advocacy skills and ethical
+          values to prepare our students for real-world success.</p>
+        <p class="text-gray-300 leading-8">The institution is managed by Ilahia Trust and is committed to inclusive
+          growth and community service. Our curriculum encourages collaboration, leadership, and a deep understanding of
+          contemporary legal challenges.</p>
       </div>
-
     </div>
-
   </div>
 </section>
-<!-- /about us -->
-
-
-
-
-
-
-<!-- OUR VISION SECTION -->
-<section class="relative py-24 overflow-hidden">
-
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img
-      src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      alt="Our Vision" class="w-full h-full object-cover">
-
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-black/30"></div>
-
-    <!-- Blue Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-550/90 via-slate-700/60 to-blue-300/20"></div>
+<section class="relative py-24 bg-slate-900 overflow-hidden">
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.16),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.12),_transparent_30%)]">
   </div>
-
-  <!-- Blur Effects -->
-  <div class="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-
   <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-
-    <div class="grid lg:grid-cols-2 gap-16 items-center min-h-[500px]">
-
-      <!-- LEFT CONTENT -->
-      <div data-aos="fade-right">
-
-        <!-- Tag -->
-        <span
-          class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/10 backdrop-blur-md text-white text-sm tracking-[3px] uppercase mb-6">
-          <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-          Our Vision
-        </span>
-
-        <!-- Heading -->
-        <h2 class="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-          Shaping Future <br>
-          <span class="text-blue-500">
-            Legal Leaders
-          </span>
-        </h2>
-
-        <!-- Divider -->
-        <div class="w-24 h-1 bg-blue-500 rounded-full mb-8"></div>
-
-        <!-- Description -->
-        <p class="text-white/70 text-lg leading-8 max-w-xl">
-          We aspire to create a transformative legal education ecosystem
-          that nurtures integrity, innovation, leadership, and social
-          responsibility among future legal professionals.
-        </p>
-
-      </div>
-
-      <!-- RIGHT CARD -->
-      <div class="relative" data-aos="zoom-in">
-
-        <!-- Glow -->
-        <div class="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-[40px]"></div>
-
-        <!-- Card -->
-        <div
-          class="relative bg-white/10 backdrop-blur-2xl border border-white/10 rounded-[36px] p-10 lg:p-14 shadow-2xl overflow-hidden">
-
-          <!-- Decorative Quote -->
-          <div class="absolute top-4 right-8 text-blue-500 text-[120px] font-serif leading-none">
-            ”
-          </div>
-
-          <!-- Icon -->
-          <div
-            class="w-16 h-16 rounded-2xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center mb-8">
-            <i class="fa-solid fa-scale-balanced text-blue-500 text-2xl"></i>
-          </div>
-
-          <!-- Quote -->
-          <p class="text-white text-xl lg:text-2xl leading-10 font-light relative z-10">
-            To be a leading institution that fosters excellence in legal
-            education and empowers students to become innovative,
-            ethical, and impactful legal professionals.
-          </p>
-
-          <!-- Footer -->
-          <div class="mt-10 flex items-center gap-4">
-            <div class="w-14 h-[2px] bg-blue-500"></div>
-
-            <span class="text-blue-500 uppercase tracking-[4px] text-sm font-semibold">
-              Ilahia Law College
-            </span>
-          </div>
-
-        </div>
-
-      </div>
-
+    <div class="text-center mb-16">
+      <p class="uppercase tracking-[6px] text-blue-400 font-semibold mb-4">Our Vision</p>
+      <h2 class="text-4xl md:text-5xl font-black text-white">Shaping future legal leaders</h2>
+      <p class="mt-6 text-gray-300 max-w-3xl mx-auto leading-8">We envision an institution that empowers students with
+        legal knowledge, ethical judgment, and the confidence to transform communities through justice.</p>
     </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- /Our Mission Section -->
-
-<!-- SIMPLE STATS SECTION -->
-<section class="py-14 bg-white">
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-    <!-- Stats Wrapper -->
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
-
-      <!-- Item -->
-      <div
-        class="bg-white border border-gray-100 rounded-2xl py-8 px-5 text-center shadow-sm hover:shadow-md transition duration-300"
-        data-aos="fade-up">
-
-        <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-blue-50 flex items-center justify-center">
-          <i class="fa-solid fa-chalkboard-user text-blue-500 text-xl"></i>
-        </div>
-
-        <h2 class="count text-3xl md:text-4xl font-bold text-gray-900" data-count="60">
-          0
-        </h2>
-
-        <p class="mt-2 text-sm uppercase tracking-[2px] text-gray-500 font-medium">
-          Teachers
-        </p>
-
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="rounded-3xl bg-slate-800 border border-white/10 p-10 shadow-2xl">
+        <h3 class="text-2xl font-bold text-white mb-4">Integrity and Excellence</h3>
+        <p class="text-gray-300 leading-7">Our vision is to develop responsible lawyers who combine professional
+          excellence with integrity and social accountability.</p>
       </div>
-
-      <!-- Item -->
-      <div
-        class="bg-white border border-gray-100 rounded-2xl py-8 px-5 text-center shadow-sm hover:shadow-md transition duration-300"
-        data-aos="fade-up" data-aos-delay="100">
-
-        <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-blue-50 flex items-center justify-center">
-          <i class="fa-solid fa-book-open-reader text-blue-500 text-xl"></i>
-        </div>
-
-        <h2 class="count text-3xl md:text-4xl font-bold text-gray-900" data-count="50">
-          0
-        </h2>
-
-        <p class="mt-2 text-sm uppercase tracking-[2px] text-gray-500 font-medium">
-          Courses
-        </p>
-
+      <div class="rounded-3xl bg-slate-800 border border-white/10 p-10 shadow-2xl">
+        <h3 class="text-2xl font-bold text-white mb-4">Impactful Education</h3>
+        <p class="text-gray-300 leading-7">We strive to create an education system that produces graduates prepared for
+          national and global legal challenges.</p>
       </div>
-
-      <!-- Item -->
-      <div
-        class="bg-white border border-gray-100 rounded-2xl py-8 px-5 text-center shadow-sm hover:shadow-md transition duration-300"
-        data-aos="fade-up" data-aos-delay="200">
-
-        <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-blue-50 flex items-center justify-center">
-          <i class="fa-solid fa-user-graduate text-blue-500 text-xl"></i>
-        </div>
-
-        <h2 class="count text-3xl md:text-4xl font-bold text-gray-900" data-count="1000">
-          0
-        </h2>
-
-        <p class="mt-2 text-sm uppercase tracking-[2px] text-gray-500 font-medium">
-          Students
-        </p>
-
-      </div>
-
-      <!-- Item -->
-      <div
-        class="bg-white border border-gray-100 rounded-2xl py-8 px-5 text-center shadow-sm hover:shadow-md transition duration-300"
-        data-aos="fade-up" data-aos-delay="300">
-
-        <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-blue-50 flex items-center justify-center">
-          <i class="fa-solid fa-award text-blue-500 text-xl"></i>
-        </div>
-
-        <h2 class="count text-3xl md:text-4xl font-bold text-gray-900" data-count="3737">
-          0
-        </h2>
-
-        <p class="mt-2 text-sm uppercase tracking-[2px] text-gray-500 font-medium">
-          Success Stories
-        </p>
-
-      </div>
-
     </div>
-
   </div>
-
 </section>
-
-
-
-
-
-
-<!-- OUR MISSION SECTION -->
-<section class="relative py-24 overflow-hidden">
-
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img
-      src="https://images.pexels.com/photos/6077447/pexels-photo-6077447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      alt="Our Mission" class="w-full h-full object-cover">
-
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-slate-950/80"></div>
-
-    <!-- Blue Gradient -->
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/70 to-blue-500/20"></div>
-  </div>
-
-  <!-- Glow Effects -->
-  <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-
+<section class="relative py-24 bg-[#0A192F] overflow-hidden">
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-900/20 rounded-full blur-3xl"></div>
   <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-
-    <!-- Heading -->
-    <div class="text-center mb-16" data-aos="fade-up">
-
-      <span
-        class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-400 text-sm uppercase tracking-[3px] font-medium mb-5">
-        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-        Our Mission
-      </span>
-
-      <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-        Building Ethical & <br>
-        <span class="text-blue-500">
-          Impactful Legal Professionals
-        </span>
+    <div class="text-center mb-16">
+      <p class="uppercase tracking-[6px] text-blue-400 font-semibold mb-4">Our Mission</p>
+      <h2 class="text-4xl md:text-5xl font-black text-white">Empowering students through legal education and practice
       </h2>
-
-      <p class="text-white/60 text-lg max-w-3xl mx-auto leading-8">
-        Empowering students through academic excellence,
-        practical exposure, ethical values, and social responsibility.
-      </p>
-
+      <p class="mt-6 text-gray-300 max-w-3xl mx-auto leading-8">Our mission is to provide transformative legal learning
+        with practical exposure, ethical mentorship, and supportive student development.</p>
     </div>
-
-    <!-- Mission Cards -->
-    <div class="grid lg:grid-cols-2 gap-8">
-
-      <!-- LEFT CARD -->
-      <div class="bg-white/10 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 lg:p-10 shadow-2xl"
-        data-aos="fade-right">
-
-        <!-- Item -->
-        <div class="flex gap-5 mb-8">
-
-          <div
-            class="min-w-[60px] h-[60px] rounded-2xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center">
-            <i class="fa-solid fa-scale-balanced text-blue-500 text-2xl"></i>
-          </div>
-
-          <div>
-            <h4 class="text-white text-xl font-semibold mb-3">
-              Academic Excellence
-            </h4>
-
-            <p class="text-white/70 leading-8">
-              To provide an academically rigorous legal education that equips students with the skills, knowledge, and
-              values necessary for success in the legal profession.
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Divider -->
-        <div class="w-full h-[1px] bg-white/10 mb-8"></div>
-
-        <!-- Item -->
-        <div class="flex gap-5">
-
-          <div
-            class="min-w-[60px] h-[60px] rounded-2xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center">
-            <i class="fa-solid fa-book-open-reader text-blue-500 text-2xl"></i>
-          </div>
-
-          <div>
-            <h4 class="text-white text-xl font-semibold mb-3">
-              Intellectual Growth
-            </h4>
-
-            <p class="text-white/70 leading-8">
-              To create a dynamic learning environment that encourages critical thinking, research, and intellectual
-              engagement.
-            </p>
-          </div>
-
-        </div>
-
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="rounded-3xl bg-slate-800 border border-white/10 p-8 shadow-2xl">
+        <h3 class="text-xl font-bold text-white mb-3">Academic Rigor</h3>
+        <p class="text-gray-300 leading-7">Deliver a rigorous curriculum that fosters in-depth legal understanding.</p>
       </div>
-
-      <!-- RIGHT CARD -->
-      <div class="bg-white/10 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 lg:p-10 shadow-2xl"
-        data-aos="fade-left">
-
-        <!-- Item -->
-        <div class="flex gap-5 mb-8">
-
-          <div
-            class="min-w-[60px] h-[60px] rounded-2xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center">
-            <i class="fa-solid fa-gavel text-blue-500 text-2xl"></i>
-          </div>
-
-          <div>
-            <h4 class="text-white text-xl font-semibold mb-3">
-              Practical Learning
-            </h4>
-
-            <p class="text-white/70 leading-8">
-              To offer opportunities for practical learning through internships, moot courts, legal clinics, and
-              community service projects.
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Divider -->
-        <div class="w-full h-[1px] bg-white/10 mb-8"></div>
-
-        <!-- Item -->
-        <div class="flex gap-5">
-
-          <div
-            class="min-w-[60px] h-[60px] rounded-2xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center">
-            <i class="fa-solid fa-handshake-angle text-blue-500 text-2xl"></i>
-          </div>
-
-          <div>
-            <h4 class="text-white text-xl font-semibold mb-3">
-              Social Responsibility
-            </h4>
-
-            <p class="text-white/70 leading-8">
-              To instill a deep sense of social responsibility and ethical conduct, empowering students to contribute
-              positively to society through law.
-            </p>
-          </div>
-
-        </div>
-
+      <div class="rounded-3xl bg-slate-800 border border-white/10 p-8 shadow-2xl">
+        <h3 class="text-xl font-bold text-white mb-3">Practical Skills</h3>
+        <p class="text-gray-300 leading-7">Build advocacy, research, and courtroom readiness through hands-on training.
+        </p>
       </div>
-
+      <div class="rounded-3xl bg-slate-800 border border-white/10 p-8 shadow-2xl">
+        <h3 class="text-xl font-bold text-white mb-3">Ethical Leadership</h3>
+        <p class="text-gray-300 leading-7">Cultivate values of justice, integrity, and responsible legal service.</p>
+      </div>
     </div>
-
   </div>
-
 </section>
-
-
-
-
-<!-- Mission & Vision Section -->
-<section class="relative py-24 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50">
-
-  <!-- Background Shapes -->
-  <div class="absolute top-0 left-0 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-100/40 rounded-full blur-3xl"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
-
-    <!-- Section Heading -->
-    <div class="text-center mb-16" data-aos="fade-up">
-
-      <span
-        class="inline-flex items-center px-5 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold tracking-widest uppercase mb-4">
-        Our Foundation
-      </span>
-
-      <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-5">
-        Vision & Mission
-      </h2>
-
-      <div class="w-24 h-1 bg-blue-700 mx-auto rounded-full"></div>
-
-    </div>
-
-    <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-      <!-- Image Side -->
-      <div class="relative group" data-aos="zoom-in">
-
-
-        <div class="overflow-hidden rounded-[35px] shadow-[0_25px_60px_rgba(0,0,0,0.12)]">
-
-          <img
-            src="https://media.istockphoto.com/id/474306176/photo/yale-university-graduation-ceremonies.jpg?s=612x612&w=0&k=20&c=W9yb72ka-iApvw-TO7QAmdPfS58KjLpyLFJwf_7Dr4o="
-            alt="Law College" class="w-full h-[650px] object-cover transition duration-700 group-hover:scale-105">
-
-        </div>
-
-        <!-- Floating Badge -->
-        <div
-          class="absolute bottom-8 left-8 bg-white/90 backdrop-blur-xl shadow-2xl rounded-3xl px-8 py-5 border border-gray-100">
-
-          <h4 class="text-2xl font-black text-blue-700">
-            Excellence
-          </h4>
-
-          <p class="text-gray-600 text-sm mt-1">
-            Legal Education & Advocacy
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- Content Side -->
-      <div class="space-y-8">
-
-        <!-- Vision Card -->
-        <div
-          class="bg-white rounded-[30px] p-8 shadow-xl border border-gray-100 hover:-translate-y-2 transition duration-300"
-          data-aos="fade-up">
-
-          <div class="flex items-center gap-4 mb-6">
-
-            <div class="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center">
-
-              <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 10l4.55-4.55a2.121 2.121 0 10-3-3L12 7m0 0L7.45 2.45a2.121 2.121 0 10-3 3L9 10m3-3v10">
-                </path>
-
-              </svg>
-
-            </div>
-
-            <h3 class="text-3xl font-bold text-gray-900">
-              Vision
-            </h3>
-
-          </div>
-
-          <p class="text-gray-600 leading-8 text-justify">
-            To emerge as a centre of excellence in legal education by
-            nurturing socially committed, professionally competent,
-            and ethically grounded legal professionals who uphold
-            constitutional values, promote justice, and contribute
-            meaningfully to national and global legal development.
-          </p>
-
-        </div>
-
-        <!-- Mission Card -->
-        <div class="bg-gradient-to-br from-blue-300 to-indigo-400 text-white rounded-[30px] p-8 shadow-2xl"
-          data-aos="fade-up">
-
-          <div class="flex items-center gap-4 mb-8">
-
-            <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center">
-
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
-                </path>
-
-              </svg>
-
-            </div>
-
-            <h3 class="text-3xl font-bold">
-              Mission
-            </h3>
-
-          </div>
-
-          <div class="space-y-5">
-
-            <div class="flex gap-4">
-              <div class="min-w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mt-1">
-                ✓
-              </div>
-              <p class="leading-7">
-                To impart quality legal education integrating academic excellence, practical training, and professional
-                ethics.
-              </p>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="min-w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mt-1">
-                ✓
-              </div>
-              <p class="leading-7">
-                To cultivate critical thinking, research aptitude, advocacy skills, and leadership qualities.
-              </p>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="min-w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mt-1">
-                ✓
-              </div>
-              <p class="leading-7">
-                To promote constitutional morality, social justice, human rights, and the rule of law.
-              </p>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="min-w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mt-1">
-                ✓
-              </div>
-              <p class="leading-7">
-                To provide experiential learning through moot courts, legal aid clinics, internships, seminars, and
-                community engagement.
-              </p>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="min-w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mt-1">
-                ✓
-              </div>
-              <p class="leading-7">
-                To develop socially responsible legal professionals committed to integrity, public service, and lifelong
-                learning.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
 {% endblock %}

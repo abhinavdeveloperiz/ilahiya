@@ -1,62 +1,48 @@
-{% extends 'base.html' %}
-{% block content %}
-<!-- page title -->
-<section class="page-title-section overlay" data-background="static/images/title.jpeg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item">
-            <a class="h2 text-primary font-secondary" href="#">Chairman's Desk</a>
-          </li>
-          <li class="list-inline-item text-white h3 font-secondary"></li>
-        </ul>
-        <p class="text-lighten">
-          Home <i class="fa-solid fa-angles-right"></i> About Us <i class="fa-solid fa-angles-right"></i> Chairman's
-          Desk
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /page title -->
+﻿{% extends 'base.html' %}
 
-<!-- Chairman's Desk Section -->
-<section class="chairman-desk py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-5">
-        <img src="static/images/chairmanns.jpeg" alt="Chairman" class="img-fluid shadow" data-aos="fade-left" />
+{% block content %}
+
+
+<!-- page title -->
+<section class="relative h-[80vh] bg-fixed bg-center bg-cover flex items-center"
+  style="background-image: url('/static/newimages/4.JPG');">
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/20"></div>
+
+
+
+</section>
+
+
+<section class="relative py-24 bg-[#0A192F] overflow-hidden">
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-900/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-72 h-72 bg-slate-900/20 rounded-full blur-3xl"></div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="uppercase tracking-[6px] text-blue-400 font-semibold mb-4">Chairman\'s Desk</p>
+      <h1 class="text-4xl md:text-5xl font-black text-white">Message from the Chairman</h1>
+      <p class="mt-6 text-gray-300 max-w-3xl mx-auto leading-8">A letter of inspiration from the chairman highlighting
+        the college's mission, values and commitment to students.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900">
+        <img src="static/images/chairmanns.jpeg" alt="Chairman" class="w-full h-full object-cover min-h-[440px]">
       </div>
-      <div class="col-md-7">
-        <h2 class="section-title font-secondary mb-3" data-aos="fade-left">Message from the Chairman</h2>
-        <p class="text-muted text-justify" data-aos="fade-left">
-          <i class="ri-double-quotes-l fs-3"></i>At Ilahia Law College, we uphold a tradition of excellence in legal
-          education, providing students with a strong academic foundation and professional competence. Our institution
-          is committed to nurturing socially responsible lawyers who will contribute meaningfully to the legal
-          profession and society.
-        </p>
-        <p class="text-muted text-justify" data-aos="fade-left">
-          We prioritize innovation, integrity, and inclusivity, creating an environment where students can thrive both
-          academically and personally. With our state-of-the-art facilities, experienced faculty, and a student-centered
-          approach, Ilahia Law College is dedicated to producing legal professionals who uphold justice and fairness in
-          all spheres of life.
-          <i class="ri-double-quotes-r fs-3"></i>
-        </p>
-        <p class="font-weight-bold" data-aos="fade-left">K Y Sadic Muhammad</p>
-        <p class="font-weight-bold" data-aos="fade-left">- Chairman, Ilahia Law College</p>
+      <div class="rounded-3xl bg-slate-800 border border-white/10 p-10 shadow-2xl">
+        <p class="text-blue-300 uppercase tracking-[2px] font-semibold mb-4">Leadership Message</p>
+        <h2 class="text-3xl font-bold text-white mb-6">Guiding the next generation of legal professionals.</h2>
+        <p class="text-gray-300 leading-8 mb-6">At Ilahia Law College we cultivate a culture of academic excellence,
+          ethical practice and social responsibility. Our focus is to develop students who are prepared for courtroom
+          advocacy, research and community leadership.</p>
+        <p class="text-gray-300 leading-8 mb-6">We believe in a holistic education that blends strong legal theory with
+          practical skills, mentorship and a supportive campus environment.</p>
+        <div class="pt-4 border-t border-white/10">
+          <p class="text-white font-bold">K Y Sadic Muhammad</p>
+          <p class="text-blue-300">Chairman, Ilahia Law College</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<!-- /Chairman's Desk Section -->
-<!-- CSS override to replace background image -->
-<style>
-  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
-    background-image: url('static/images/title.jpeg') !important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style>
 {% endblock %}

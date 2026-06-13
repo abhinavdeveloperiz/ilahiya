@@ -1,210 +1,173 @@
-{% extends 'base.html' %}Admission Process | Ilahia Law College{% block content %}
+{% extends 'base.html' %}
+{% block title %}Admission Process | Ilahia Law College{% endblock %}
+{% block content %}
+
 <!-- page title -->
-<section class="page-title-section overlay" data-background="static/images/title.jpeg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item">
-            <a class="h2 text-primary font-secondary" href="@@page-link">Admission Process</a>
-          </li>
-          <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
-        </ul>
-        <p class="text-lighten">
-          Home <i class="fa-solid fa-angles-right"></i> Admission <i class="fa-solid fa-angles-right"></i> Admission
-          Process
-        </p>
+<section class="relative h-[80vh] bg-fixed bg-center bg-cover flex items-center"
+  style="background-image: url('/static/newimages/3.JPG');">
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/20"></div>
+
+
+
+</section>
+
+<section class="relative py-20 bg-[#0A192F] overflow-hidden">
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.18),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.12),_transparent_30%)]">
+  </div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <p class="uppercase tracking-[6px] text-blue-400 font-semibold mb-4">Admission Procedure</p>
+      <h2 class="text-3xl md:text-4xl font-black text-white">Admission Procedure for Ilahia Law College</h2>
+      <p class="mt-4 text-gray-300 max-w-3xl mx-auto leading-8">This page covers the full admission process, eligibility
+        rules, application details and seat allotment guidelines.</p>
+    </div>
+
+    <div class="grid gap-8">
+      <div class="grid gap-8 lg:grid-cols-2">
+        <article class="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-2xl backdrop-blur-sm">
+          <h3 class="text-2xl font-bold text-white mb-4">Eligibility for Admission</h3>
+          <p class="text-gray-300 leading-8 mb-6">A candidate who has passed the Plus Two ( +2 ) examination under the
+            Government of Kerala or an equivalent board exam recognized by Mahatma Gandhi University with at least 45%
+            for general candidates and 40% for SC/ST candidates is eligible for our law programs.</p>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Kerala Law Entrance Examination is required for Government quota admission to 3-year LLB and 5-year
+                BBA.LLB courses.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Applications are invited for entrance exams to government and private law colleges participating in
+                the seat sharing agreement.</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-2xl backdrop-blur-sm">
+          <h3 class="text-2xl font-bold text-white mb-4">Eligibility Criteria for 5-Year Courses</h3>
+          <p class="text-gray-300 leading-8 mb-6">The five-year integrated LLB program requires strong academic
+            performance, minimum marks and age criteria. These rules ensure candidates are prepared for advanced legal
+            education.</p>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Passed HSC or equivalent exam with at least 45% aggregate marks (42% for SEBC, 40% for
+                SC/ST).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Minimum age is 17 years.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>No upper age limit applies.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Applicants must be Indian citizens.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-2">
+        <article class="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-2xl backdrop-blur-sm">
+          <h3 class="text-2xl font-bold text-white mb-4">Eligibility for LLB Course</h3>
+          <p class="text-gray-300 leading-8 mb-6">Admission to the 3-year LLB course is open to graduates from any
+            recognized university, subject to minimum marks and documentation requirements.</p>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Applicant should be an Indian citizen.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Graduation with at least 45% aggregate marks (40% for SC/ST candidates).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Provisional or degree certificate must be produced at admission.</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-2xl backdrop-blur-sm">
+          <h3 class="text-2xl font-bold text-white mb-4">Qualifying Standards in the Entrance Exam</h3>
+          <ul class="space-y-3 text-gray-300 leading-8">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>General / SEBC candidates must secure at least 10% marks in the entrance exam.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>SC/ST candidates must secure at least 5% marks.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>The exam is a 3-hour test of General English, General Knowledge and Aptitude for Legal
+                Studies.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-2">
+        <article class="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-2xl backdrop-blur-sm">
+          <h3 class="text-2xl font-bold text-white mb-4">How and When to Apply</h3>
+          <p class="text-gray-300 leading-8">Apply online through www.cee.kerala.gov.in. Upload a recent passport-size
+            colour photograph in JPG format, with size 15-30 KB and dimensions 150x200 pixels.</p>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-2xl backdrop-blur-sm">
+          <h3 class="text-2xl font-bold text-white mb-4">Application Fee</h3>
+          <ul class="space-y-3 text-gray-300 leading-8">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>General / SEBC candidates pay Rs. 685; SC/ST candidates pay Rs. 345.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Fee can be remitted at State Bank of Travancore branches using the challan.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-2">
+        <article class="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-2xl backdrop-blur-sm">
+          <h3 class="text-2xl font-bold text-white mb-4">Application Submission</h3>
+          <p class="text-gray-300 leading-8">Print the online application, attach a passport-size photograph, and have
+            it attested by a Gazette Officer. Send the documents to the Commissioner for Entrance Examinations, Housing
+            Board Buildings, 5th Floor, Santhi Nagar, Thiruvananthapuram-695001 by registered post, speed post or hand
+            delivery.</p>
+        </article>
+
+        <article class="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-2xl backdrop-blur-sm">
+          <h3 class="text-2xl font-bold text-white mb-4">Seat Allotment</h3>
+          <ul class="space-y-3 text-gray-300 leading-8">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>Admission allotments are based on rank, institution preferences and the Centralized Allotment
+                Process.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>CAP details are published on official websites and in newspapers; individual intimation is not
+                sent.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-blue-400"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span>All allotments follow the rules in the official prospectus for the Three Year LL.B Course,
+                Kerala.</span>
+            </li>
+          </ul>
+        </article>
       </div>
     </div>
   </div>
 </section>
-<!-- /page title -->
 
-<!-- Admission Process Section -->
-<section class="container my-5">
-  <div class="row">
-    <div class="col-12 text-center mb-4">
-      <h2 class="mb-0 text-nowrap mr-3 fadeInDown text-left">Admission Procedure for Ilahia Law College</h2>
-    </div>
-  </div>
-
-  <div class="row d-flex align-items-stretch">
-    <div class="col-12 fadeInLeft mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h5 class="text-dark" style="font-size: 1.6rem;">Eligibility for Admission</h5>
-        <p>
-          <strong>A candidate who has passed the Plus two ( +2 ) examination of the public examination board under
-            Government of Kerala Or any other equivalent examination passed and recognized by Mahatma Gandhi University Kottayam with
-            not less than 45% of marks for general category and 40 % for SC and ST are eligible for admission to the
-            courses offered by Ilahia Law College Muvattupuzha. 50% of the seats are allocated to the candidates those who are
-            coming under the Government quota and the rest will be filled by the management.</strong>
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> Kerala Law Entrance Examination for Admission under the Government
-          quota to 3 year LLB and 5 year BBA.LLB courses.
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> Applications are invited for the Entrance Examination for admission
-          to Three Year LLB Course in Government Law Colleges at Thiruvananthapuram, Ernakulam, Thrissur and Kozhikode
-          and in Private Self-financing Law Colleges of Kerala which have entered into seat sharing agreement with the
-          State Government.
-        </p>
-      </div>
-    </div>
-
-    <div class="col-12 fadeInRight mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h5 class="text-dark" style="font-size: 1.6rem;">Eligibility Criteria for 5 year Courses</h5>
-        <p>
-          <strong>Five-year integrated L.L.B eligibility criteria. The eligibility criteria inform candidates about
-            academic qualification, minimum marks and age limit that one has to meet to be considered for admission to
-            five year L.L.B program. five year L.L.B courses eligibility criteria, read below.<strong>
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The candidate should have passed HSC examination of Board of HSC
-          education, Kerala or any equivalent qualifying exam scoring at least 45% aggregate marks. SEBC candidates and
-          SC/ ST candidates, however, need only 42% and 40% respectively.
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The candidate must be minimum of 17 years of age
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> There is no upper age limit for appearing in the exam.
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The applicant must be an Indian citizen.
-      </div>
-    </div>
-  </div>
-
-  <div class="row d-flex align-items-stretch mt-4">
-    <div class="col-12 fadeInLeft mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h5 class="text-dark" style="font-size: 1.6rem;">Eligibility for LLB Course</h5>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i>Nativity : Applicant should be an Indian Citizen
-        </p>
-        <h5 class="text-dark" style="font-size: 1.6rem;">Academic Qualifications</h5>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> Candidate seeking admission to the Course should be a Graduate in
-          any faculty of any University in Kerala or of any other Universities recognized by any of the Universities in
-          Kerala as equivalent there to He/she should have passed the Bachelor’s Degree Examination with a minimum of
-          45% marks in aggregate (i.e., 45% marks for all the parts of the Degree Examination taken together). However,
-          candidates belonging to SC/ST category need only 40% marks in the qualifying examination Candidates who are
-          appearing /have appeared for the qualifying exam (end of the regular exam of academic year) are also eligible
-          to apply for the Entrance Examination
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> Such candidates become eligible for admission only if they produce
-          the Provisional / Degree Certificate and mark lists of all parts of the qualifying examination at the time of
-          admission
-        </p>
-      </div>
-    </div>
-
-    <div class="col-12 fadeInRight mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h5 class="text-dark" style="font-size: 1.6rem;">Qualifying Standards in the Entrance Exam</h5>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> To qualify in the examination, a General / SEBC applicant should
-          secure a minimum of 10% marks in the Entrance Examination whereas a candidate belonging to SC/ST category
-          should get a minimum of 5% marks Entrance Exam for all the three Courses
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The Entrance Examination will be conducted in Thiruvananthapuram,
-          Ernakulam, Thrissur and Kozhikode on April /May. It will be of 3 hours duration and will consist of 200
-          Multiple Choice Questions. The Questions will cover General English, General Knowledge and Aptitude for Legal
-          Studies
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="row d-flex align-items-stretch mt-4">
-    <div class="col-12 fadeInLeft mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h5 class="text-dark" style="font-size: 1.6rem;">How and When to Apply</h5>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> Candidates seeking admission to the Course can apply online on the
-          website www.cee.kerala.gov.in of the Commissioner for Entrance Examinations. The website will be open for
-          online registration. While applying online, the candidate has to upload his/her recent passport size colour
-          photograph with light background in jpg format, with size between 15 kb and 30kb and dimensions 150 (width) x
-          200 (height) in pixels.
-        </p>
-      </div>
-    </div>
-
-    <div class="col-12 fadeInRight mb-4">
-      <div class="card shadow-lg p-4 border-0 rounded-lg h-100">
-        <h5 class="text-dark" style="font-size: 1.6rem;">Application Fee for 3yr. LLB Course and 5 year Courses</h5>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The application fees for applying five year courses and 3 year
-          courses are Rs.685/-(Rupees Six Hundred And Eighty Five only) for General/ SEBC and for SC/ST Candidates, the
-          application fee is Rs.345/-(Rupees Three Hundred And Forty Five only) fee may change as per Government
-          Regulations.
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The required fee can be remitted at any branch of the State Bank of
-          Travancore using the Bank Challan, which is available along with the print out of online application.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="row d-flex align-items-stretch">
-    <div class="col-12 fadeInLeft mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h5 class="text-dark" style="font-size: 1.6rem;">Last date and time for receipt of printout of application</h5>
-        <p>
-          <strong>Candidates should take printout of the online submitted application and affix a recent passport size
-            photograph identical to the one uploaded, and get it attested by a Gazette Officer. This application along
-            with the required documents should be forwarded to the Commissioner for Entrance Examinations, Housing Board
-            Buildings, 5th Floor, Santhi Nagar, Thiruvananthapuram-695001 in A4 size envelope, either by registered post
-            / speed post / hand delivery.</strong>
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The envelope of the application should be super scribed Application
-          for Three Year LLB Entrance Examination
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The candidates registered for the examination can download their
-          Admit Cards from the website www.cee.kerala.gov.in the admit card thus obtained should be brought to the
-          examination hall.
-        </p>
-      </div>
-    </div>
-
-    <div class="col-12 fadeInRight mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h5 class="text-dark" style="font-size: 1.6rem;">Allotment of Seats</h5>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> Commissioner for Entrance Examinations will make the institution
-          wise allotment in accordance with the rank obtained by the candidates in the Entrance Examination and the
-          order of preference of institutions registered by the candidates during online Centralized Allotment Process
-          (CAP)
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The details of CAP will be notified on the website and in leading
-          newspapers
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> Individual intimation in this regard will not be sent to candidates
-        </p>
-        <p>
-          <i class="fa-solid fa-graduation-cap"></i> The Entrance Examination and subsequent allotments will be based on
-          the provisions laid down in the Prospectus for Admission to Three Year LL.B Course, Kerala available on the
-          website.
-      </div>
-    </div>
-  </div>
-</section>
-<!-- CSS override to replace background image -->
-<style>
-  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
-    background-image: url('static/images/title.jpeg') !important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style>
 {% endblock %}

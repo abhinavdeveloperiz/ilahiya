@@ -1,34 +1,6 @@
-{% extends 'base.html' %}Anti Ragging Cell | Ilahia Law College{% block content %}
-<!-- page title -->
-<section class="page-title-section overlay" data-background="static/images/title.jpeg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item">
-            <a class="h2 text-primary font-secondary" href="@@page-link">Anti Ragging Cell</a>
-          </li>
-          <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
-        </ul>
-        <p class="text-lighten">
-          Home <i class="fa-solid fa-angles-right"></i> Campus Life <i class="fa-solid fa-angles-right"></i> Anti
-          Ragging Cell
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /page title -->
-<!-- CSS override to replace background image -->
-<style>
-  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
-    background-image: url('static/images/title.jpeg') !important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style>
-
+﻿from pathlib import Path
+base = Path('templates')
+style = '''
 <!-- Page-level dark theme -->
 <style>/* ILH_THEME */
 section.page-title-section.overlay {min-height:320px;position:relative;background-size:cover;background-position:center;background-repeat:no-repeat;padding:4rem 0;}
@@ -46,4 +18,22 @@ section.section a:hover,section.section .text-color:hover {color:#38bdf8 !import
 section.section .overlay-text {background:rgba(15,23,42,0.90) !important;}
 section.section .facility-image-container img,section.section .hostel-image-container img,section.section .card-img-top,section.section img {object-fit:cover !important;}
 </style>
-{% endblock %}
+'''
+skipped=[]
+updated=[]
+for p in sorted(base.glob('*.html')):
+    if p.name in {'base.html','index.html'}:
+        continue
+    text = p.read_text(encoding='utf-8')
+    if '/* ILH_THEME */' in text:
+        updated.append(p.name)
+        continue
+    if '{% endblock %}' not in text:
+        skipped.append(p.name)
+        continue
+    text = text.replace('{% endblock %}', style + '{% endblock %}', 1)
+    p.write_text(text, encoding='utf-8')
+    updated.append(p.name)
+print('updated', updated)
+if skipped:
+    print('skipped', skipped)

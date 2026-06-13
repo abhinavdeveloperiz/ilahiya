@@ -1,125 +1,132 @@
 {% extends 'base.html' %}
 
+{% block title %}Contact | Ilahia Law College{% endblock %}
 {% block content %}
-<!-- page title -->
-<section class="page-title-section overlay" data-background="static/images/title.jpeg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item">
-            <a class="h2 text-primary font-secondary" href="contact.html">Contact Us</a>
-          </li>
-        </ul>
-        <p class="text-lighten">
-          Home <i class="fa-solid fa-angles-right"></i> Contact Us
-        </p>
-      </div>
-    </div>
+
+<!-- Hero -->
+<section class="relative h-[70vh] bg-fixed bg-center bg-cover flex items-center"
+  style="background-image: url('/static/newimages/5.JPG');">
+  <div class="absolute inset-0 bg-slate-900/70"></div>
+  <div class="relative mx-auto max-w-4xl px-6 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white">Get in Touch</h1>
+    <p class="mt-4 text-slate-300 max-w-2xl mx-auto">For admissions, seminars, moot court events, or general enquiries,
+      contact our office — we're here to help.</p>
   </div>
 </section>
-<!-- /page title -->
 
-<!-- contact -->
-<section class="section bg-gray">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="section-title" data-aos="fade-in">Get in Touch with Us</h2>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Contact Form -->
-      <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-in">
-        <!-- Display success or error messages -->
+<!-- Contact -->
+<section class="py-16 bg-[#0A192F]">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-2 items-start">
+      <!-- Form -->
+      <div class="space-y-6" data-aos="fade-up">
+        <h2 class="text-2xl font-semibold text-white">Send us a message</h2>
+
         {% if messages %}
-        <div>
+        <div class="space-y-3">
           {% for message in messages %}
-          <div class="alert {% if message.tags == 'success' %}
-                    alert-success
-                  {% else %}
-                    alert-danger
-                  {% endif %}">{{ message }}</div>
+          <div
+            class="px-4 py-3 rounded-lg text-sm {% if message.tags == 'success' %}bg-emerald-600/90 text-white{% else %}bg-rose-600/90 text-white{% endif %}">
+            {{ message }}
+          </div>
           {% endfor %}
         </div>
         {% endif %}
 
-        <form action="{% url 'send_message' %}" method="POST">
+        <form action="{% url 'send_message' %}" method="POST" class="space-y-4">
           {% csrf_token %}
-          <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Full Name" required
-            data-aos="fade-left" />
-          <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Your Email Address"
-            required data-aos="fade-left" />
-          <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Inquiry Subject"
-            required data-aos="fade-left" />
-          <textarea name="message" id="message" class="form-control mb-3" placeholder="Write your message here..."
-            rows="5" required data-aos="fade-left"></textarea>
-          <button type="submit" class="btn btn-primary" data-aos="fade-left">SEND MESSAGE</button>
+          <div>
+            <label for="name" class="sr-only">Name</label>
+            <input id="name" name="name" required placeholder="Your full name"
+              class="w-full rounded-lg bg-slate-800 border border-slate-700 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+          </div>
+          <div>
+            <label for="email" class="sr-only">Email</label>
+            <input id="email" name="email" type="email" required placeholder="Your email address"
+              class="w-full rounded-lg bg-slate-800 border border-slate-700 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+          </div>
+          <div>
+            <label for="subject" class="sr-only">Subject</label>
+            <input id="subject" name="subject" required placeholder="Subject"
+              class="w-full rounded-lg bg-slate-800 border border-slate-700 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+          </div>
+          <div>
+            <label for="message" class="sr-only">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."
+              class="w-full rounded-lg bg-slate-800 border border-slate-700 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"></textarea>
+          </div>
+          <div>
+            <button type="submit"
+              class="inline-flex items-center gap-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-6 py-3 rounded-lg shadow">Send
+              Message</button>
+          </div>
         </form>
       </div>
 
-      <!-- Contact Information -->
-      <div class="col-lg-5">
-        <p class="mb-5" data-aos="fade-left">
-          For inquiries related to <strong>admissions, legal seminars, moot court competitions, or faculty
-            appointments</strong>, feel free to reach out via phone or email. Our dedicated team is here to assist you.
-        </p>
+      <!-- Contact info -->
+      <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-2xl font-semibold text-white">Contact Details</h2>
+        <p class="text-slate-300">For enquiries about admissions, events, or collaborations, contact the relevant office
+          below.</p>
 
-        <h5 class="text-dark" data-aos="fade-left">Contact Details</h5>
-        <br />
-        <ul class="list-unstyled">
-          <li>
-            <i class="fas fa-user-tie mr-2 text-dark"></i><strong>Chairman :</strong> +91 90745 23805
-          </li><br />
-          <li>
-            <i class="fas fa-chalkboard-teacher mr-2 text-dark"></i><strong>Principal :</strong> +91 94485 02518
-          </li><br />
-          <li>
-            <i class="fas fa-briefcase mr-2 text-dark"></i><strong>Administrative Officer :</strong> +91 94466 06549
-          </li><br />
-          <li>
-            <i class="fas fa-laptop-code mr-2 text-dark"></i><strong>System Administrator :</strong> +91 99478 89499
-          </li><br />
-          <li>
-            <i class="fas fa-briefcase mr-2 text-dark"></i><strong>Faculty Coordinator :</strong> +91 89219 08430
-          </li>
-        </ul>
-        <br /><br />
-        <h5 class="text-dark" data-aos="fade-left">Campus Address</h5>
-        <br />
-        <div class="d-flex">
-          <i class="fas fa-map-marker-alt text-dark mt-1 mr-3"></i>
-          <p class="mb-0">
-            Ilahia Nagar, Muvattupuzha<br />
-            Ernakulam District, Kerala<br />
-            India - 686673
-          </p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 text-cyan-300"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <p class="text-slate-300"><strong>Chairman</strong></p>
+              <p class="text-slate-400">+91 90745 23805</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="mt-1 text-cyan-300"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div>
+              <p class="text-slate-300"><strong>Principal</strong></p>
+              <p class="text-slate-400">+91 94485 02518</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="mt-1 text-cyan-300"><i class="fas fa-briefcase"></i></div>
+            <div>
+              <p class="text-slate-300"><strong>Administrative Officer</strong></p>
+              <p class="text-slate-400">+91 94466 06549</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="mt-1 text-cyan-300"><i class="fas fa-laptop-code"></i></div>
+            <div>
+              <p class="text-slate-300"><strong>System Administrator</strong></p>
+              <p class="text-slate-400">+91 99478 89499</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="mt-1 text-cyan-300"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <p class="text-slate-300"><strong>Campus Address</strong></p>
+              <p class="text-slate-400">Ilahia Nagar, Muvattupuzha<br />Ernakulam District, Kerala<br />India - 686673
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="mt-12">
+      <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-[0_20px_60px_-30px_rgba(2,6,23,0.8)]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3928.8824516477644!2d76.56767599999999!3d10.026558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAxJzM1LjYiTiA3NsKwMzQnMDMuNiJF!5e0!3m2!1sen!2sin!4v1738141076412!5m2!1sen!2sin"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
 </section>
-<!-- /contact -->
 
-<br /><br />
-
-<!-- Google Map Section -->
-<section class="section pt-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="map-container" data-aos="fade-left">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3928.8824516477644!2d76.56767599999999!3d10.026558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAxJzM1LjYiTiA3NsKwMzQnMDMuNiJF!5e0!3m2!1sen!2sin!4v1738141076412!5m2!1sen!2sin"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CSS override to replace background image -->
+<!-- Page-level dark theme (kept for compatibility) -->
 <style>
   section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
     background-image: url('static/images/title.jpeg') !important;
@@ -128,4 +135,5 @@
     background-repeat: no-repeat;
   }
 </style>
+
 {% endblock %}

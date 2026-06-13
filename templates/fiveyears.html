@@ -4,247 +4,357 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>{{ details.course }} - Ilahia Law College</title>
 
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-  <!-- jQuery (required for Bootstrap JavaScript plugins) -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
-  <!-- Bootstrap JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body class="bg-[#0A192F] text-gray-200">
 
-
-  <div class="container mt-3">
-    <a href="/courses" class="btn btn-primary mb-3">
-      <i class="bi bi-arrow-left"></i> Back to Courses
-    </a>
-  </div>
-
-  <!-- page title -->
-  <section class="page-title-section overlay" data-background="static/images/title.jpeg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <ul class="list-inline custom-breadcrumb">
-            <li class="list-inline-item">
-              <a class="h2 text-primary font-secondary" href="/courses">Law Courses</a>
-            </li>
-          </ul>
-          <p class="text-lighten">
-            Home <i class="fa-solid fa-angles-right"></i> Courses <i class="fa-solid fa-angles-right"></i> Course
-            Details
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /page title -->
-
-  <!-- course details section -->
-  <section class="section-sm">
-    <div class="container">
-      <div class="row align-items-center mb-5">
-        <!-- course image -->
-        <div class="col-md-5">
-          <img src="{{ details.image.url }}" class="img-fluid w-100" />
-        </div>
-        <!-- course details -->
-        <div class="col-md-7">
-          <h2>{{details.course}}</h2>
-          <ul class="list-unstyled">
-            <li class="d-flex align-items-center mb-3">
-              <i class="ti-book text-dark icon-md mr-3"></i>
-              <div>
-                <h6 class="mb-0">COURSE DURATION</h6>
-                <p class="mb-0">{{details.duration}}</p>
-              </div>
-            </li>
-          </ul>
-          <button class="btn btn-primary mt-3" onclick="openPopup()">Apply Now</button>
-        </div>
-      </div>
-
-      <!-- Registration Popup -->
-      <div id="registerPopup" class="popup-overlay" style="display: none;">
-        <div class="popup-form">
-          <button class="close-btn" onclick="closePopup()">×</button>
-          <h4 class="mb-3">Register for {{details.course}}</h4>
-          <form method="POST" action="{% url 'send_llb' %}">
-            {% csrf_token %}
-            <div class="form-group">
-              <input type="text" name="name" class="form-control mb-3" placeholder="Full Name" required />
-              <input type="email" name="email" class="form-control mb-3" placeholder="Email" required />
-              <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone Number" required />
-              <textarea name="message" class="form-control mb-3" placeholder="Message (optional)" rows="3"></textarea>
-              <button type="submit" class="btn btn-success w-100">Submit Application</button>
-            </div>
-          </form>
-
-        </div>
-      </div>
-
-      <!-- additional course information -->
-      <div class="col">
-        <div class="col-12 mb-4">
-          <h3>About Course</h3>
-          <p class="text-justify" style="text-align: justify;">{{details.about}}</p>
-        </div>
-
-        <div class="mb-4">
-          <h3>Eligibility & Admission Criteria</h3>
-          <br>
-          <ul class="list-styled">
-            <li>
-              <strong>(i) Nativity Requirements:</strong>
-              <br>
-              <br>
-              <ul>
-                <li>The applicant must be an Indian citizen.</li>
-                <li>However, only candidates of Kerala origin are eligible for reservation benefits or fee
-                  concessions. </li>
-              </ul>
-              <p class="mt-2">To establish Indian citizenship, applicants must upload any one of the following
-                documents along with their application:</p>
-              <ul>
-                <li>A true copy of the birth certificate issued by a competent birth registration authority
-                  (Panchayat/Municipality/Corporation), indicating that the place of birth is within any
-                  state or union territory of India.</li>
-                <li>A relevant page from the Secondary School Leaving Certificate (SSLC) showing the
-                  place of birth in any state or union territory of India.</li>
-                <li>A valid passport issued by the Government of India.</li>
-                <li>A certificate from a Village Officer or other competent authority, verifying that the
-                  candidate is a native of any state or union territory of India (in the prescribed format).</li>
-              </ul>
-            </li>
-            <li>
-              <strong> For candidates claiming Kerala origin, any one of the following documents must be
-                uploaded to prove nativity:</strong>
-              <br>
-              <br>
-              <ul>
-                <li>A relevant page of the SSLC certificate showing the place of birth in Kerala.</li>
-                <li>A birth certificate issued by a competent birth registration authority, indicating Kerala
-                  as the place of birth.</li>
-                <li>
-                  Relevant pages of the passport of either the candidate or their parents, issued by the
-                  Government of India, showing the place of birth in Kerala. (If the parent’s passport is
-                  submitted, a corroborative certificate proving the relationship must also be uploaded.)</small>
-                </li>
-                <li>
-                  SSLC certificate pages of either the candidate or their parents, showing Kerala as the
-                  place of birth. (If using the parent’s certificate, a corroborative relationship certificate
-                  must be uploaded.)</small>
-                </li>
-                <li>A certificate in the prescribed format issued by the Village Officer or Tahsildar,
-                  confirming that the candidate or their parent was born in Kerala.</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div class="mb-4">
-          <ul class="list-styled">
-            <li class="mt-3">
-              <strong>(ii) Academic Qualifications:</strong>
-              <br>
-              <br>
-              <ul>
-                <li>Candidates must have successfully completed the Higher Secondary Examination (HSE)
-                  conducted by the Higher Secondary Education Board of Kerala, or any equivalent
-                  examination recognised by universities in Kerala.</li>
-                <li>Applicants who have completed a 10+2 schooling system recognised by the Central or
-                  State Government Educational Authorities, or possess equivalent academic
-                  qualifications as recognised by the Bar Council of India (BCI), are eligible to apply.</li>
-                <li>Candidates who have obtained a Higher Secondary Pass Certificate (+2) or a First
-                  Degree Certificate through distance education or correspondence courses are also
-                  considered eligible for admission.</li>
-                <li> However, individuals who have directly pursued a 10+2 qualification or a graduation/
-                  postgraduate degree through open university systems without a basic qualification for
-                  such studies are not eligible for admission.
-                </li>
-                <li>Students who are currently appearing or have recently appeared for their qualifying
-                  examination may also apply. However, they will be eligible for admission only upon
-                  producing their final pass certificate and mark list at the time of admission.</li>
-                <li>A minimum of 45% aggregate marks in the qualifying examination is required for general
-                  category candidates.</li>
-                <li> For candidates belonging to Scheduled Castes (SC) or Scheduled Tribes (ST), the
-                  minimum required percentage is 40%.</li>
-                <li> No rounding off of marks to the nearest integer is permitted</li>
-                <li>Candidates belonging to the SEBC category with physical disabilities need 42% marks.</li>
-              </ul>
-            </li>
-            <li class="mt-3">
-              <strong>(iii) Age Criteria:</strong>
-              <br>
-              <br>
-              <ul>
-                <li>The applicant must have completed 17 years of age as of December 31st of the
-                  admission year.</li>
-                <li>The upper age limit for admission to the five-year integrated LL.B. course will be subject
-                  to the final decision of the Hon'ble Supreme Court of India.</li>
-                <li>If the age restriction under Clause 28 of the Legal Education Rules, 2008, as framed by
-                  the Bar Council of India (BCI), is reinstated, only those within the specified age limit will
-                  be permitted to take the Entrance Examination.</li>
-                <li>This comprehensive admission framework ensures that only eligible and qualified
-                  candidates gain entry into the Integrated Double Degree Course in Law, maintaining high
-                  academic standards and fostering the development of competent legal professionals.</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      
-    </div>
-  </section>
   <style>
-    .popup-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    .popup-form {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      position: relative;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .close-btn {
-      position: absolute;
-      right: 15px;
-      top: 10px;
-      background: transparent;
-      border: none;
-      font-size: 24px;
-      color: #000;
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
   </style>
 
-  <!-- Script -->
+  <!-- BACK BUTTON & BREADCRUMB -->
+  <section class="bg-[#0A192F] pt-6 pb-2">
+    <div class="max-w-7xl mx-auto px-6">
+      <a href="/courses"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-700 hover:bg-blue-800 text-white font-semibold transition">
+        <i class="fa-solid fa-arrow-left"></i> Back to Courses
+      </a>
+      <div class="mt-4 flex items-center gap-2 text-gray-400 text-sm">
+        <a href="/" class="text-blue-400 hover:text-blue-300">Home</a>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+        <a href="/courses" class="text-blue-400 hover:text-blue-300">Courses</a>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+        <span class="text-gray-300">{{details.course}}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO SECTION -->
+  <section class="relative py-20 bg-[#0A192F] overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-indigo-900/20 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- COURSE IMAGE -->
+        <div data-aos="fade-right" data-aos-duration="1200">
+          <div class="relative group overflow-hidden rounded-3xl shadow-2xl">
+            <img src="{{ details.image.url }}"
+              class="w-full h-96 object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+          </div>
+        </div>
+
+        <!-- COURSE INFO -->
+        <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200" class="space-y-6">
+          <div>
+            <span
+              class="inline-flex items-center px-4 py-2 rounded-full bg-blue-900 text-blue-300 text-sm font-semibold mb-4">
+              <i class="fa-solid fa-book mr-2"></i> COURSE DETAILS
+            </span>
+            <h1 class="text-5xl font-black text-white leading-tight mb-2">
+              {{details.course}}
+            </h1>
+          </div>
+
+          <!-- DURATION CARD -->
+          <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-xl bg-blue-700/20 flex items-center justify-center">
+                <i class="fa-solid fa-hourglass-end text-2xl text-blue-400"></i>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm uppercase tracking-wide font-semibold">Course Duration</p>
+                <p class="text-2xl font-bold text-white">{{details.duration}}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA BUTTON -->
+          <button onclick="openPopup()"
+            class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-xl transition duration-300 shadow-lg hover:shadow-xl">
+            <i class="fa-solid fa-pen-to-square mr-2"></i> Apply Now
+          </button>
+
+          <!-- FEATURES -->
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">
+              <p class="text-blue-400 text-2xl font-bold">5</p>
+              <p class="text-gray-400 text-sm mt-1">Years Program</p>
+            </div>
+            <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 text-center">
+              <p class="text-blue-400 text-2xl font-bold">∞</p>
+              <p class="text-gray-400 text-sm mt-1">Career Options</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT COURSE SECTION -->
+  <section class="py-20 bg-[#0A192F] relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-black text-white mb-4">About This Course</h2>
+        <div class="w-20 h-1 bg-blue-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="bg-slate-800 rounded-3xl p-8 md:p-12 border border-slate-700 shadow-xl">
+        <p class="text-gray-300 leading-8 text-lg">
+          {{details.about}}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELIGIBILITY SECTION -->
+  <section class="py-20 bg-[#0A192F] relative overflow-hidden">
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-900/20 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-black text-white mb-4">Eligibility & Admission Criteria</h2>
+        <p class="text-gray-300 text-lg">Meeting these requirements is essential for admission to our program</p>
+        <div class="w-20 h-1 bg-blue-500 mx-auto rounded-full mt-6"></div>
+      </div>
+
+      <!-- ELIGIBILITY CARDS -->
+      <div class="space-y-6">
+
+        <!-- NATIVITY REQUIREMENTS -->
+        <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden hover:border-slate-600 transition">
+          <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-6">
+            <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+              <i class="fa-solid fa-globe"></i> (i) Nativity Requirements
+            </h3>
+          </div>
+          <div class="p-8 space-y-6">
+            <div>
+              <h4 class="text-white font-semibold text-lg mb-4">Citizenship & Documentation</h4>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex gap-3">
+                  <span class="text-blue-400 font-bold mt-1">•</span>
+                  <span>The applicant must be an Indian citizen.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-blue-400 font-bold mt-1">•</span>
+                  <span>Only candidates of Kerala origin are eligible for reservation benefits or fee
+                    concessions.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-700/50 rounded-xl p-6 border border-slate-600">
+              <p class="text-gray-300 mb-4 font-semibold">Required documents to establish Indian citizenship (any one):
+              </p>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex gap-3">
+                  <span class="text-green-400">✓</span>
+                  <span>Birth certificate from Panchayat/Municipality/Corporation showing place of birth in India</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-green-400">✓</span>
+                  <span>SSLC certificate showing place of birth in any Indian state</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-green-400">✓</span>
+                  <span>Valid passport issued by Government of India</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-green-400">✓</span>
+                  <span>Certificate from Village Officer confirming Indian nativity</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-700/50 rounded-xl p-6 border border-slate-600">
+              <p class="text-gray-300 mb-4 font-semibold">For Kerala origin candidates (any one):</p>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex gap-3">
+                  <span class="text-green-400">✓</span>
+                  <span>SSLC certificate showing Kerala as place of birth</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-green-400">✓</span>
+                  <span>Birth certificate indicating Kerala as place of birth</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-green-400">✓</span>
+                  <span>Passport of candidate or parents showing Kerala as birthplace</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-green-400">✓</span>
+                  <span>Certificate from Village Officer/Tahsildar confirming Kerala nativity</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACADEMIC QUALIFICATIONS -->
+        <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden hover:border-slate-600 transition">
+          <div class="bg-gradient-to-r from-purple-600 to-purple-700 p-6">
+            <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+              <i class="fa-solid fa-graduation-cap"></i> (ii) Academic Qualifications
+            </h3>
+          </div>
+          <div class="p-8 space-y-6">
+            <ul class="space-y-4 text-gray-300">
+              <li class="flex gap-3">
+                <span class="text-purple-400 font-bold mt-1">•</span>
+                <span>Completed Higher Secondary Examination (HSE) or equivalent recognized by Kerala
+                  universities</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-purple-400 font-bold mt-1">•</span>
+                <span>10+2 schooling or equivalent qualifications recognized by Bar Council of India (BCI)</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-purple-400 font-bold mt-1">•</span>
+                <span>Higher Secondary Pass Certificate through distance education or correspondence courses</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-purple-400 font-bold mt-1">•</span>
+                <span>Students appearing for qualifying examination may apply (must produce final pass certificate at
+                  admission)</span>
+              </li>
+            </ul>
+
+            <div class="bg-slate-700/50 rounded-xl p-6 border border-slate-600">
+              <p class="text-gray-300 mb-4 font-semibold">Minimum Marks Required:</p>
+              <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+                  <p class="text-blue-400 font-bold text-lg">45%</p>
+                  <p class="text-gray-400 text-sm">General Category</p>
+                </div>
+                <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+                  <p class="text-green-400 font-bold text-lg">40%</p>
+                  <p class="text-gray-400 text-sm">SC/ST Category</p>
+                </div>
+                <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+                  <p class="text-yellow-400 font-bold text-lg">42%</p>
+                  <p class="text-gray-400 text-sm">SEBC with Disability</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AGE CRITERIA -->
+        <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden hover:border-slate-600 transition">
+          <div class="bg-gradient-to-r from-green-600 to-green-700 p-6">
+            <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+              <i class="fa-solid fa-birthday-cake"></i> (iii) Age Criteria
+            </h3>
+          </div>
+          <div class="p-8 space-y-6">
+            <ul class="space-y-4 text-gray-300">
+              <li class="flex gap-3">
+                <span class="text-green-400 font-bold mt-1">•</span>
+                <span>Must have completed 17 years of age as of December 31st of the admission year</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-green-400 font-bold mt-1">•</span>
+                <span>Upper age limit subject to final decision of Hon'ble Supreme Court of India</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-green-400 font-bold mt-1">•</span>
+                <span>Age restrictions under Clause 28 of Legal Education Rules, 2008 (BCI) may apply if
+                  reinstated</span>
+              </li>
+            </ul>
+
+            <div class="bg-gradient-to-r from-green-600/20 to-green-700/20 rounded-xl p-6 border border-green-700/50">
+              <p class="text-green-300">
+                This comprehensive admission framework ensures that only eligible and qualified candidates gain entry to
+                our Integrated Double Degree Course in Law, maintaining high academic standards and fostering competent
+                legal professionals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION MODAL -->
+  <div id="registerPopup" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+    style="display: none;">
+    <div
+      class="bg-slate-800 rounded-3xl shadow-2xl w-full max-w-lg border border-slate-700 max-h-[90vh] overflow-y-auto">
+      <!-- Header -->
+      <div class="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 p-6 flex items-center justify-between">
+        <h3 class="text-2xl font-bold text-white">Apply for {{details.course}}</h3>
+        <button onclick="closePopup()" class="text-white hover:text-gray-200 text-2xl transition">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Form -->
+      <div class="p-8">
+        <form method="POST" action="{% url 'send_llb' %}" class="space-y-5">
+          {% csrf_token %}
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-2">Full Name <span class="text-red-400">*</span></label>
+            <input type="text" name="name" required placeholder="Enter your full name"
+              class="w-full px-4 py-3 rounded-lg bg-slate-700 text-white border border-slate-600 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition" />
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-2">Email Address <span
+                class="text-red-400">*</span></label>
+            <input type="email" name="email" required placeholder="your.email@example.com"
+              class="w-full px-4 py-3 rounded-lg bg-slate-700 text-white border border-slate-600 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition" />
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-2">Phone Number <span
+                class="text-red-400">*</span></label>
+            <input type="tel" name="phone" required placeholder="+91 98765 43210"
+              class="w-full px-4 py-3 rounded-lg bg-slate-700 text-white border border-slate-600 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition" />
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-semibold mb-2">Message <span
+                class="text-gray-400">(Optional)</span></label>
+            <textarea name="message" rows="4" placeholder="Tell us about your background and interests..."
+              class="w-full px-4 py-3 rounded-lg bg-slate-700 text-white border border-slate-600 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition resize-none"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-lg hover:shadow-xl">
+            <i class="fa-solid fa-paper-plane mr-2"></i> Submit Application
+          </button>
+        </form>
+
+        <p class="text-gray-400 text-sm text-center mt-6">
+          We'll review your application and contact you within 2 business days.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <script>
     function openPopup() {
       document.getElementById('registerPopup').style.display = 'flex'
@@ -252,16 +362,35 @@
     function closePopup() {
       document.getElementById('registerPopup').style.display = 'none'
     }
+    document.getElementById('registerPopup').addEventListener('click', function (e) {
+      if (e.target === this) closePopup()
+    })
   </script>
-  <!-- CSS override to replace background image -->
-  <style>
-    section.page-title-section.overlay[data-background='static/images/title.jpeg'] {
-      background-image: url('static/images/title.jpeg') !important;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  </style>
+
+</body>
+
+</html>
+
+
+
+<!-- Script -->
+<script>
+  function openPopup() {
+    document.getElementById('registerPopup').style.display = 'flex'
+  }
+  function closePopup() {
+    document.getElementById('registerPopup').style.display = 'none'
+  }
+</script>
+<!-- CSS override to replace background image -->
+<style>
+  section.page-title-section.overlay[data-background='static/images/title.jpeg'] {
+    background-image: url('static/images/title.jpeg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
 
 
 </body>

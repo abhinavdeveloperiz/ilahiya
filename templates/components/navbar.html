@@ -1,26 +1,104 @@
 <!-- NAVBAR -->
 <header class="fixed top-0 left-0 w-full z-50">
 
-    <nav class="bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
+    <style>
+        .navItem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            height: 40px;
+            padding: 0 16px;
+
+            background: #1e1e4b;
+            color: #fff;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .3px;
+
+            border: 2px solid #10102d;
+            border-radius: 10px;
+
+            box-shadow: 4px 4px 0px #10102d;
+
+            transition: all .15s ease;
+        }
+
+        .navItem:hover {
+            color: #fff;
+            transform: translate(3px, 3px);
+            box-shadow: 1px 1px 0px #10102d;
+        }
+
+        .navItem::after {
+            display: none;
+        }
+
+        .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all .25s ease;
+        }
+
+        .group:hover .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .dropdown-link {
+            display: block;
+
+            padding: 10px 14px;
+            margin-bottom: 8px;
+
+            background: #1e1e4b;
+            color: white;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            border: 2px solid #10102d;
+            border-radius: 10px;
+
+            box-shadow: 3px 3px 0px #10102d;
+
+            transition: all .15s ease;
+        }
+
+        .dropdown-link:hover {
+            color: white;
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #10102d;
+        }
+    </style>
+
+    <nav class="bg-white/80 backdrop-blur-2xl border-b border-white/20 shadow-lg">
 
         <div class="max-w-7xl mx-auto px-4 lg:px-8">
 
-            <div class="flex items-center justify-between h-[88px]">
+            <div class="flex items-center justify-between h-[78px]">
 
                 <!-- LOGO -->
-                <a href="/" class="flex items-center gap-4">
+                <a href="/" class="flex items-center gap-3">
 
-                    <img src="static/images/ilahialogo.png" alt="Logo"
-                        class="w-14 h-14 rounded-full object-cover shadow-lg border border-gray-200">
+                    <img src="static/images/ilahialogo.png" alt="Ilahia Law College"
+                        class="w-12 h-12 rounded-full object-cover border border-gray-200 shadow-md">
 
                     <div class="hidden sm:block">
 
-                        <h2 class="text-lg font-extrabold uppercase tracking-wide text-[#1e1e4b]">
+                        <h2 class="text-base font-bold uppercase tracking-wider text-xl text-[#1e1e4b]">
                             Ilahia Law College
                         </h2>
 
-                        <p class="text-sm text-gray-500 tracking-wide">
-                            Muvattupuzha, Kerala - 686673
+                        <p class="text-[14px] text-gray-500 leading-tight">
+                            Affiliated to MG University, Kottayam
+                            <br>
+                            Approved by Bar Council of India
                         </p>
 
                     </div>
@@ -28,92 +106,185 @@
                 </a>
 
                 <!-- DESKTOP MENU -->
-                <nav class="hidden lg:flex items-center gap-6">
+                <nav class="hidden lg:flex items-center gap-3">
 
                     <a href="/" class="navItem">Home</a>
 
-                    <!-- About Us Dropdown -->
+                    <!-- ABOUT -->
                     <div class="relative group">
-                        <button class="navItem flex items-center gap-2">About Us
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div
-                            class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-lg border border-gray-100 nav-dropdown z-[70]">
-                            <div class="p-3">
-                                <div class="border-b border-gray-100 pb-3 mb-3">
-                                    <a href="aboutus" class="block font-semibold text-gray-800 px-2 py-1">College
-                                        Profile</a>
 
-                                </div>
-                                <a href="aboutus" class="text-sm text-gray-600 px-2 py-1">About Us</a>
-                                <a href="managements" class="block text-gray-700 px-2 py-1">Management</a>
-                                <a href="chairmans_desk" class="block text-gray-700 px-2 py-1">Chairman's Desk</a>
-                                <a href="principal_desk" class="block text-gray-700 px-2 py-1">Principal's Desk</a>
-                                <a href="admindesk" class="block text-gray-700 px-2 py-1">Administrator's Desk</a>
-                                <a href="facultydesk" class="block text-gray-700 px-2 py-1">Faculty's Desk</a>
+                        <button class="navItem flex items-center gap-1">
+
+                            About Us
+
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+
+                            </svg>
+
+                        </button>
+
+                        <div
+                            class="absolute left-0 mt-4 w-64 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 nav-dropdown z-[70]">
+
+                            <div class="p-3">
+
+                                <a href="aboutus"
+                                    class="block px-3 py-2 rounded-lg text-[13px] font-semibold text-[#1e1e4b] hover:bg-gray-100">
+                                    College Profile
+                                </a>
+
+                                <a href="aboutus" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    About Us
+                                </a>
+
+                                <a href="managements" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Management
+                                </a>
+
+                                <a href="chairmans_desk"
+                                    class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Chairman's Desk
+                                </a>
+
+                                <a href="principal_desk"
+                                    class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Principal's Desk
+                                </a>
+
+                                <a href="admindesk" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Administrator's Desk
+                                </a>
+
+                                <a href="facultydesk" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Faculty's Desk
+                                </a>
+
                             </div>
+
                         </div>
+
                     </div>
 
-                    <!-- Admissions Dropdown -->
+                    <!-- ADMISSIONS -->
                     <div class="relative group">
-                        <button class="navItem flex items-center gap-2">Admissions
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
+
+                        <button class="navItem flex items-center gap-1">
+
+                            Admissions
+
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+
                             </svg>
+
                         </button>
+
                         <div
-                            class="absolute left-0 mt-3 w-44 bg-white rounded-lg shadow-lg border border-gray-100 nav-dropdown z-[70]">
+                            class="absolute left-0 mt-4 w-52 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 nav-dropdown z-[70]">
+
                             <div class="p-3">
-                                <a href="courses" class="block text-gray-700 px-2 py-1">Courses</a>
-                                <a href="admission_process" class="block text-gray-700 px-2 py-1">Admission Process</a>
+
+                                <a href="courses" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Courses
+                                </a>
+
+                                <a href="admission_process"
+                                    class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Admission Process
+                                </a>
+
                             </div>
+
                         </div>
+
                     </div>
 
-                    <a href="programs" class="navItem">Programs</a>
+                    <a href="programs" class="navItem">
+                        Programs
+                    </a>
 
-                    <a href="iqac" class="navItem">IQAC</a>
+                    <a href="iqac" class="navItem">
+                        IQAC
+                    </a>
 
-                    <!-- Campus Life Dropdown -->
+                    <!-- CAMPUS LIFE -->
                     <div class="relative group">
-                        <button class="navItem flex items-center gap-2">Campus Life
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
+
+                        <button class="navItem flex items-center gap-1">
+
+                            Campus Life
+
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+
                             </svg>
+
                         </button>
+
                         <div
-                            class="absolute left-0 mt-3 w-44 bg-white rounded-lg shadow-lg border border-gray-100 nav-dropdown z-[70]">
+                            class="absolute left-0 mt-4 w-60 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 nav-dropdown z-[70]">
+
                             <div class="p-3">
-                                <a href="gallery" class="block text-gray-700 px-2 py-1">Gallery</a>
-                                <a href="facilities" class="block text-gray-700 px-2 py-1">Facilities</a>
-                                <a href="achievements" class="block text-gray-700 px-2 py-1">Our Achievements</a>
-                                <a href="rules" class="block text-gray-700 px-2 py-1">Rules & Regulations</a>
-                                <a href="committee" class="block text-gray-700 px-2 py-1">Statutory Committee</a>
+
+                                <a href="gallery" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Gallery
+                                </a>
+
+                                <a href="facilities" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Facilities
+                                </a>
+
+                                <a href="achievements" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Our Achievements
+                                </a>
+
+                                <a href="rules" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Rules & Regulations
+                                </a>
+
+                                <a href="committee" class="block px-3 py-2 rounded-lg text-[13px] hover:bg-gray-100">
+                                    Statutory Committee
+                                </a>
+
                             </div>
+
                         </div>
+
                     </div>
 
-                    <a href="contactpage"
-                        class="px-5 py-2.5 rounded-xl bg-[#1e1e4b] text-white font-semibold hover:bg-[#15203a] transition duration-300 shadow-lg">
+                    <!-- CONTACT BUTTON -->
+                    <a href="contactpage" class="h-10 px-5 flex items-center justify-center
+          text-xs font-bold text-white
+          bg-[#c49a3a]
+          border-2 border-[#8c6a1f]
+          rounded-xl
+          shadow-[4px_4px_0px_#8c6a1f]
+          hover:translate-x-[3px]
+          hover:translate-y-[3px]
+          hover:shadow-[1px_1px_0px_#8c6a1f]
+          transition-all duration-150">
+
                         Contact
+
                     </a>
 
                 </nav>
 
                 <!-- MOBILE BUTTON -->
                 <button id="openMenu"
-                    class="lg:hidden w-11 h-11 rounded-xl bg-[#1e1e4b] text-white flex items-center justify-center">
+                    class="lg:hidden w-10 h-10 rounded-xl bg-[#1e1e4b] text-white flex items-center justify-center shadow-lg">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
 
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -187,7 +358,7 @@
                 <div>
 
                     <p class="text-sm font-semibold text-gray-800">
-                        +91 90720 75311
+                        +91 94001 30499
                     </p>
 
                     <p class="text-xs text-gray-500">
@@ -403,6 +574,11 @@
                     if (svg) svg.style.transform = 'rotate(0deg)';
                 }
             });
+        });
+
+        // prevent clicks inside dropdown from closing the menu immediately
+        document.querySelectorAll('header .nav-dropdown').forEach(dropdown => {
+            dropdown.addEventListener('click', (event) => event.stopPropagation());
         });
 
         // close menus on outside click

@@ -1,222 +1,186 @@
 {% extends 'base.html' %}
+{% block title %}Rules & Regulations | Ilahia Law College{% endblock %}
 {% block content %}
-<!-- Academic Regulations Section -->
-<section class="page-title-section overlay" data-background="static/images/title.jpeg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item">
-            <a class="h2 text-primary font-secondary" href="@@page-link">College Regulations</a>
-          </li>
-        </ul>
-      </div>
+
+<!-- page title -->
+<!-- page title -->
+<section class="relative h-[80vh] bg-fixed bg-center bg-cover flex items-center"
+  style="background-image: url('/static/newimages/3.JPG');">
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/20"></div>
+
+
+</section>
+
+<section class="relative py-24 bg-[#0A192F] overflow-hidden">
+  <div class="absolute top-0 right-0 w-72 h-72 bg-blue-900/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 bg-slate-900/20 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid gap-8 xl:grid-cols-2">
+      <article class="rounded-[32px] border border-white/10 bg-slate-900/95 p-8 shadow-2xl" data-aos="fade-up">
+        <div class="flex items-center gap-3 mb-6 text-blue-300">
+          <i class="fas fa-user-graduate text-2xl"></i>
+          <h2 class="text-2xl font-bold text-white">Academic Regulations</h2>
+        </div>
+        <div class="space-y-6 text-slate-200">
+          <div class="space-y-3">
+            <h3 class="text-xl font-semibold text-white">Attendance</h3>
+            <ul class="space-y-3 pl-5 text-slate-200 list-disc">
+              <li>Regular attendance is mandatory. Students must attend at least 75% of classes each semester.</li>
+              <li>Medical leave must be submitted with valid documentation.</li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-xl font-semibold text-white">Examination</h3>
+            <p class="text-slate-300 leading-7">The college follows a comprehensive examination system including
+              university semester exams and internal assessments.</p>
+            <div class="space-y-4">
+              <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-5">
+                <h4 class="font-semibold text-white">Semester Exams</h4>
+                <p class="text-slate-300 leading-7">The 5-year program has 10 semesters and the 3-year program has 6
+                  semesters. Semester exams are conducted every 6 months by MG University.</p>
+              </div>
+              <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-5">
+                <h4 class="font-semibold text-white">Internal Assessment</h4>
+                <p class="text-slate-300 leading-7">Internal assessments include two exams, one presentation, and one
+                  assignment. The best internal exam score will be considered.</p>
+              </div>
+              <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-5">
+                <h4 class="font-semibold text-white">Academic Integrity</h4>
+                <p class="text-slate-300 leading-7">Plagiarism and dishonesty are not tolerated and will result in
+                  disciplinary action.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-[32px] border border-white/10 bg-slate-900/95 p-8 shadow-2xl" data-aos="fade-up"
+        data-aos-delay="100">
+        <div class="flex items-center gap-3 mb-6 text-blue-300">
+          <i class="fas fa-balance-scale text-2xl"></i>
+          <h2 class="text-2xl font-bold text-white">Campus Discipline</h2>
+        </div>
+        <div class="space-y-6 text-slate-200">
+          <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-5">
+            <h3 class="font-semibold text-white">College Hours</h3>
+            <p class="text-slate-300 leading-7">9:30 AM to 3:30 PM. The Principal may make schedule adjustments when
+              necessary.</p>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-5">
+            <h3 class="font-semibold text-white">Punctuality</h3>
+            <p class="text-slate-300 leading-7">Students must arrive on time for classes, exams, and official college
+              events.</p>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-5">
+            <h3 class="font-semibold text-white">Uniform Dress Code</h3>
+            <div class="mt-3 space-y-3 text-white">
+              <p class="text-white"><span class="font-semibold text-white">Boys:</span> Black pants, white shirt, and
+                college emblem/badge.
+              </p>
+              <p class="text-white"><span class="font-semibold text-white">Girls:</span> Black pants, white shirt, black
+                blazer, and
+                college emblem/badge.</p>
+            </div>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-slate-950/80 p-5">
+            <h3 class="font-semibold text-white">Code of Conduct</h3>
+            <p class="text-gray-400 leading-7">Students are expected to maintain respect, discipline, and decorum across
+              campus.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-12 grid gap-8 xl:grid-cols-2">
+      <article class="rounded-[32px] border border-white/10 bg-slate-900/95 p-8 shadow-2xl" data-aos="fade-up">
+        <div class="flex items-center gap-3 mb-6 text-blue-300">
+          <i class="fas fa-book-reader text-2xl"></i>
+          <h2 class="text-2xl font-bold text-white">Other Regulations</h2>
+        </div>
+        <div class="space-y-5 text-slate-200">
+          <div class="flex gap-4">
+            <span class="mt-1 text-blue-400"><i class="fas fa-gavel"></i></span>
+            <div>
+              <h3 class="font-semibold text-white">Library Rules</h3>
+              <p class="text-slate-300 leading-7">Follow borrowing policies, return deadlines, and quiet study rules.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="mt-1 text-blue-400"><i class="fas fa-gavel"></i></span>
+            <div>
+              <h3 class="font-semibold text-white">Moot Court</h3>
+              <p class="text-slate-300 leading-7">Participation is encouraged to improve legal research and advocacy
+                skills.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="mt-1 text-blue-400"><i class="fas fa-gavel"></i></span>
+            <div>
+              <h3 class="font-semibold text-white">Extracurricular Activities</h3>
+              <p class="text-slate-300 leading-7">Participate in sports, culture, and clubs to develop leadership and
+                teamwork.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="mt-1 text-blue-400"><i class="fas fa-gavel"></i></span>
+            <div>
+              <h3 class="font-semibold text-white">Anti-Ragging</h3>
+              <p class="text-slate-300 leading-7">Ragging is strictly prohibited and violators will face disciplinary
+                action.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="mt-1 text-blue-400"><i class="fas fa-gavel"></i></span>
+            <div>
+              <h3 class="font-semibold text-white">Sexual Harassment</h3>
+              <p class="text-slate-300 leading-7">Zero tolerance policy. Report any incidents to the relevant
+                authorities.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-[32px] border border-white/10 bg-slate-900/95 p-8 shadow-2xl" data-aos="fade-up"
+        data-aos-delay="100">
+        <div class="flex items-center gap-3 mb-6 text-blue-300">
+          <i class="fas fa-exclamation-triangle text-2xl"></i>
+          <h2 class="text-2xl font-bold text-white">General Guidelines</h2>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 mb-8">
+          <div class="rounded-3xl border border-rose-500/10 bg-rose-950/80 p-6">
+            <h3 class="text-lg font-semibold text-white mb-2"><i class="fas fa-ban mr-2"></i>Communication</h3>
+            <p class="text-slate-300 leading-7">Students should regularly check college notices and announcements.</p>
+          </div>
+          <div class="rounded-3xl border border-amber-500/10 bg-amber-950/80 p-6">
+            <h3 class="text-lg font-semibold text-white mb-2"><i class="fas fa-comments mr-2"></i>Feedback</h3>
+            <p class="text-slate-300 leading-7">Share feedback on courses, faculty, and facilities to improve campus
+              life.</p>
+          </div>
+        </div>
+        <div class="space-y-6 text-slate-200">
+          <div>
+            <h3 class="font-semibold text-white">Grievance Redressal</h3>
+            <p class="text-slate-300 leading-7">Approach the committee with any concerns or issues for prompt
+              resolution.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white">Fee Payment</h3>
+            <p class="text-slate-300 leading-7">Semester fees must be paid on time to remain eligible for promotion.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white">Final Authority</h3>
+            <p class="text-slate-300 leading-7">The Principal's decision is final for all matters related to rules and
+              regulations.</p>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="container my-5">
-  <div class="row">
-    <div class="col-12 text-center mb-4">
-      <h2 class="mb-3 fadeInDown text-left">Academic Regulations & Campus Guidelines</h2>
-      <p class="text-muted fadeInUp text-left">Ilahia Law College maintains high standards of academic excellence and
-        campus discipline. Below are the key regulations all students must follow.</p>
-    </div>
-  </div>
-
-  <!-- Academic Policies -->
-  <div class="row mb-4">
-    <div class="col-12 fadeInUp">
-      <div class="card shadow-lg p-4 border-0">
-        <h3 class="text-dark mb-4"><i class="fas fa-user-graduate mr-2"></i>Academic Regulations</h3>
-
-        <div class="regulation-item">
-          <h5 class="text-dark">Attendance</h5>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-check-circle text-success mr-2"></i>Regular attendance is mandatory for all students.
-              Students are expected to attend at least 75% of the total classes held in each semester.
-            </li>
-            <li>
-              <i class="fas fa-check-circle text-success mr-2"></i>Medical leave requires documentation
-            </li>
-          </ul>
-        </div>
-
-        <div class="regulation-item mt-4">
-          <h5 class="text-dark">Examination</h5>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-check-circle text-success mr-2"></i>The college follows a comprehensive examination
-              system, including semester exams conducted by MG University and internal assessments. The examination
-              structure is as follows:
-            </li>
-          </ul>
-          <br />
-          <h6>Semester Exams</h6>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-file-alt text-info mr-2"></i>The college follows a semester system, with 5-year programs
-              having 10 semesters and 3-year programs having 6 semesters. Semester exams are conducted every 6 months by
-              MG University.
-            </li>
-          </ul>
-          <br />
-          <h6>Semester Exams</h6>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-file-alt text-info mr-2"></i>The college follows a semester system, with 5-year programs
-              having 10 semesters and 3-year programs having 6 semesters. Semester exams are conducted every 6 months by
-              MG University.
-            </li>
-          </ul>
-          <h6 class="mt-3">Internal Assessment</h6>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-chart-bar text-warning mr-2"></i>In each semester, internal assessments are conducted by
-              the teaching faculty, consisting of two internal examinations (best of one will be considered), one
-              presentation, and one assignment submission. Students must fill out examination forms within the specified
-              deadline. Examination timetables will be announced separately.
-            </li>
-          </ul>
-          <h6 class="mt-3">Academic Integrity</h6>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-chart-bar text-warning mr-2"></i>Plagiarism and academic dishonesty will not be
-              tolerated. Students found guilty will face penalties.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Campus Discipline -->
-  <div class="row mb-4">
-    <div class="col-12 fadeInUp">
-      <div class="card shadow-lg p-4 border-0">
-        <h3 class="text-dark mb-4"><i class="fas fa-balance-scale mr-2"></i>Campus Discipline</h3>
-
-        <div class="regulation-item">
-          <h5 class="text-dark">College Hours</h5>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-clock text-dark mr-2"></i>9:30 AM to 3:30 PM. The principal, under the management's
-              authority, may make slight adjustments to the timing schedule as needed.
-            </li>
-          </ul>
-          <br />
-          <h5 class="text-dark">Punctuality</h5>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-clock text-dark mr-2"></i>Students are expected to be punctual for classes and other
-              college events.
-            </li>
-          </ul>
-        </div>
-
-        <div class="regulation-item mt-4">
-          <h5 class="text-dark">Uniform Dress code</h5>
-          <h6>Boys</h6>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-tshirt text-black mr-2"></i>Black pants, white shirt, and college emblem/badge.
-            </li>
-          </ul>
-          <h6 class="mt-3">Girls</h6>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-tshirt text-black mr-2"></i>Black pants, white shirt, black blazer, and college
-              emblem/badge.
-            </li>
-          </ul>
-          <br />
-          <h5 class="text-dark">Code of Conduct</h5>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fas fa-tshirt text-black mr-2"></i>Students are expected to maintain decorum and respect towards
-              faculty, staff, and fellow students.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Facility Regulations -->
-  <div class="row mb-4">
-    <div class="col-12 fadeInUp">
-      <div class="card shadow-lg p-4 border-0">
-        <h3 class="text-dark mb-2"><i class="fas fa-book-reader mr-2"></i>Other Regulations</h3>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <h5><i class="fas fa-gavel text-warning mr-2"></i>Library Rules</h5>
-            <p>Students are expected to follow library rules, including borrowing policies and return deadlines.</p>
-          </li>
-          <li class="mb-3">
-            <h5><i class="fas fa-gavel text-warning mr-2"></i>Moot Court</h5>
-            <p>Participation in moot court activities is encouraged to enhance practical legal skills.</p>
-          </li>
-          <li class="mb-2">
-            <h5><i class="fas fa-gavel text-warning mr-2"></i>Extracurricular Activities</h5>
-            <p>Students are encouraged to participate in sports, cultural events, and other extracurricular activities
-              to develop their skills and interests.</p>
-          </li>
-          <li class="mb-3">
-            <h5><i class="fas fa-gavel text-warning mr-2"></i>Anti-Ragging</h5>
-            <p>Ragging is strictly prohibited, and students found guilty will face penalties.</p>
-          </li>
-          <li class="mb-3">
-            <h5><i class="fas fa-gavel text-warning mr-2"></i>Prevention of Sexual Harassment</h5>
-            <p>The college has a zero-tolerance policy towards sexual harassment, and students are encouraged to report
-              incidents.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Conduct Policies -->
-  <div class="row mb-4">
-    <div class="col-12 fadeInUp">
-      <div class="card shadow-lg p-4 border-0">
-        <h3 class="text-dark mb-4"><i class="fas fa-exclamation-triangle mr-2"></i>General Guidelines</h3>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="alert alert-danger">
-              <h5><i class="fas fa-ban mr-2"></i>Communication</h5>
-              <p>Students are expected to regularly check college notices and updates.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="alert alert-warning">
-              <h5><i class="fas fa-female mr-2"></i>Feedback</h5>
-              <p>Students are encouraged to provide feedback on courses, faculty, and college facilities.</p>
-            </div>
-          </div>
-        </div>
-        <h5 class="mt-3"><i class="fas fa-comments mr-2"></i>Grievance Redressal</h5>
-        <p>Students can approach the grievance redressal committee for addressing any concerns or issues.</p>
-        <br>
-        <h5 class="mt-3"><i class="fas fa-comments mr-2"></i>Fee Payment </h5>
-        <p>Completion of semester fees is mandatory for promotion to the next semester.</p>
-        <br>
-        <h5 class="mt-3"><i class="fas fa-comments mr-2"></i>Final Authority </h5>
-        <p>The Principal's decision is final in all matters related to the college's rules and regulations. The
-          Principal reserves the right to make changes to the rules and regulations as deemed necessary, considering the
-          best interests of the college and its students.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CSS override to replace background image -->
-<style>
-  section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
-    background-image: url('static/images/title.jpeg') !important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style>
 {% endblock %}
