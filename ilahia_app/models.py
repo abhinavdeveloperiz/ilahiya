@@ -42,6 +42,7 @@ class Management_desk(models.Model):
     image = models.ImageField(upload_to='management_desk_images/')
     name=models.CharField(max_length=200)
     position=models.CharField(max_length=200)
+    phone=models.CharField(max_length=200,null=True, blank=True)
 
 
 class Administrator_desk(models.Model):
