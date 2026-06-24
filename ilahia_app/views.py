@@ -50,9 +50,9 @@ def courses(request):
 
 
 def gallery(request):
-    gallery=Gallery.objects.all()
-    arts = ArtdayGallery.objects.all()
-    co_curricular = Co_curricularGallery.objects.all()
+    gallery=Gallery.objects.order_by('-id')
+    arts = ArtdayGallery.objects.order_by('-id')
+    co_curricular = Co_curricularGallery.objects.order_by('-id')
     context={
         'gallery':gallery,
         'arts':arts,
@@ -246,7 +246,7 @@ def academics(request):
 
 def programs(request):
     """Render the programs page."""
-    academic=Academic_Program.objects.all()
+    academic=Academic_Program.objects.order_by("-id")
     context={
         'academic':academic,
         }
@@ -258,9 +258,14 @@ def facilities(request):
     return render(request, "facilities.html")
 
 
+from .models import OurAchivements
+
 def achievements(request):
-    """Render the achievements page."""
-    return render(request, "achievements.html")
+    achievements = OurAchivements.objects.all()
+    context = {
+        'achievements': achievements
+    }
+    return render(request, "achievements.html", context)
 
 
 def moot_court_society(request):
@@ -308,10 +313,14 @@ def admindesk(request):
     return render(request, "admindesk.html",context)
 
 def facultydesk(request):
-    Faculties=Faculty.objects.all()
+    Faculties=Faculty.objects.filter(faculty_type='Law Faculty')
+    Non_Law_Faculties=Faculty.objects.filter(faculty_type='Non-Law Faculty')
     context={
-        'Faculty':Faculties,
+
+        'Law_Faculty':Faculties,
+        'Non_Law_Faculties':Non_Law_Faculties,
         }
+    
     return render(request, "facultydesk.html",context)
 
 def committee(request):

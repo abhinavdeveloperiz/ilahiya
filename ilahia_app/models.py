@@ -42,6 +42,7 @@ class Management_desk(models.Model):
     image = models.ImageField(upload_to='management_desk_images/')
     name=models.CharField(max_length=200)
     position=models.CharField(max_length=200)
+    message = models.TextField(null=True,blank=True)
     phone=models.CharField(max_length=200,null=True, blank=True)
 
 
@@ -73,6 +74,11 @@ class Co_curricularGallery(models.Model):
 
 
 class Faculty(models.Model):
+    faculty_choices = [
+        ('Law Faculty', 'Law Faculty'),
+        ('Non-Law Faculty', 'Non-Law Faculty'),
+    ]
+    faculty_type = models.CharField(max_length=20, choices=faculty_choices,null=True, blank=True)
     image = models.ImageField(upload_to='faculty_desk_images/')
     name=models.CharField(max_length=200)
     designation=models.CharField(max_length=200)
@@ -113,6 +119,16 @@ class UpComingEvents(models.Model):
 
 
 
+class OurAchivements(models.Model):
+    image = models.ImageField(upload_to='achievements_images/')
+    title=models.CharField(max_length=200)
+    description = models.TextField()
 
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Our Achievements"
+        verbose_name_plural = "Our Achievements"
 
 

@@ -19,17 +19,33 @@
   <div class="absolute bottom-0 right-0 w-72 h-72 bg-slate-900/20 rounded-full blur-3xl"></div>
   <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
     <div class="text-center mb-16">
-      <p class="uppercase tracking-[6px] text-blue-400 font-semibold mb-4">Faculty</p>
-      <h1 class="text-4xl md:text-5xl font-black text-white">Our Faculty Team</h1>
-      <p class="mt-6 text-gray-300 max-w-3xl mx-auto leading-8">Meet the expert legal educators who guide students
-        through academic and professional development.</p>
+      <h1 class="text-3xl md:text-4xl font-black text-white">Law Faculty</h1>
+
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {% for f in Faculty %}
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {% for f in Law_Faculty %}
       <div
         class="group rounded-[30px] bg-slate-800 border border-slate-700 p-6 shadow-xl transition hover:-translate-y-2 duration-300">
         <div class="overflow-hidden rounded-3xl mb-5">
-          <img src="{{ f.image.url }}" alt="{{ f.name }}" class="w-full h-72 object-cover">
+          <img src="{{ f.image.url }}" alt="{{ f.name }}" class="w-full h-[50vh] md-72 object-cover">
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-2">{{ f.name }}</h3>
+        <p class="text-blue-300">{{ f.designation }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 ">
+    <div class="text-center mb-16">
+      <h1 class="text-3xl md:text-4xl font-black text-white mt-24">Non-Law Faculty</h1>
+
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {% for f in Non_Law_Faculties %}
+      <div
+        class="group rounded-[30px] bg-slate-800 border border-slate-700 p-6 shadow-xl transition hover:-translate-y-2 duration-300">
+        <div class="overflow-hidden rounded-3xl mb-5">
+          <img src="{{ f.image.url }}" alt="{{ f.name }}" class="w-full h-[50vh] md:h-72 object-cover">
         </div>
         <h3 class="text-2xl font-bold text-white mb-2">{{ f.name }}</h3>
         <p class="text-blue-300">{{ f.designation }}</p>

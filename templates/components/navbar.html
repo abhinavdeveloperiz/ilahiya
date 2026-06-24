@@ -42,11 +42,11 @@
     <!-- MAIN NAVBAR -->
     <nav class="bg-white border-b-2 border-[#1e1e4b]/10 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 lg:px-6">
-            <div class="flex items-center justify-between py-2.5 gap-3 w-full">
+            <div class="flex items-center justify-between py-3.5 sm:py-4 gap-2 w-full">
 
                 <!-- ===== LOGO + IDENTITY ===== -->
-                <div class="flex items-center gap-3 shrink-0 min-w-0 md:-ml-24 md:mr-6">
-                    <a href="/" class="flex items-center gap-3 group">
+                <div class="flex items-center gap-3 shrink-0 min-w-0">
+                    <a href="/" class="flex items-center gap-2 sm:gap-3 group md:mr-12">
 
                         <!-- Logo ring effect -->
                         <div class="relative shrink-0">
@@ -54,24 +54,25 @@
                                 class="absolute inset-0 rounded-full bg-gradient-to-br from-[#c49a3a] to-[#1e1e4b] p-[2px] scale-105 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
                             </div>
                             <img src="static/images/ilahialogo.png" alt="Ilahia Law College"
-                                class="relative w-14 h-14 lg:w-[68px] lg:h-[68px] rounded-full object-cover border-2 border-white shadow-md">
+                                class="relative w-14 h-14 lg:w-[72px] lg:h-[72px] rounded-full object-cover border-2 border-white shadow-md">
                         </div>
 
                         <!-- Text block -->
                         <div class="flex flex-col leading-tight gap-0.5">
 
                             <h1
-                                class="text-[18px] sm:text-[22px] lg:text-[26px] font-black uppercase tracking-wide text-[#1e1e4b] whitespace-nowrap">
+                                class="text-[22px] sm:text-[24px] lg:text-[28px] font-black uppercase tracking-wide text-[#1e1e4b] whitespace-nowrap">
                                 Ilahia Law College
                             </h1>
 
                             <span
-                                class="slogan-shimmer text-[10px] sm:text-[11px] lg:text-[13px] font-extrabold uppercase tracking-[0.12em] whitespace-nowrap">
+                                class="slogan-shimmer text-[11px] sm:text-[12px] lg:text-[14px] font-extrabold uppercase tracking-[0.12em] whitespace-nowrap">
                                 Dream Big, Lead with Justice
                             </span>
 
-                            <span class="hidden lg:block text-[11px] text-gray-500 font-medium whitespace-nowrap">
-                                Affiliated to MG University, Kottayam &nbsp;|&nbsp; Approved by Bar Council of India
+                            <span
+                                class="block text-[10px] sm:text-[11px] lg:text-[13px] text-gray-500 font-medium whitespace-nowrap">
+                                Affiliated to MG University &middot; Approved by BCI
                             </span>
 
                         </div>
@@ -227,7 +228,7 @@
 
 <!-- ===== MOBILE SIDEBAR ===== -->
 <div id="mobileMenu"
-    class="fixed top-0 right-[-100%] w-[88%] max-w-[380px] h-full bg-white z-[70] transition-all duration-500 shadow-2xl overflow-y-auto flex flex-col">
+    class="fixed top-0 right-0 translate-x-full w-[88%] max-w-[380px] h-full bg-white z-[70] transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto flex flex-col will-change-transform">
 
     <!-- Sidebar Header -->
     <div class="bg-gradient-to-r from-[#1e1e4b] to-[#2d2d6b] p-5">
@@ -295,7 +296,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
-            <div id="aboutMenu" class="pl-4 max-h-0 overflow-hidden transition-all duration-300 space-y-0.5 pb-0">
+            <div id="aboutMenu"
+                class="pl-4 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out space-y-0.5 pb-0">
                 <a href="aboutus" class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">About
                     Us</a>
                 <a href="" class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Our
@@ -330,7 +332,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
-            <div id="admissionMenu" class="pl-4 max-h-0 overflow-hidden transition-all duration-300 space-y-0.5">
+            <div id="admissionMenu"
+                class="pl-4 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out space-y-0.5">
                 <a href="courses"
                     class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Courses</a>
                 <a href="admission_process"
@@ -356,7 +359,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
-            <div id="campusMenu" class="pl-4 max-h-0 overflow-hidden transition-all duration-300 space-y-0.5">
+            <div id="campusMenu"
+                class="pl-4 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out space-y-0.5">
                 <a href="gallery"
                     class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Gallery</a>
                 <a href="facilities"
@@ -388,14 +392,14 @@
     const menuOverlay = document.getElementById("menuOverlay");
 
     function openMobileMenu() {
-        mobileMenu.style.right = "0";
+        mobileMenu.classList.remove("translate-x-full");
         menuOverlay.classList.remove("opacity-0", "invisible");
         menuOverlay.classList.add("opacity-50");
         document.body.style.overflow = "hidden";
     }
 
     function closeMobileMenu() {
-        mobileMenu.style.right = "-100%";
+        mobileMenu.classList.add("translate-x-full");
         menuOverlay.classList.add("opacity-0", "invisible");
         menuOverlay.classList.remove("opacity-50");
         document.body.style.overflow = "";

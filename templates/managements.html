@@ -26,25 +26,32 @@
         and experienced management team committed to academic excellence and institutional growth.</p>
     </div>
     <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div
+        class="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900 flex items-center justify-center">
+        <img src="/static/trust/trust.jpeg" alt="Management" class="w-full h-80 object-cober">
+      </div>
       <div class="rounded-3xl bg-slate-800 border border-white/10 p-10 shadow-2xl">
-        <h2 class="text-3xl font-bold text-white mb-6">Message from the Manager</h2>
+        <h2 class="text-3xl font-bold text-white mb-6">About Trust</h2>
         <p class="text-gray-300 leading-8 text-justify">
-          Ilahiya Law College, Muvattupuzha, is founded with a vision to nurture not only skilled legal professionals,
-          but also responsible individuals committed to justice, integrity, and service to society. We believe legal
-          education should go beyond classrooms, encouraging critical thinking, ethical values, and a deeper
-          understanding of law in real life.
-        <p class="mt-4 text-gray-300 leading-8 text-justify">
-          As a new institution, we move forward with dedication, inclusiveness, and a student-centered approach. Our
-          goal is to create an environment where every learner grows with confidence, compassion, and excellence, ready
-          to contribute meaningfully to the legal profession and the community.
+          The ILAHIA Trust is the noble dream of a bunch of visionaries hailing from socio-economic, political, cultural
+          and business circuits in and around Muvattupuzha that came true in the year 1992.Ever since, this has majorly
+          contributed to the educational aspiration of the region. The Trust is steered by a 13 member governing board.
+          The Prime objective of the Trust is to cater to educational needs of the knowledge seekers located in and
+          around its place of origin.
         </p>
+        <p class="mt-4 text-gray-300 leading-8 text-justify">
+          Now Ilahia trust has 70 members, of which 13 members are elected to the executive committee. The establishment
+          of a lower primary school (Kavumkara Muslim L.P. School) in 1992 was an affirmation of its phenomenal growth.
+          The commencement of a prestigious English medium School (CBSE Syllabus) named Ilahia Public School in the same
+          year added another landmark to its credit. The inception of Ilahia College of Arts & Science was an assertion
+          of its unstinting dedication to professional excellence. TheCollege is managed by the governing body , Ilahia
+          College Managing Committee. The Engineering College at Mulavoor (MVPA) is the fulfilment of the long cherished
+          desire of Ilahia Trust. It underlines the Trust's timely and ingenious response to academic needs.
+
         </p>
       </div>
 
-      <div
-        class="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900 flex items-center justify-center">
-        <img src="/static/trust/trust.jpeg" alt="Management" class="w-full h-auto object-contain">
-      </div>
+
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mt-16">
       {% for m in management %}
@@ -55,8 +62,12 @@
         </div>
         <h3 class="text-2xl font-bold text-white mb-2">{{ m.position }}</h3>
         <p class="text-blue-300 font-semibold mb-3">{{ m.name }}</p>
+        <p class="text-md text-justify text-gray-100 mb-6">{{ m.message }}</p>
         {% if m.phone %}
-        <a href="tel:+91{{m.phone}}" class="text-gray-300"><i class="ri-phone-line text-blue-400 mr-2"></i>{{ m.phone}}</a>
+        <a href="tel:{{ m.phone|cut:' '|cut:'-' }}" class="flex items-center text-gray-300 hover:text-white transition">
+          <i class="ri-phone-line text-blue-400 mr-2"></i>
+          <span>{{ m.phone }}</span>
+        </a>
         {% endif %}
       </div>
       {% endfor %}

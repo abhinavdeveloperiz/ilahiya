@@ -3,7 +3,7 @@
 <!-- Page Title -->
 <!-- page title -->
 <section class="relative h-[80vh] bg-fixed bg-center bg-cover flex items-center"
-  style="background-image: url('/static/newimages/3.JPG');">
+  style="background-image: url('/static/newimages/10.jpeg');">
 
   <!-- Dark Overlay -->
   <div class="absolute inset-0 bg-black/20"></div>
@@ -16,19 +16,20 @@
   <div class="container">
     <div class="row justify-content-center">
       <!-- Card 4: Ashly Sunny Photography Achievement -->
+      {% for achievement in achievements %}
       <div class="col-md-3 mb-4">
         <div class="card shadow-lg border-0 h-100">
-          <img src="static/images/ashley.jpeg" class="card-img-top rounded-top" alt="Photography Award"
+          <img src="{{ achievement.image.url }}" class="card-img-top rounded-top" alt="{{ achievement.title }}"
             data-aos="fade-up" />
           <div class="card-body">
-            <h5 class="card-title text-primary font-secondary">Photography Competition</h5>
+            <h5 class="card-title text-primary font-secondary">{{ achievement.title }}</h5>
             <p class="card-text">
-              Ashly Sunny (3 Year LLB) secured <strong>A Grade</strong> in Photography at MG University Kalolsavam held
-              at Al-Azhar College, Thodupuzha.
+              {{ achievement.description }}
             </p>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>
