@@ -101,25 +101,30 @@
                                 </svg>
                             </button>
                             <div
-                                class="nav-dropdown absolute left-0 top-full mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 z-[70] overflow-hidden">
+                                class="nav-dropdown absolute left-0 top-full mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 z-[70]">
                                 <div class="py-2">
 
                                     <a href="aboutus"
                                         class="flex items-center gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150">About
                                         The Trust</a>
-                                    <a href="managements"
-                                        class="flex items-center gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150">Management
-                                        Desk</a>
+
+                                    <div class="relative">
+                                        <button
+                                            class="w-[calc(100%-8px)] flex items-center justify-between gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150 cursor-pointer">
+                                            Management
+                                            <svg class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                                        </button>
+                                        <div class="nav-dropdown absolute left-full top-0 ml-1 w-48 bg-white rounded-xl shadow-2xl border border-gray-100 z-[80] overflow-hidden">
+                                            <div class="py-1">
+                                                <a href="managements" class="flex items-center gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150">Management Desk</a>
+                                                <a href="chairmans_desk" class="flex items-center gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150">Chairman's Desk</a>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <a href="principal_desk"
                                         class="flex items-center gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150">Principal's
                                         Desk</a>
-
-                                    <a href="chairmans_desk"
-                                        class="flex items-center gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150">Chairman's
-                                        Desk</a>
-
-
                                     <a href="facultydesk"
                                         class="flex items-center gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150">Faculty's
                                         Desk</a>
@@ -144,7 +149,7 @@
                                 </svg>
                             </button>
                             <div
-                                class="nav-dropdown absolute left-0 top-full mt-2 w-48 bg-white rounded-xl shadow-2xl border border-gray-100 z-[70] overflow-hidden">
+                                class="nav-dropdown absolute left-0 top-full mt-2 w-48 bg-white rounded-xl shadow-2xl border border-gray-100 z-[70]">
                                 <div class="py-1">
                                     <a href="courses"
                                         class="flex items-center gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150">Courses</a>
@@ -179,7 +184,7 @@
                                 </svg>
                             </button>
                             <div
-                                class="nav-dropdown absolute right-0 top-full mt-2 w-52 bg-white rounded-xl shadow-2xl border border-gray-100 z-[70] overflow-hidden">
+                                class="nav-dropdown absolute right-0 top-full mt-2 w-52 bg-white rounded-xl shadow-2xl border border-gray-100 z-[70]">
                                 <div class="py-1">
                                     <a href="gallery"
                                         class="flex items-center gap-2 px-4 py-2.5 text-[12.5px] font-semibold text-white bg-[#1e1e4b] border border-[#10102d] rounded-lg m-1 shadow-[2px_2px_0px_#10102d] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#10102d] transition-all duration-150">Gallery</a>
@@ -300,23 +305,26 @@
                 class="pl-4 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out space-y-0.5 pb-0">
                 <a href="aboutus" class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">About
                     Us</a>
-                <a href="" class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Our
-                    Vision</a>
-                <a href="" class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Our
-                    Mission</a>
-                <a href="" class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Our
-                    Values</a>
-                <a href="managements"
-                    class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Management</a>
-                <a href="chairmans_desk"
-                    class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Chairman's Desk</a>
+
+                <div>
+                    <button class="mobile-accordion w-full flex items-center justify-between py-2 text-[13.5px] font-medium text-gray-600 hover:text-[#1e1e4b]" data-target="nestedManagementMenu">
+                        Management
+                        <svg class="w-3 h-3 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="nestedManagementMenu" class="pl-4 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out space-y-0.5">
+                        <a href="managements" class="block py-2 text-[13px] text-gray-500 hover:text-[#1e1e4b] font-medium">Management Desk</a>
+                        <a href="chairmans_desk" class="block py-2 text-[13px] text-gray-500 hover:text-[#1e1e4b] font-medium">Chairman's Desk</a>
+                    </div>
+                </div>
+
                 <a href="principal_desk"
                     class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Principal's Desk</a>
-                <a href="admindesk"
-                    class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Administrator's
-                    Desk</a>
                 <a href="facultydesk"
                     class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium pb-2">Faculty's
+                    Desk</a>
+
+                <a href="admindesk"
+                    class="block py-2 text-[13.5px] text-gray-600 hover:text-[#1e1e4b] font-medium">Administrator's
                     Desk</a>
             </div>
         </div>
@@ -411,19 +419,35 @@
 
     // Mobile accordion
     document.querySelectorAll('.mobile-accordion').forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
             const targetId = button.getAttribute('data-target');
             const panel = document.getElementById(targetId);
             if (!panel) return;
+            
             const isOpen = !panel.classList.contains('max-h-0');
+            const parentAccordion = panel.parentElement.closest('[style*="max-height"]');
+            
             if (isOpen) {
+                const childHeight = panel.scrollHeight;
                 panel.style.maxHeight = null;
                 panel.classList.add('max-h-0');
                 button.querySelector('svg').style.transform = 'rotate(0deg)';
+                
+                if (parentAccordion && !parentAccordion.classList.contains('max-h-0')) {
+                    const currentMax = parseInt(parentAccordion.style.maxHeight) || parentAccordion.scrollHeight;
+                    parentAccordion.style.maxHeight = Math.max(0, currentMax - childHeight) + 'px';
+                }
             } else {
                 panel.classList.remove('max-h-0');
-                panel.style.maxHeight = panel.scrollHeight + 'px';
+                const childHeight = panel.scrollHeight;
+                panel.style.maxHeight = childHeight + 'px';
                 button.querySelector('svg').style.transform = 'rotate(180deg)';
+                
+                if (parentAccordion && !parentAccordion.classList.contains('max-h-0')) {
+                    const currentMax = parseInt(parentAccordion.style.maxHeight) || parentAccordion.scrollHeight;
+                    parentAccordion.style.maxHeight = (currentMax + childHeight) + 'px';
+                }
             }
         });
     });
@@ -443,11 +467,15 @@
                 const parent = btn.parentElement;
                 if (!parent) return;
                 const isOpen = parent.classList.contains('open');
+                
                 wrapperItems.forEach(w => {
-                    w.classList.remove('open');
-                    const s = w.querySelector('button svg');
-                    if (s) s.style.transform = 'rotate(0deg)';
+                    if (!w.contains(parent)) {
+                        w.classList.remove('open');
+                        const s = w.querySelector(':scope > button svg') || w.querySelector('button svg');
+                        if (s) s.style.transform = 'rotate(0deg)';
+                    }
                 });
+
                 if (!isOpen) {
                     parent.classList.add('open');
                     const svg = btn.querySelector('svg');
@@ -463,7 +491,7 @@
         document.addEventListener('click', () => {
             wrapperItems.forEach(w => {
                 w.classList.remove('open');
-                const s = w.querySelector('button svg');
+                const s = w.querySelector(':scope > button svg') || w.querySelector('button svg');
                 if (s) s.style.transform = 'rotate(0deg)';
             });
         });

@@ -66,6 +66,7 @@ def managements(request):
     context={
         'management':management,
         }
+    
     return render(request, "managements.html",context)
 
 
